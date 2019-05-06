@@ -39,6 +39,18 @@ int main(int argc, char *argv[]) {
         throw std::invalid_argument("Run: <algorithm> <version> <filepath-in> <filepath-out>");
     }
 
+
+    Graph g1;
+
+
+
+
+
+
+
+
+
+
     // Ler o arquivo usando uma função de conversão para o formato de entrada padrão deste trabalho.
     std::ifstream infile;
     infile.open(argv[3]);

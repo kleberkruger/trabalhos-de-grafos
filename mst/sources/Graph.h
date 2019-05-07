@@ -13,145 +13,92 @@
 #ifndef MST_GRAPH_H
 #define MST_GRAPH_H
 
+#include <algorithm>
 #include <list>
-#include <queue>
-#include <string>
 #include <vector>
+#include <string>
 
-/**
- * Classe que representa um componente (vértice ou aresta) de um grafo.
- */
-class GraphComponent {
-private:
+#include <iostream>
 
-    const int id;
-    std::string label;
+#include "DataStructs.h"
 
-protected:
+struct Vertex {
 
-    explicit GraphComponent(const int id, const std::string &label) : id(id), label(label) {}
+    float key;
+    int rank;
+    Vertex *parent;
 
-public:
-
-    const int getId() const { return id; }
-
-    const std::string &getLabel() const { return label; }
-
-    void setLabel(const std::string &label) { GraphComponent::label = label; }
+    explicit Vertex() : key(std::numeric_limits<float>::infinity()) {}
 };
 
-/**
- * Classe que representa um vértice do grafo.
- */
-class Vertex : public GraphComponent {
-private:
+struct Edge {
 
-    const std::list<Vertex *> adjacent;
+//    const Vertex &start;
+//    const Vertex &end;
 
-public:
-
-    explicit Vertex(const int id, const std::string &label = "")
-            : GraphComponent::GraphComponent(id, label) {}
-};
-
-class Edge : public GraphComponent {
-public:
-
-    Edge(const int id, const Vertex &start, const Vertex &end, const std::string &label)
-            : GraphComponent(id, label), start(start), end(end) {}
-
-    Edge(const int id, const Vertex &start, const Vertex &end, float weight = 1, const std::string &label = "")
-            : GraphComponent(id, label), start(start), end(end), weight(weight) {}
-
-public:
-
-    const Vertex &start;
-    const Vertex &end;
+    Vertex *start;
+    Vertex *end;
     float weight;
+
+    explicit Edge(float weight = 1) : weight(weight) {}
+
+//    Edge(const int id, const Vertex &start, const Vertex &end, float weight)
+//            : start(start), end(end), weight(weight) {}
+
+    inline bool operator<(const Edge &other) const { return weight < other.weight; }
+
+    inline bool operator>(const Edge &other) const { return weight > other.weight; }
+
+    inline bool operator<=(const Edge &other) const { return weight <= other.weight; }
+
+    inline bool operator>=(const Edge &other) const { return weight >= other.weight; }
 };
 
-class Graph {
-private:
+struct Graph {
 
-    std::vector<Vertex *> vertex;
-    std::vector<Edge *> edges;
+    std::vector<Vertex> vertex;
+    std::vector<Edge> edges;
 
-public:
-
-    /**
-     * Cria um grafo com n vértices.
-     *
-     * @param n
-     */
-    explicit Graph(int n = 0) {
+//    explicit Graph(int n = 0, int m = 0) : vertex(n), edges(m) { // Apenas se fosse ponteiros
+    explicit Graph(int n = 0, int m = 0) {
         for (int i = 0; i < n; i++) {
             insertVertex();
         }
     }
 
+    Graph(const Graph &orig) = default;
 
-    /**
-     * Destrói o grafo.
-     */
-    virtual ~Graph() {
-
-    }
-
-    /**
-     * Limpa o grafo.
-     */
-    void clear() {
-
-    }
-
-    /**
-     * Limpa as arestas do grafo.
-     */
     void clearEdges() {
-
+        edges.clear();
     }
 
-    /**
-     * Insere um vértice no grafo.
-     *
-     * @param label
-     */
-    int insertVertex(const std::string &label = "") {
-        static int id = 0;
-        auto *v = new Vertex(id, label);
-        vertex.push_back(v);
-        return id++;
+    void clearAll() {
+        vertex.clear();
+        edges.clear();
     }
 
-    /**
-     * Insere uma aresta (v1, v2) ao grafo.
-     *
-     * @param v1 vértice inicial
-     * @param v2 vértice final
-     * @param weight custo (peso) da aresta
-     */
+    void insertVertex() {
+        vertex.emplace_back();
+    }
+
     void insertEdge(int v1, int v2, float weight) {
-        static int id = 0;
-        auto *e = new Edge(id, *vertex[v1], *vertex[v2], weight);
-        edges.push_back(e);
-        id++;
+        edges.emplace_back(weight);
     }
 
-    /**
-     * Executa o algoritmo de kruscal no grafo e armazena em mst a árvore geradora mínima.
-     *
-     * @param graph o grafo original
-     * @param mst a árvore geradora mínima
-     */
+    void insertEdge(const Edge &edge) {
+        edges.emplace_back(edge);
+    }
+
     static float kruskal(const Graph &graph, Graph &mst);
 
-    /**
-     * Executa o algoritmo de prim no grafo e armazena em mst a árvore geradora mínima.
-     *
-     * @param graph o grafo original
-     * @param mst a árvore geradora mínima
-     */
     static float prim(const Graph &graph, Graph &mst);
+
+    void print() const {
+        std::cout << "|V| in: " << this << ": " << vertex.size() << std::endl;
+        std::cout << "Edges in: " << this << ": " << std::endl;
+        for (auto e : edges)
+            std::cout << e.weight << std::endl;
+    }
 };
 
 

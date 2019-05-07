@@ -123,6 +123,33 @@ mst/fast:
 	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/build
 .PHONY : mst/fast
 
+sources/DataStructs.o: sources/DataStructs.cpp.o
+
+.PHONY : sources/DataStructs.o
+
+# target to build an object file
+sources/DataStructs.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/DataStructs.cpp.o
+.PHONY : sources/DataStructs.cpp.o
+
+sources/DataStructs.i: sources/DataStructs.cpp.i
+
+.PHONY : sources/DataStructs.i
+
+# target to preprocess a source file
+sources/DataStructs.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/DataStructs.cpp.i
+.PHONY : sources/DataStructs.cpp.i
+
+sources/DataStructs.s: sources/DataStructs.cpp.s
+
+.PHONY : sources/DataStructs.s
+
+# target to generate assembly for a file
+sources/DataStructs.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/DataStructs.cpp.s
+.PHONY : sources/DataStructs.cpp.s
+
 sources/Graph.o: sources/Graph.cpp.o
 
 .PHONY : sources/Graph.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... mst"
+	@echo "... sources/DataStructs.o"
+	@echo "... sources/DataStructs.i"
+	@echo "... sources/DataStructs.s"
 	@echo "... sources/Graph.o"
 	@echo "... sources/Graph.i"
 	@echo "... sources/Graph.s"

@@ -1,2 +1,5 @@
 # grafos-t1-mst
+
 Primeiro Trabalho Prático de Algoritmos em Grafos
+
+Alunos: Kleber Kruger, Felipe Barbosa e Rodrigo Kanehisa.

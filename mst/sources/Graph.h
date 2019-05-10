@@ -13,37 +13,25 @@
 #ifndef MST_GRAPH_H
 #define MST_GRAPH_H
 
-#include <algorithm>
-#include <list>
-#include <vector>
 #include <string>
-
+#include <vector>
 #include <iostream>
-
-#include "DataStructs.h"
 
 struct Vertex {
 
-    float key;
-    int rank;
-    Vertex *parent;
+    explicit Vertex(int id, std::string label = "");
 
-    explicit Vertex() : key(std::numeric_limits<float>::infinity()) {}
+    Vertex(const Vertex &orig);
+
+    virtual ~Vertex();
+
+    int id;
+    std::string label;
 };
 
 struct Edge {
 
-//    const Vertex &start;
-//    const Vertex &end;
-
-    Vertex *start;
-    Vertex *end;
-    float weight;
-
-    explicit Edge(float weight = 1) : weight(weight) {}
-
-//    Edge(const int id, const Vertex &start, const Vertex &end, float weight)
-//            : start(start), end(end), weight(weight) {}
+    explicit Edge(int start, int end, float weight);
 
     inline bool operator<(const Edge &other) const { return weight < other.weight; }
 
@@ -52,53 +40,31 @@ struct Edge {
     inline bool operator<=(const Edge &other) const { return weight <= other.weight; }
 
     inline bool operator>=(const Edge &other) const { return weight >= other.weight; }
+
+    int start;
+    int end;
+    float weight;
 };
 
-struct Graph {
+class Graph {
+public:
 
-    std::vector<Vertex> vertex;
+    explicit Graph(int n = 0, int m = 0);
+
+    Graph(const Graph &orig);
+
+    virtual ~Graph();
+
+    int insertVertex(const std::string &label = "");
+
+    int insertEdge(int v1, int v2, float weight);
+
+    void clearEdges();
+
+    void print();
+
+    std::vector<Vertex> vertices;
     std::vector<Edge> edges;
-
-//    explicit Graph(int n = 0, int m = 0) : vertex(n), edges(m) { // Apenas se fosse ponteiros
-    explicit Graph(int n = 0, int m = 0) {
-        for (int i = 0; i < n; i++) {
-            insertVertex();
-        }
-    }
-
-    Graph(const Graph &orig) = default;
-
-    void clearEdges() {
-        edges.clear();
-    }
-
-    void clearAll() {
-        vertex.clear();
-        edges.clear();
-    }
-
-    void insertVertex() {
-        vertex.emplace_back();
-    }
-
-    void insertEdge(int v1, int v2, float weight) {
-        edges.emplace_back(weight);
-    }
-
-    void insertEdge(const Edge &edge) {
-        edges.emplace_back(edge);
-    }
-
-    static float kruskal(const Graph &graph, Graph &mst);
-
-    static float prim(const Graph &graph, Graph &mst);
-
-    void print() const {
-        std::cout << "|V| in: " << this << ": " << vertex.size() << std::endl;
-        std::cout << "Edges in: " << this << ": " << std::endl;
-        for (auto e : edges)
-            std::cout << e.weight << std::endl;
-    }
 };
 
 

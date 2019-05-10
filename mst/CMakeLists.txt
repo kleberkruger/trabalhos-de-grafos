@@ -3,4 +3,4 @@ project(mst)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(mst sources/Main.cpp sources/Graph.cpp sources/Graph.h sources/DataStructs.cpp sources/DataStructs.h)
+add_executable(mst sources/main.cpp sources/graph.cpp sources/graph.h sources/prim.cpp sources/prim.h sources/kruskal.cpp sources/kruskal.h)

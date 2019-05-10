@@ -5,36 +5,135 @@
       <config projectName="mst" targetName="mst" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79667ee1-3641-4808-9c28-fae26bf0c2f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sources/DataStructs.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/DataStructs.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test1_in.txt" afterDir="false" />
+    <list default="true" id="804bd9c3-4e6f-48e4-8789-3951f12380ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/sources/kruskal.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/kruskal.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/prim.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/prim.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LEIAME.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LEIAME.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LEIAME.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/mst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/mst.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mst.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/DataStructs.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/DataStructs.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/Graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/Graph.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/Graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/Graph.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/Main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/filein.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/fileout.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test1_in.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/.idea/dictionaries/kleberkruger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/.idea/mst.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/LEIAME.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/3.14.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/3.14.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/3.14.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/3.14.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/3.14.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/mst.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/mst.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/mst.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/mst.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/mst.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/mst.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/mst.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/mst.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/mst.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/mst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/cmake-build-debug/mst.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/sources/DisjointSet.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/sources/DisjointSet.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/sources/Graph.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/sources/Graph.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/sources/Main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/tests/filein.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst_base/tests/fileout.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/.idea/untitled.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/3.14.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/3.14.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/3.14.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/3.14.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/3.14.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/untitled.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/CMakeFiles/untitled.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/untitled" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/cmake-build-debug/untitled.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort_example/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,30 +147,36 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/Graph.cpp">
+        <entry file="file://$PROJECT_DIR$/sources/kruskal.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+            <state relative-caret-position="442">
+              <caret line="56" column="18" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/Main.cpp">
+        <entry file="file://$PROJECT_DIR$/sources/kruskal.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+            <state relative-caret-position="443">
+              <caret line="106" selection-start-line="106" selection-end-line="106" />
+              <folding>
+                <element signature="e#2005#2014#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sources/Graph.h">
+        <entry file="file://$PROJECT_DIR$/sources/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-168">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            <state relative-caret-position="410">
+              <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+              <folding>
+                <element signature="e#266#285#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,30 +189,28 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/sources/graph.h" />
+        <option value="$PROJECT_DIR$/sources/graph.cpp" />
         <option value="$PROJECT_DIR$/sources/main.cpp" />
-        <option value="$PROJECT_DIR$/LEIAME.txt" />
-        <option value="$PROJECT_DIR$/sources/Main.cpp" />
-        <option value="$PROJECT_DIR$/sources/Graph.cpp" />
-        <option value="$PROJECT_DIR$/sources/Graph.h" />
-        <option value="$PROJECT_DIR$/sources/DataStructs.h" />
+        <option value="$PROJECT_DIR$/sources/kruskal.cpp" />
+        <option value="$PROJECT_DIR$/sources/kruskal.h" />
       </list>
     </option>
   </component>
-  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1682" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1876" />
     <option name="y" value="23" />
-    <option name="width" value="2539" />
+    <option name="width" value="1680" />
     <option name="height" value="1014" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,25 +227,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/tests" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sources" />
     </key>
@@ -166,50 +260,48 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="4" Folder0="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary" Folder1="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary" Folder2="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary" Folder3="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary" CustomDictionaries="4" CustomDictionary0="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary/portuguese-brazil_technical-terms_without-accents.dic" CustomDictionary1="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary/portuguese-brazil_technical-terms.dic" CustomDictionary2="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary/portuguese-brazil_without-accents.dic" CustomDictionary3="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary/portuguese-brazil.dic" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="project-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="4" Folder0="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary" Folder1="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary" Folder2="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary" Folder3="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary" CustomDictionaries="4" CustomDictionary0="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary/portuguese-brazil.dic" CustomDictionary1="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary/portuguese-brazil_without-accents.dic" CustomDictionary2="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary/portuguese-brazil_technical-terms.dic" CustomDictionary3="$PROJECT_DIR$/../../../../../../../Plugins/Spelling/IntelliJ-Portuguese-Brazil-Dictionary/portuguese-brazil_technical-terms_without-accents.dic" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="project-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="79667ee1-3641-4808-9c28-fae26bf0c2f8" name="Default Changelist" comment="" />
-      <created>1557211078943</created>
+      <changelist id="804bd9c3-4e6f-48e4-8789-3951f12380ba" name="Default Changelist" comment="" />
+      <created>1557464567589</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1557211078943</updated>
-      <workItem from="1557211080547" duration="1744000" />
-      <workItem from="1557212928404" duration="241000" />
-      <workItem from="1557213188344" duration="9817000" />
+      <updated>1557464567589</updated>
+      <workItem from="1557464571823" duration="19868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11802000" />
+    <option name="totallyTimeSpent" value="19868000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1680" y="23" width="2560" height="1014" extended-state="6" />
+    <frame x="1876" y="23" width="1680" height="1014" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25377283" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="CMake" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Messages" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,51 +311,91 @@
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test1_in.txt">
+    <entry file="file://$PROJECT_DIR$/../../mst_base3/sources/graph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/T2 SO/Geovanna/Restaurante.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/LEIAME.txt">
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/map">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="51" lean-forward="true" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+        <state relative-caret-position="-822">
+          <caret line="938" column="31" selection-start-line="938" selection-start-column="31" selection-end-line="938" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm">
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/unordered_map">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="4123" selection-start-line="4123" selection-end-line="4123" />
+        <state relative-caret-position="282">
+          <caret line="856" column="62" selection-start-line="856" selection-start-column="53" selection-end-line="856" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/DataStructs.cpp">
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/tuple">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1359" column="6" selection-start-line="1359" selection-start-column="6" selection-end-line="1359" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/__hash_table">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="2402" column="19" selection-start-line="2402" selection-start-column="19" selection-end-line="2402" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/prim.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/Main.cpp">
+    <entry file="file://$PROJECT_DIR$/sources/prim.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/graph.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        <state relative-caret-position="401">
+          <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+          <folding>
+            <element signature="e#307#324#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/Graph.cpp">
+    <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+        <state relative-caret-position="250">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/DataStructs.h">
+    <entry file="file://$PROJECT_DIR$/sources/kruskal.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="442">
+          <caret line="56" column="18" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/Graph.h">
+    <entry file="file://$PROJECT_DIR$/sources/kruskal.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state relative-caret-position="443">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+          <folding>
+            <element signature="e#2005#2014#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+          <folding>
+            <element signature="e#266#285#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

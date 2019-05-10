@@ -123,86 +123,113 @@ mst/fast:
 	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/build
 .PHONY : mst/fast
 
-sources/DataStructs.o: sources/DataStructs.cpp.o
+sources/graph.o: sources/graph.cpp.o
 
-.PHONY : sources/DataStructs.o
-
-# target to build an object file
-sources/DataStructs.cpp.o:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/DataStructs.cpp.o
-.PHONY : sources/DataStructs.cpp.o
-
-sources/DataStructs.i: sources/DataStructs.cpp.i
-
-.PHONY : sources/DataStructs.i
-
-# target to preprocess a source file
-sources/DataStructs.cpp.i:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/DataStructs.cpp.i
-.PHONY : sources/DataStructs.cpp.i
-
-sources/DataStructs.s: sources/DataStructs.cpp.s
-
-.PHONY : sources/DataStructs.s
-
-# target to generate assembly for a file
-sources/DataStructs.cpp.s:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/DataStructs.cpp.s
-.PHONY : sources/DataStructs.cpp.s
-
-sources/Graph.o: sources/Graph.cpp.o
-
-.PHONY : sources/Graph.o
+.PHONY : sources/graph.o
 
 # target to build an object file
-sources/Graph.cpp.o:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/Graph.cpp.o
-.PHONY : sources/Graph.cpp.o
+sources/graph.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/graph.cpp.o
+.PHONY : sources/graph.cpp.o
 
-sources/Graph.i: sources/Graph.cpp.i
+sources/graph.i: sources/graph.cpp.i
 
-.PHONY : sources/Graph.i
+.PHONY : sources/graph.i
 
 # target to preprocess a source file
-sources/Graph.cpp.i:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/Graph.cpp.i
-.PHONY : sources/Graph.cpp.i
+sources/graph.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/graph.cpp.i
+.PHONY : sources/graph.cpp.i
 
-sources/Graph.s: sources/Graph.cpp.s
+sources/graph.s: sources/graph.cpp.s
 
-.PHONY : sources/Graph.s
+.PHONY : sources/graph.s
 
 # target to generate assembly for a file
-sources/Graph.cpp.s:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/Graph.cpp.s
-.PHONY : sources/Graph.cpp.s
+sources/graph.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/graph.cpp.s
+.PHONY : sources/graph.cpp.s
 
-sources/Main.o: sources/Main.cpp.o
+sources/kruskal.o: sources/kruskal.cpp.o
 
-.PHONY : sources/Main.o
+.PHONY : sources/kruskal.o
 
 # target to build an object file
-sources/Main.cpp.o:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/Main.cpp.o
-.PHONY : sources/Main.cpp.o
+sources/kruskal.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/kruskal.cpp.o
+.PHONY : sources/kruskal.cpp.o
 
-sources/Main.i: sources/Main.cpp.i
+sources/kruskal.i: sources/kruskal.cpp.i
 
-.PHONY : sources/Main.i
+.PHONY : sources/kruskal.i
 
 # target to preprocess a source file
-sources/Main.cpp.i:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/Main.cpp.i
-.PHONY : sources/Main.cpp.i
+sources/kruskal.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/kruskal.cpp.i
+.PHONY : sources/kruskal.cpp.i
 
-sources/Main.s: sources/Main.cpp.s
+sources/kruskal.s: sources/kruskal.cpp.s
 
-.PHONY : sources/Main.s
+.PHONY : sources/kruskal.s
 
 # target to generate assembly for a file
-sources/Main.cpp.s:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/Main.cpp.s
-.PHONY : sources/Main.cpp.s
+sources/kruskal.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/kruskal.cpp.s
+.PHONY : sources/kruskal.cpp.s
+
+sources/main.o: sources/main.cpp.o
+
+.PHONY : sources/main.o
+
+# target to build an object file
+sources/main.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/main.cpp.o
+.PHONY : sources/main.cpp.o
+
+sources/main.i: sources/main.cpp.i
+
+.PHONY : sources/main.i
+
+# target to preprocess a source file
+sources/main.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/main.cpp.i
+.PHONY : sources/main.cpp.i
+
+sources/main.s: sources/main.cpp.s
+
+.PHONY : sources/main.s
+
+# target to generate assembly for a file
+sources/main.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/main.cpp.s
+.PHONY : sources/main.cpp.s
+
+sources/prim.o: sources/prim.cpp.o
+
+.PHONY : sources/prim.o
+
+# target to build an object file
+sources/prim.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/prim.cpp.o
+.PHONY : sources/prim.cpp.o
+
+sources/prim.i: sources/prim.cpp.i
+
+.PHONY : sources/prim.i
+
+# target to preprocess a source file
+sources/prim.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/prim.cpp.i
+.PHONY : sources/prim.cpp.i
+
+sources/prim.s: sources/prim.cpp.s
+
+.PHONY : sources/prim.s
+
+# target to generate assembly for a file
+sources/prim.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/prim.cpp.s
+.PHONY : sources/prim.cpp.s
 
 # Help Target
 help:
@@ -213,15 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... mst"
-	@echo "... sources/DataStructs.o"
-	@echo "... sources/DataStructs.i"
-	@echo "... sources/DataStructs.s"
-	@echo "... sources/Graph.o"
-	@echo "... sources/Graph.i"
-	@echo "... sources/Graph.s"
-	@echo "... sources/Main.o"
-	@echo "... sources/Main.i"
-	@echo "... sources/Main.s"
+	@echo "... sources/graph.o"
+	@echo "... sources/graph.i"
+	@echo "... sources/graph.s"
+	@echo "... sources/kruskal.o"
+	@echo "... sources/kruskal.i"
+	@echo "... sources/kruskal.s"
+	@echo "... sources/main.o"
+	@echo "... sources/main.i"
+	@echo "... sources/main.s"
+	@echo "... sources/prim.o"
+	@echo "... sources/prim.i"
+	@echo "... sources/prim.s"
 .PHONY : help
 
 

@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mst.dir/sources/Main.cpp.o"
-  "CMakeFiles/mst.dir/sources/Graph.cpp.o"
-  "CMakeFiles/mst.dir/sources/DataStructs.cpp.o"
+  "CMakeFiles/mst.dir/sources/main.cpp.o"
+  "CMakeFiles/mst.dir/sources/graph.cpp.o"
+  "CMakeFiles/mst.dir/sources/prim.cpp.o"
+  "CMakeFiles/mst.dir/sources/kruskal.cpp.o"
   "mst.pdb"
   "mst"
 )

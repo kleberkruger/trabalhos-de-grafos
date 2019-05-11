@@ -14,17 +14,22 @@
 #define MST_GRAPH_H
 
 
+#include <list>
 #include <vector>
 #include <iostream>
 #include "disjoint_set.h"
-//#include "kruskal.h"
 
+
+struct Vertex;
+struct Edge;
+struct EdgeTo;
 
 struct Vertex {
 
     explicit Vertex(int id);
 
     int id;
+    std::list<EdgeTo> adjacency;
 };
 
 struct Edge {
@@ -44,6 +49,10 @@ struct Edge {
 };
 
 struct EdgeTo {
+
+    EdgeTo(int end, float weight);
+
+    virtual ~EdgeTo();
 
     int end;
     float weight;
@@ -76,9 +85,17 @@ public:
     std::vector<Vertex> vertices;
     std::vector<Edge> edges;
 
+    const std::vector<Vertex> &getAdjacencyList() const;
+
+    const std::list<EdgeTo> &getAdjacencyList(int vertex) const;
+
+    float *getMinAdjacencyMatrix() const;
+
 private:
 
     const static int DEFAULT_VERSION = 0;
+
+    float *minAdjacencyMatrix;
 };
 
 

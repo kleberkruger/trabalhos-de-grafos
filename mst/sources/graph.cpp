@@ -17,6 +17,10 @@ Vertex::Vertex(int id) : id(id) {}
 
 Edge::Edge(int start, int end, float weight) : start(start), end(end), weight(weight) {}
 
+EdgeTo::EdgeTo(int end, float weight) : end(end), weight(weight) {}
+
+EdgeTo::~EdgeTo() = default;
+
 
 Graph::Graph(int n, int m) {
     vertices.reserve(n);
@@ -27,18 +31,29 @@ Graph::Graph(int n, int m) {
 
 Graph::Graph(const Graph &orig) = default;
 
-Graph::~Graph() {}
+Graph::~Graph() = default;
 
 void Graph::insertVertex(int id) {
     vertices.emplace_back(id);
 }
 
 void Graph::insertEdge(int v1, int v2, float weight) {
-    edges.emplace_back(v1, v2, weight);;
+    edges.emplace_back(v1, v2, weight);
+
+    vertices[v1].adjacency.emplace_back(v2, weight);
+    vertices[v2].adjacency.emplace_back(v1, weight);
 }
 
 void Graph::clearEdges() {
     edges.clear();
+}
+
+const std::vector<Vertex> &Graph::getAdjacencyList() const {
+    return vertices;
+}
+
+const std::list<EdgeTo> &Graph::getAdjacencyList(int vertex) const {
+    return vertices[vertex].adjacency;
 }
 
 void Graph::print() {
@@ -159,4 +174,11 @@ double Graph::kruskal(const Graph &graph, Graph &mst) {
     }
 
     return total;
+}
+
+/*
+ * TODO: Implementar a matriz de adjacência.
+ */
+float *Graph::getMinAdjacencyMatrix() const {
+    return minAdjacencyMatrix;
 }

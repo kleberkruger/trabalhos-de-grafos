@@ -10,6 +10,7 @@
  * - Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
  */
 
+#include <algorithm>
 #include "graph.h"
 
 Vertex::Vertex(int id) : id(id) {}
@@ -108,6 +109,12 @@ double Graph::mst(const Graph &graph, Graph &mst, int version) {
         case 2:
             total = kruskal<UnionFindDisjointSet>(graph, mst); // 1:15
             break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
     }
     return total;
 }
@@ -174,6 +181,31 @@ double Graph::kruskal(const Graph &graph, Graph &mst) {
     }
 
     return total;
+}
+
+template<class DS>
+double Graph::prim(const Graph &graph, Graph &mst){
+    mst = graph;
+    mst.clearEdges();
+
+    for(auto &u : mst.vertices){
+        u.key = std::numeric_limits<float>::infinity();
+        u.parent = nullptr;
+    }
+
+    auto &r = mst.vertices[0];
+    DS Q();
+
+    while(Q.empty()){
+        auto &u = Q.extractMin();
+        for(auto &e : u.adjacency){
+            auto &v = mst.vertices[e.end];
+            if(Q.find(v) && e.weight < v.key){
+                v.parent = u;
+                v.key = e.weight;
+            }
+        }
+    }
 }
 
 /*

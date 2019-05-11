@@ -30,6 +30,8 @@ struct Vertex {
 
     int id;
     std::list<EdgeTo> adjacency;
+    int key;
+    Vertex* parent;
 };
 
 struct Edge {
@@ -81,6 +83,9 @@ public:
     static double kruskal(const Graph &graph, Graph &mst);
 
     static double kruskalIngenuo(const Graph &graph, Graph &mst);
+
+    template <class DS>
+    static double prim(const Graph &graph, Graph &mst);
 
     std::vector<Vertex> vertices;
     std::vector<Edge> edges;

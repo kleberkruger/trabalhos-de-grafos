@@ -13,6 +13,7 @@
 #include <iostream>
 #include <fstream>
 #include <unistd.h>
+#include <strings.h>
 #include "graph.h"
 
 enum Algorithm {
@@ -57,7 +58,7 @@ void execute(Algorithm alg, int version, const std::string &inFilePath, const st
 }
 
 int main(int argc, char *argv[]) {
-    chdir("/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst");
+    //chdir("/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst");
 
     if (argc != 5) {
         throw std::invalid_argument("Run: <algorithm> <version> <filepath-in> <filepath-out>");

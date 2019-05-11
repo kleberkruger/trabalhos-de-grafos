@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/sources/disjoint_set.h
+/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/sources/disjoint_set.h
 vector
 -
 
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/sources/graph.h
+/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/sources/graph.h
 list
 -
 vector
@@ -18,15 +18,17 @@ vector
 iostream
 -
 disjoint_set.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/sources/disjoint_set.h
+/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/sources/disjoint_set.h
 
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/sources/main.cpp
+/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/sources/main.cpp
 iostream
 -
 fstream
 -
 unistd.h
 -
+strings.h
+-
 graph.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/sources/graph.h
+/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/sources/graph.h
 

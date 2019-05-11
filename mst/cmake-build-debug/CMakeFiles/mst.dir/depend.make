@@ -8,6 +8,9 @@ CMakeFiles/mst.dir/sources/graph.cpp.o: ../sources/disjoint_set.h
 CMakeFiles/mst.dir/sources/graph.cpp.o: ../sources/graph.cpp
 CMakeFiles/mst.dir/sources/graph.cpp.o: ../sources/graph.h
 
+CMakeFiles/mst.dir/sources/heap.cpp.o: ../sources/heap.cpp
+CMakeFiles/mst.dir/sources/heap.cpp.o: ../sources/heap.h
+
 CMakeFiles/mst.dir/sources/kruskal.cpp.o: ../sources/disjoint_set.h
 CMakeFiles/mst.dir/sources/kruskal.cpp.o: ../sources/graph.h
 CMakeFiles/mst.dir/sources/kruskal.cpp.o: ../sources/kruskal.cpp

@@ -15,6 +15,7 @@
 
 
 #include <vector>
+#include <algorithm>
 #include "graph.h"
 
 // FIXME: Seria interessante transformar o Kruskal apenas em ima função template?

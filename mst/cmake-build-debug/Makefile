@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/felipe/Downloads/CLion-2019.1.3/clion-2019.1.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/felipe/Downloads/CLion-2019.1.3/clion-2019.1.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst"
+CMAKE_SOURCE_DIR = /media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/cmake-build-debug"
+CMAKE_BINARY_DIR = /media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/felipe/Downloads/CLion-2019.1.3/clion-2019.1.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/felipe/Downloads/CLion-2019.1.3/clion-2019.1.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles" "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles /media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,6 +177,33 @@ sources/graph.cpp.s:
 	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/graph.cpp.s
 .PHONY : sources/graph.cpp.s
 
+sources/heap.o: sources/heap.cpp.o
+
+.PHONY : sources/heap.o
+
+# target to build an object file
+sources/heap.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/heap.cpp.o
+.PHONY : sources/heap.cpp.o
+
+sources/heap.i: sources/heap.cpp.i
+
+.PHONY : sources/heap.i
+
+# target to preprocess a source file
+sources/heap.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/heap.cpp.i
+.PHONY : sources/heap.cpp.i
+
+sources/heap.s: sources/heap.cpp.s
+
+.PHONY : sources/heap.s
+
+# target to generate assembly for a file
+sources/heap.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/heap.cpp.s
+.PHONY : sources/heap.cpp.s
+
 sources/kruskal.o: sources/kruskal.cpp.o
 
 .PHONY : sources/kruskal.o
@@ -238,14 +265,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... mst"
+	@echo "... edit_cache"
 	@echo "... sources/disjoint_set.o"
 	@echo "... sources/disjoint_set.i"
 	@echo "... sources/disjoint_set.s"
 	@echo "... sources/graph.o"
 	@echo "... sources/graph.i"
 	@echo "... sources/graph.s"
+	@echo "... sources/heap.o"
+	@echo "... sources/heap.i"
+	@echo "... sources/heap.s"
 	@echo "... sources/kruskal.o"
 	@echo "... sources/kruskal.i"
 	@echo "... sources/kruskal.s"

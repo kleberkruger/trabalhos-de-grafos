@@ -204,33 +204,6 @@ sources/heap.cpp.s:
 	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/heap.cpp.s
 .PHONY : sources/heap.cpp.s
 
-sources/kruskal.o: sources/kruskal.cpp.o
-
-.PHONY : sources/kruskal.o
-
-# target to build an object file
-sources/kruskal.cpp.o:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/kruskal.cpp.o
-.PHONY : sources/kruskal.cpp.o
-
-sources/kruskal.i: sources/kruskal.cpp.i
-
-.PHONY : sources/kruskal.i
-
-# target to preprocess a source file
-sources/kruskal.cpp.i:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/kruskal.cpp.i
-.PHONY : sources/kruskal.cpp.i
-
-sources/kruskal.s: sources/kruskal.cpp.s
-
-.PHONY : sources/kruskal.s
-
-# target to generate assembly for a file
-sources/kruskal.cpp.s:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/kruskal.cpp.s
-.PHONY : sources/kruskal.cpp.s
-
 sources/main.o: sources/main.cpp.o
 
 .PHONY : sources/main.o
@@ -276,9 +249,6 @@ help:
 	@echo "... sources/heap.o"
 	@echo "... sources/heap.i"
 	@echo "... sources/heap.s"
-	@echo "... sources/kruskal.o"
-	@echo "... sources/kruskal.i"
-	@echo "... sources/kruskal.s"
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"

@@ -12,7 +12,7 @@
 
 #include "heap.h"
 
-ArrayHeap::ArrayHeap(int n, int s) : nodes(n) {
+ArrayHeap::ArrayHeap(int n, int s) : nodes(n), position(n) {
     build(n, s);
 }
 
@@ -27,24 +27,34 @@ void ArrayHeap::build(int n, int s) {
 
 int ArrayHeap::extractMin() {
     int minIndex = 0;
-    for (int i = 1; i < size; ++i) {
+    for (int i = 1; i < size; i++) {
         if (nodes[i].value < nodes[minIndex].value) {
             minIndex = i;
         }
     }
 
     int min = nodes[minIndex].vertex;
-    nodes[minIndex] = nodes[--size];
+    swap(minIndex, --size);
 
     return min;
 }
 
 void ArrayHeap::decreaseKey(unsigned long index, float value) {
-    nodes[index].value = value;
+    nodes[find(index)].value = value;
 }
 
 bool ArrayHeap::empty() {
     return size == 0;
+}
+
+int ArrayHeap::find(int index) {
+    return position[index];
+}
+
+void ArrayHeap::swap(int e1, int e2) {
+    auto aux = nodes[e1];
+    nodes[e1] = nodes[e2];
+    nodes[e2] = aux;
 }
 
 BinaryHeap::BinaryHeap(int n, int s) : nodes(n) {
@@ -74,9 +84,11 @@ int BinaryHeap::extractMin() {
 }
 
 void BinaryHeap::decreaseKey(unsigned long index, float value) {
+    std::cout << "v" << index << " => " << nodes[index].value << " => " << value << std::endl;
     if (nodes[index].value < value) {
         throw std::invalid_argument("Decrease Error!");
     }
+
 
     nodes[index].value = value;
 

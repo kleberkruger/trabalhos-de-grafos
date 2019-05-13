@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/sources/disjoint_set.cpp" "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles/mst.dir/sources/disjoint_set.cpp.o"
-  "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/sources/graph.cpp" "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles/mst.dir/sources/graph.cpp.o"
-  "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/sources/heap.cpp" "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles/mst.dir/sources/heap.cpp.o"
-  "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/sources/main.cpp" "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles/mst.dir/sources/main.cpp.o"
+  "/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/sources/disjoint_set.cpp" "/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles/mst.dir/sources/disjoint_set.cpp.o"
+  "/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/sources/graph.cpp" "/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles/mst.dir/sources/graph.cpp.o"
+  "/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/sources/heap.cpp" "/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles/mst.dir/sources/heap.cpp.o"
+  "/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/sources/main.cpp" "/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles/mst.dir/sources/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

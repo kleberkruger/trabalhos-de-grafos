@@ -15,6 +15,10 @@
 
 
 #include <vector>
+#include <limits>
+#include <iostream>
+#include <stdexcept>
+#include <algorithm>
 
 class Heap {
 
@@ -46,8 +50,11 @@ public:
 
     bool empty() override;
 
+    int find(int index);
+
 protected:
 
+    void swap(int e1, int e2);
 
 private:
 
@@ -55,6 +62,7 @@ private:
 
     std::vector<HeapNode> nodes;
     std::vector<HeapNode>::size_type size;
+    std::vector<std::vector<HeapNode>::size_type> position;
 };
 
 class BinaryHeap : public Heap {

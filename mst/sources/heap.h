@@ -112,4 +112,47 @@ private:
 };
 
 
+class FibHeap : public Heap(){
+public:
+
+    struct node { 
+        node* parent; // Parent pointer 
+        node* child; // Child pointer 
+        node* left; // Pointer to the node on the left 
+        node* right; // Pointer to the node on the right 
+        int key; // Value of the node 
+        int degree; // Degree of the node 
+        char mark; // Black or white mark of the node 
+        char c; // Flag for assisting in the Find node function 
+    }; 
+
+
+    FibHeap(int n, int s);
+
+
+    void insertion(int val) 
+
+    int extractMin();
+
+    void decreaseKey(struct node* found, int val);
+
+    bool empty() override;
+
+    int find(struct node* mini, int old_val, int val);
+
+    protected:
+
+        void swap(int e1, int e2);
+
+    private:
+        void Cut(struct node* found, struct node* temp);
+        void Cascase_cut(struct node* temp);
+        void heapfy();
+
+
+        void build(int n, int s);
+
+        int no_of_nodes = 0;
+    };
+
 #endif //MST_HEAP_H

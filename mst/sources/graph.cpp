@@ -88,10 +88,10 @@ double Graph::mst(const Graph &graph, Graph &mst, int version) {
             total = kruskalIngenuo(graph, mst);
             break;
         case 1:
-            total = kruskal<BlogDisjointSet>(graph, mst); // 1:13
+            total = kruskal<FastUnionFind>(graph, mst); // 1:13
             break;
         case 2:
-            total = kruskal<UnionFindDisjointSet>(graph, mst); // 1:15
+            total = kruskal<UnionFind>(graph, mst); // 1:15
             break;
         case 3:
             total = prim<ArrayHeap>(graph, mst); // 1:15

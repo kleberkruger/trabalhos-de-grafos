@@ -123,32 +123,167 @@ mst/fast:
 	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/build
 .PHONY : mst/fast
 
-sources/disjoint_set.o: sources/disjoint_set.cpp.o
+sources/arrayheap.o: sources/arrayheap.cpp.o
 
-.PHONY : sources/disjoint_set.o
+.PHONY : sources/arrayheap.o
 
 # target to build an object file
-sources/disjoint_set.cpp.o:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/disjoint_set.cpp.o
-.PHONY : sources/disjoint_set.cpp.o
+sources/arrayheap.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/arrayheap.cpp.o
+.PHONY : sources/arrayheap.cpp.o
 
-sources/disjoint_set.i: sources/disjoint_set.cpp.i
+sources/arrayheap.i: sources/arrayheap.cpp.i
 
-.PHONY : sources/disjoint_set.i
+.PHONY : sources/arrayheap.i
 
 # target to preprocess a source file
-sources/disjoint_set.cpp.i:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/disjoint_set.cpp.i
-.PHONY : sources/disjoint_set.cpp.i
+sources/arrayheap.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/arrayheap.cpp.i
+.PHONY : sources/arrayheap.cpp.i
 
-sources/disjoint_set.s: sources/disjoint_set.cpp.s
+sources/arrayheap.s: sources/arrayheap.cpp.s
 
-.PHONY : sources/disjoint_set.s
+.PHONY : sources/arrayheap.s
 
 # target to generate assembly for a file
-sources/disjoint_set.cpp.s:
-	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/disjoint_set.cpp.s
-.PHONY : sources/disjoint_set.cpp.s
+sources/arrayheap.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/arrayheap.cpp.s
+.PHONY : sources/arrayheap.cpp.s
+
+sources/arrayset.o: sources/arrayset.cpp.o
+
+.PHONY : sources/arrayset.o
+
+# target to build an object file
+sources/arrayset.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/arrayset.cpp.o
+.PHONY : sources/arrayset.cpp.o
+
+sources/arrayset.i: sources/arrayset.cpp.i
+
+.PHONY : sources/arrayset.i
+
+# target to preprocess a source file
+sources/arrayset.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/arrayset.cpp.i
+.PHONY : sources/arrayset.cpp.i
+
+sources/arrayset.s: sources/arrayset.cpp.s
+
+.PHONY : sources/arrayset.s
+
+# target to generate assembly for a file
+sources/arrayset.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/arrayset.cpp.s
+.PHONY : sources/arrayset.cpp.s
+
+sources/binaryheap.o: sources/binaryheap.cpp.o
+
+.PHONY : sources/binaryheap.o
+
+# target to build an object file
+sources/binaryheap.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/binaryheap.cpp.o
+.PHONY : sources/binaryheap.cpp.o
+
+sources/binaryheap.i: sources/binaryheap.cpp.i
+
+.PHONY : sources/binaryheap.i
+
+# target to preprocess a source file
+sources/binaryheap.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/binaryheap.cpp.i
+.PHONY : sources/binaryheap.cpp.i
+
+sources/binaryheap.s: sources/binaryheap.cpp.s
+
+.PHONY : sources/binaryheap.s
+
+# target to generate assembly for a file
+sources/binaryheap.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/binaryheap.cpp.s
+.PHONY : sources/binaryheap.cpp.s
+
+sources/disjointset.o: sources/disjointset.cpp.o
+
+.PHONY : sources/disjointset.o
+
+# target to build an object file
+sources/disjointset.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/disjointset.cpp.o
+.PHONY : sources/disjointset.cpp.o
+
+sources/disjointset.i: sources/disjointset.cpp.i
+
+.PHONY : sources/disjointset.i
+
+# target to preprocess a source file
+sources/disjointset.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/disjointset.cpp.i
+.PHONY : sources/disjointset.cpp.i
+
+sources/disjointset.s: sources/disjointset.cpp.s
+
+.PHONY : sources/disjointset.s
+
+# target to generate assembly for a file
+sources/disjointset.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/disjointset.cpp.s
+.PHONY : sources/disjointset.cpp.s
+
+sources/fastunionfind.o: sources/fastunionfind.cpp.o
+
+.PHONY : sources/fastunionfind.o
+
+# target to build an object file
+sources/fastunionfind.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/fastunionfind.cpp.o
+.PHONY : sources/fastunionfind.cpp.o
+
+sources/fastunionfind.i: sources/fastunionfind.cpp.i
+
+.PHONY : sources/fastunionfind.i
+
+# target to preprocess a source file
+sources/fastunionfind.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/fastunionfind.cpp.i
+.PHONY : sources/fastunionfind.cpp.i
+
+sources/fastunionfind.s: sources/fastunionfind.cpp.s
+
+.PHONY : sources/fastunionfind.s
+
+# target to generate assembly for a file
+sources/fastunionfind.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/fastunionfind.cpp.s
+.PHONY : sources/fastunionfind.cpp.s
+
+sources/fibonacciheap.o: sources/fibonacciheap.cpp.o
+
+.PHONY : sources/fibonacciheap.o
+
+# target to build an object file
+sources/fibonacciheap.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/fibonacciheap.cpp.o
+.PHONY : sources/fibonacciheap.cpp.o
+
+sources/fibonacciheap.i: sources/fibonacciheap.cpp.i
+
+.PHONY : sources/fibonacciheap.i
+
+# target to preprocess a source file
+sources/fibonacciheap.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/fibonacciheap.cpp.i
+.PHONY : sources/fibonacciheap.cpp.i
+
+sources/fibonacciheap.s: sources/fibonacciheap.cpp.s
+
+.PHONY : sources/fibonacciheap.s
+
+# target to generate assembly for a file
+sources/fibonacciheap.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/fibonacciheap.cpp.s
+.PHONY : sources/fibonacciheap.cpp.s
 
 sources/graph.o: sources/graph.cpp.o
 
@@ -204,6 +339,33 @@ sources/heap.cpp.s:
 	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/heap.cpp.s
 .PHONY : sources/heap.cpp.s
 
+sources/listset.o: sources/listset.cpp.o
+
+.PHONY : sources/listset.o
+
+# target to build an object file
+sources/listset.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/listset.cpp.o
+.PHONY : sources/listset.cpp.o
+
+sources/listset.i: sources/listset.cpp.i
+
+.PHONY : sources/listset.i
+
+# target to preprocess a source file
+sources/listset.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/listset.cpp.i
+.PHONY : sources/listset.cpp.i
+
+sources/listset.s: sources/listset.cpp.s
+
+.PHONY : sources/listset.s
+
+# target to generate assembly for a file
+sources/listset.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/listset.cpp.s
+.PHONY : sources/listset.cpp.s
+
 sources/main.o: sources/main.cpp.o
 
 .PHONY : sources/main.o
@@ -231,6 +393,33 @@ sources/main.cpp.s:
 	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/main.cpp.s
 .PHONY : sources/main.cpp.s
 
+sources/unionfind.o: sources/unionfind.cpp.o
+
+.PHONY : sources/unionfind.o
+
+# target to build an object file
+sources/unionfind.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/unionfind.cpp.o
+.PHONY : sources/unionfind.cpp.o
+
+sources/unionfind.i: sources/unionfind.cpp.i
+
+.PHONY : sources/unionfind.i
+
+# target to preprocess a source file
+sources/unionfind.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/unionfind.cpp.i
+.PHONY : sources/unionfind.cpp.i
+
+sources/unionfind.s: sources/unionfind.cpp.s
+
+.PHONY : sources/unionfind.s
+
+# target to generate assembly for a file
+sources/unionfind.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/unionfind.cpp.s
+.PHONY : sources/unionfind.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -240,18 +429,39 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... mst"
-	@echo "... sources/disjoint_set.o"
-	@echo "... sources/disjoint_set.i"
-	@echo "... sources/disjoint_set.s"
+	@echo "... sources/arrayheap.o"
+	@echo "... sources/arrayheap.i"
+	@echo "... sources/arrayheap.s"
+	@echo "... sources/arrayset.o"
+	@echo "... sources/arrayset.i"
+	@echo "... sources/arrayset.s"
+	@echo "... sources/binaryheap.o"
+	@echo "... sources/binaryheap.i"
+	@echo "... sources/binaryheap.s"
+	@echo "... sources/disjointset.o"
+	@echo "... sources/disjointset.i"
+	@echo "... sources/disjointset.s"
+	@echo "... sources/fastunionfind.o"
+	@echo "... sources/fastunionfind.i"
+	@echo "... sources/fastunionfind.s"
+	@echo "... sources/fibonacciheap.o"
+	@echo "... sources/fibonacciheap.i"
+	@echo "... sources/fibonacciheap.s"
 	@echo "... sources/graph.o"
 	@echo "... sources/graph.i"
 	@echo "... sources/graph.s"
 	@echo "... sources/heap.o"
 	@echo "... sources/heap.i"
 	@echo "... sources/heap.s"
+	@echo "... sources/listset.o"
+	@echo "... sources/listset.i"
+	@echo "... sources/listset.s"
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"
+	@echo "... sources/unionfind.o"
+	@echo "... sources/unionfind.i"
+	@echo "... sources/unionfind.s"
 .PHONY : help
 
 

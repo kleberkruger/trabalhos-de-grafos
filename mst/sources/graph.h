@@ -13,11 +13,20 @@
 #ifndef MST_GRAPH_H
 #define MST_GRAPH_H
 
+#include <iostream>
 #include <list>
 #include <vector>
-#include <iostream>
-#include "disjoint_set.h"
+
+#include "disjointset.h"
+#include "arrayset.h"
+#include "listset.h"
+#include "unionfind.h"
+#include "fastunionfind.h"
+
 #include "heap.h"
+#include "arrayheap.h"
+#include "binaryheap.h"
+#include "fibonacciheap.h"
 
 struct Vertex;
 struct Edge;
@@ -60,111 +69,40 @@ struct EdgeTo {
 class Graph {
 public:
 
-    /**
-     *
-     * @param n
-     * @param m
-     */
     explicit Graph(int n = 0, int m = 0);
 
-    /**
-     *
-     * @param orig
-     */
     Graph(const Graph &orig);
 
-    /**
-     *
-     */
     virtual ~Graph();
 
-    /**
-     *
-     * @param id
-     */
     void insertVertex(int id);
 
-    /**
-     *
-     * @param v1
-     * @param v2
-     * @param weight
-     */
     void insertEdge(int v1, int v2, float weight);
 
-    /**
-     *
-     */
     void clearEdges();
 
-    /**
-     *
-     */
     void clearAll();
 
-    /**
-     *
-     */
     void print();
 
-    /**
-     *
-     * @param graph
-     * @param mst
-     * @param version
-     * @return
-     */
     static double mst(const Graph &graph, Graph &mst, int version = DEFAULT_VERSION);
 
-    /**
-     *
-     * @param graph
-     * @param mst
-     * @return
-     */
     static double kruskalIngenuo(const Graph &graph, Graph &mst);
 
-    /**
-     *
-     * @tparam DS
-     * @param graph
-     * @param mst
-     * @return
-     */
-    template <class DS>
+    template<class DS>
     static double kruskal(const Graph &graph, Graph &mst);
 
-    /**
-     *
-     * @tparam DS
-     * @param graph
-     * @param mst
-     * @return
-     */
-    template <class DS>
+    template<class DS>
     static double prim(const Graph &graph, Graph &mst);
+
+    const std::vector<Vertex> &getAdjacencyList() const;
+
+    const std::list<EdgeTo> &getAdjacencyList(int vertex) const;
+
+    float *getMinAdjacencyMatrix() const;
 
     std::vector<Vertex> vertices;
     std::vector<Edge> edges;
-
-    /**
-     *
-     * @return
-     */
-    const std::vector<Vertex> &getAdjacencyList() const;
-
-    /**
-     *
-     * @param vertex
-     * @return
-     */
-    const std::list<EdgeTo> &getAdjacencyList(int vertex) const;
-
-    /**
-     *
-     * @return
-     */
-    float *getMinAdjacencyMatrix() const;
 
 private:
 

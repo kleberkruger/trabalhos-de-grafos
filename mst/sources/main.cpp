@@ -14,6 +14,7 @@
 #include <fstream>
 #include <unistd.h>
 #include "graph.h"
+#include "arrayheap.h"
 
 enum Algorithm {
     NONE = 0, KRUSKAL = 1, PRIM = 2

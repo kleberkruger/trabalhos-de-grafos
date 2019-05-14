@@ -11,12 +11,47 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5e5451a-2862-42dd-9aaa-d0fa2053bc0e" name="Default Changelist" comment="">
+    <list default="true" id="85a8c03b-a15b-4c9c-bbc3-6eb2994cdc73" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/in_ja9847.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/arrayheap.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/arrayheap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/arrayset.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/arrayset.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/binaryheap.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/binaryheap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/fastunionfind.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/fastunionfind.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/fibonacciheap.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/fibonacciheap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/listset.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/listset.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/unionfind.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/unionfind.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/kleberkruger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/kleberkruger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/mst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mst.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mst.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/database/in_cormen.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/kruger_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/database/in_kruger.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/kruger_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lu980_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/database/in_lu980.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lu980_out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/out.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/disjoint_set.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/disjointset.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/disjoint_set.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/disjointset.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/heap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/heap.cpp" afterDir="false" />
@@ -35,7 +70,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -43,25 +78,48 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sources/kruskal.cpp" />
-        <option value="$PROJECT_DIR$/sources/kruskal.h" />
-        <option value="$PROJECT_DIR$/database/kruger_in.txt" />
         <option value="$PROJECT_DIR$/sources/disjoint_set.h" />
         <option value="$PROJECT_DIR$/sources/disjoint_set.cpp" />
-        <option value="$PROJECT_DIR$/sources/graph.h" />
+        <option value="$PROJECT_DIR$/sources/array_disjoint_set.cpp" />
+        <option value="$PROJECT_DIR$/sources/array_disjoint_set.h" />
+        <option value="$PROJECT_DIR$/sources/binary_heap.cpp" />
+        <option value="$PROJECT_DIR$/sources/binary_heap.h" />
+        <option value="$PROJECT_DIR$/sources/fast_union_find_disjoint_set.cpp" />
+        <option value="$PROJECT_DIR$/sources/fast_union_find_disjoint_set.h" />
+        <option value="$PROJECT_DIR$/sources/fibonacci_heap.cpp" />
+        <option value="$PROJECT_DIR$/sources/fibonacci_heap.h" />
+        <option value="$PROJECT_DIR$/sources/union_find_disjoint_set.cpp" />
+        <option value="$PROJECT_DIR$/sources/union_find_disjoint_set.h" />
         <option value="$PROJECT_DIR$/sources/graph.cpp" />
+        <option value="$PROJECT_DIR$/sources/array_heap.h" />
+        <option value="$PROJECT_DIR$/sources/array_heap.cpp" />
+        <option value="$PROJECT_DIR$/sources/binaryheap.cpp" />
+        <option value="$PROJECT_DIR$/sources/binaryheap.h" />
+        <option value="$PROJECT_DIR$/sources/heap.cpp" />
+        <option value="$PROJECT_DIR$/sources/arrayheap.cpp" />
         <option value="$PROJECT_DIR$/sources/heap.h" />
         <option value="$PROJECT_DIR$/sources/main.cpp" />
-        <option value="$PROJECT_DIR$/sources/heap.cpp" />
+        <option value="$PROJECT_DIR$/sources/listset.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/sources/graph.h" />
+        <option value="$PROJECT_DIR$/sources/listset.h" />
+        <option value="$PROJECT_DIR$/sources/unionfind.cpp" />
+        <option value="$PROJECT_DIR$/sources/fastunionfind.h" />
+        <option value="$PROJECT_DIR$/sources/fastunionfind.cpp" />
+        <option value="$PROJECT_DIR$/sources/unionfind.h" />
+        <option value="$PROJECT_DIR$/sources/arrayset.cpp" />
+        <option value="$PROJECT_DIR$/sources/disjointset.cpp" />
+        <option value="$PROJECT_DIR$/sources/arrayheap.h" />
+        <option value="$PROJECT_DIR$/sources/disjointset.h" />
+        <option value="$PROJECT_DIR$/sources/arrayset.h" />
       </list>
     </option>
   </component>
-  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1754" />
-    <option name="y" value="50" />
-    <option name="width" value="1680" />
-    <option name="height" value="984" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1684" />
+    <option name="y" value="24" />
+    <option name="width" value="2510" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -71,7 +129,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -93,15 +150,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
@@ -127,7 +182,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="mst" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="prim 1 database/lu980_in.txt database/lu980_out.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mst" TARGET_NAME="mst" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="mst" RUN_TARGET_NAME="mst">
+    <configuration name="mst" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="prim 1 database/in_lu980.txt database/out_lu980.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mst" TARGET_NAME="mst" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="mst" RUN_TARGET_NAME="mst">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -139,178 +194,234 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d5e5451a-2862-42dd-9aaa-d0fa2053bc0e" name="Default Changelist" comment="" />
-      <created>1557558257870</created>
+      <changelist id="85a8c03b-a15b-4c9c-bbc3-6eb2994cdc73" name="Default Changelist" comment="" />
+      <created>1557813207825</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1557558257870</updated>
-      <workItem from="1557558259306" duration="10204000" />
-      <workItem from="1557568853978" duration="9142000" />
-      <workItem from="1557658603744" duration="4409000" />
-      <workItem from="1557664353983" duration="25514000" />
+      <updated>1557813207825</updated>
+      <workItem from="1557813210727" duration="4227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49269000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="4227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1754" y="50" width="1680" height="984" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="CMake" weight="0.3295964" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.3295964" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295964" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295964" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295964" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3295964" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295964" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/lu980_in.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/kruger_in.txt">
+    <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="160">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/ja9847_in.txt" />
-    <entry file="file://$PROJECT_DIR$/../../mst_base5/sources/kruskal.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../mst_base5/sources/kruskal.h">
+    <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="143" column="9" selection-start-line="105" selection-start-column="4" selection-end-line="143" selection-end-column="9" />
+        <state relative-caret-position="160">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/ja9847_out.txt" />
-    <entry file="file://$PROJECT_DIR$/sources/disjoint_set.cpp">
+    <entry file="file://$PROJECT_DIR$/database/in_cormen.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/in_ja9847.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/ja9847_out.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/cormen_out.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/out_lu980.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/binaryheap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1328">
-          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        <state relative-caret-position="519">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/heap.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/binaryheap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <element signature="e#317#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding>
             <element signature="e#266#285#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/disjoint_set.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="52" column="23" lean-forward="true" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/kruskal.cpp">
+    <entry file="file://$PROJECT_DIR$/sources/heap.h">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/kruskal.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#312#329#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/in.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/out.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/kruger_out.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1106">
-          <caret line="176" lean-forward="true" selection-start-line="176" selection-end-line="176" />
-          <folding>
-            <element signature="e#266#285#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="80">
+          <caret line="5" column="194" selection-start-line="5" selection-start-column="194" selection-end-line="5" selection-end-column="194" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="182" column="77" lean-forward="true" selection-start-line="182" selection-start-column="77" selection-end-line="182" selection-end-column="77" />
+        <state relative-caret-position="424">
+          <caret line="96" column="25" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
+          <folding>
+            <element signature="e#3934#3944#0" expanded="true" />
+            <element signature="e#4422#4432#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/graph.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="63" column="6" lean-forward="true" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/heap.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        <state relative-caret-position="-650">
+          <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
           <folding>
-            <element signature="e#305#324#0" expanded="true" />
+            <element signature="e#307#326#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/heap.cpp">
+    <entry file="file://$PROJECT_DIR$/sources/listset.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="151" selection-start-line="151" selection-start-column="2" selection-end-line="153" selection-end-column="49" />
+        <state relative-caret-position="272">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/lu980_out.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/sources/listset.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/unionfind.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/fastunionfind.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/fastunionfind.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/unionfind.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <folding>
+            <element signature="e#315#332#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/arrayheap.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/disjointset.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/arrayset.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/arrayheap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/disjointset.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/arrayset.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding>
+            <element signature="e#313#330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

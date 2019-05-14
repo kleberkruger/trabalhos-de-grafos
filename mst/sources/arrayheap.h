@@ -14,7 +14,6 @@
 #define MST_ARRAYHEAP_H
 
 #include <vector>
-#include <limits>
 #include "heap.h"
 
 class ArrayHeap : public Heap {

@@ -170,54 +170,8 @@ double Graph::kruskal(const Graph &graph, Graph &mst) {
     return total;
 }
 
-// template<class DS>
-// double Graph::prim(const Graph &graph, Graph &mst) {
-//     mst = Graph(graph.vertices.size(), graph.vertices.size() - 1);
-
-//     double total = 0;
-
-//     DS ds(mst.vertices.size(), 0);
-
-//     std::vector<bool> verticesInDS(graph.vertices.size(), true);
-//     std::vector<int> parent(graph.vertices.size(), -1);
-//     std::vector<float> valuesInMST(graph.vertices.size(), std::numeric_limits<float>::infinity());
-
-//     valuesInMST[0] = 0;
-
-//     while (!ds.empty()) {
-//         Vertex u = graph.vertices[ds.extractMin()];
-//         verticesInDS[u.id] = false;
-//         std::cout << "ferrou u=" << u.id << std::endl;
-//         float w = 0;
-//         for (auto &e : u.adjacency) {
-//             int v = e.end;
-//             std::cout << "ferrou v=" << v << std::endl;
-//             if (verticesInDS[v] && e.weight < valuesInMST[v]) {
-//                 parent[v] = u.id;
-//                 ds.decreaseKey(v, e.weight);
-//                 valuesInMST[v] = e.weight;
-//                 w = e.weight;
-//             }
-//         }
-
-//         for (float f : valuesInMST) std::cout << f << " ";
-//         std::cout << std::endl;
-
-//         std::cout << "ferrou saida u=" << u.id << " w=" << w << std::endl;
-//         if (parent[u.id] != -1) {
-//             mst.insertVertex(u.id);
-//             mst.insertEdge(parent[u.id], u.id, w);
-//             total += w;
-//         }
-
-//     }
-
-//     return total;
-// }
-
 template<class DS>
 double Graph::prim(const Graph &graph, Graph &mst) {
-
     mst = Graph(graph.vertices.size(), graph.vertices.size() - 1);
 
     double total = 0;
@@ -226,37 +180,32 @@ double Graph::prim(const Graph &graph, Graph &mst) {
 
     std::vector<bool> verticesInDS(graph.vertices.size(), true);
     std::vector<int> parent(graph.vertices.size(), -1);
-    std::vector<float> valuesInMST(graph.vertices.size(), std::numeric_limits<float>::infinity());
+    std::vector<double> valuesInMST(graph.vertices.size(), std::numeric_limits<double>::infinity());
 
     valuesInMST[0] = 0;
 
     while (!ds.empty()) {
         Vertex u = graph.vertices[ds.extractMin()];
         verticesInDS[u.id] = false;
-        float w = 0;
         for (auto &e : u.adjacency) {
             int v = e.end;
-            std::cout << "u = " << u.id << std::endl;
+//            std::cout << "u = " << u.id << std::endl;
             if (verticesInDS[v] && e.weight < valuesInMST[v]) {
                 parent[v] = u.id;
-                std::cout << "v = " << v << std::endl; 
+//                std::cout << "v = " << v << std::endl;
                 ds.decreaseKey(v, e.weight);
                 valuesInMST[v] = e.weight;
-                w = e.weight;
             }
-            for(int i = 0; i < valuesInMST.size(); i++)
-                std::cout << valuesInMST[i] << " ";
-            std::cout << std::endl;
-        }   
+
+//            for(float i : valuesInMST) std::cout << i << " ";
+//            std::cout << std::endl;
+        }
 
         if (parent[u.id] != -1) {
             mst.insertVertex(u.id);
             mst.insertEdge(parent[u.id], u.id, valuesInMST[u.id]);
             total += valuesInMST[u.id];
-
-            // std::cout << "v" << parent[u.id] << " -> v" << u.id << " " << valuesInMST[u.id] << std::endl;
         }
-
     }
 
     return total;

@@ -12,7 +12,6 @@
 
 #include <iostream>
 #include <fstream>
-#include <cstring>
 #include <unistd.h>
 #include "graph.h"
 
@@ -57,10 +56,115 @@ void execute(Algorithm alg, int version, const std::string &inFilePath, const st
     outFile.close();
 }
 
-int main(int argc, char *argv[]) {
-    //chdir("/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst");
+void arrayHeapTest() {
 
-    std::cout << "Aqui" << std::endl;
+    ArrayHeap heap(11, 0);
+
+    heap.decreaseKey(1, 13);
+    heap.decreaseKey(2, 8);
+    heap.decreaseKey(3, 4);
+    heap.decreaseKey(4, 9);
+    heap.decreaseKey(5, 1);
+    heap.decreaseKey(6, 16);
+    heap.decreaseKey(7, 11);
+    heap.decreaseKey(8, 8);
+    heap.decreaseKey(9, 2);
+    heap.decreaseKey(10, 20);
+
+    heap.print();
+    std::cout << std::endl;
+
+    std::cout << "extractMin = " << heap.extractMin() << std::endl;
+    heap.print();
+    std::cout << std::endl;
+
+    heap.decreaseKey(10, 0);
+    heap.print();
+
+    std::cout << "extractMin = " << heap.extractMin() << std::endl;
+    heap.print();
+    std::cout << std::endl;
+
+    std::cout << "extractMin = " << heap.extractMin() << std::endl;
+    heap.print();
+    std::cout << std::endl;
+
+    std::cout << "extractMin = " << heap.extractMin() << std::endl;
+    heap.print();
+    std::cout << std::endl;
+
+    std::cout << "extractMin = " << heap.extractMin() << std::endl;
+    heap.print();
+    std::cout << std::endl;
+
+    std::cout << "extractMin = " << heap.extractMin() << std::endl;
+    heap.print();
+    std::cout << std::endl;
+
+    std::cout << "extractMin = " << heap.extractMin() << std::endl;
+    heap.print();
+    std::cout << std::endl;
+
+    std::cout << "extractMin = " << heap.extractMin() << std::endl;
+    heap.print();
+    std::cout << std::endl;
+
+    std::cout << "extractMin = " << heap.extractMin() << std::endl;
+    heap.print();
+    std::cout << std::endl;
+
+    std::cout << "extractMin = " << heap.extractMin() << std::endl;
+    heap.print();
+    std::cout << std::endl;
+
+    std::cout << "extractMin = " << heap.extractMin() << std::endl;
+    heap.print();
+    std::cout << std::endl;
+
+//    std::cout << "extractMin = " << heap.extractMin() << std::endl;
+//    heap.print();
+//    std::cout << std::endl;
+}
+
+void binaryHeapTest() {
+
+    BinaryHeap heap(11, 0);
+    std::cout << std::endl;
+
+    heap.decreaseKey(6, 16);
+    std::cout << std::endl;
+
+    heap.decreaseKey(9, 2);
+    std::cout << std::endl;
+
+    heap.decreaseKey(3, 1);
+    std::cout << std::endl;
+
+    heap.decreaseKey(1, 13);
+    std::cout << std::endl;
+
+    heap.decreaseKey(4, 9);
+    std::cout << std::endl;
+
+    heap.decreaseKey(2, 8);
+    std::cout << std::endl;
+
+    heap.decreaseKey(5, 1);
+    std::cout << std::endl;
+
+    heap.decreaseKey(8, 8);
+    std::cout << std::endl;
+
+    heap.decreaseKey(7, 11);
+    std::cout << std::endl;
+
+    heap.decreaseKey(10, 20);
+    std::cout << std::endl;
+}
+
+int main(int argc, char *argv[]) {
+    chdir("/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/grafos-t1-mst/mst");
+
     if (argc != 5) {
         throw std::invalid_argument("Run: <algorithm> <version> <filepath-in> <filepath-out>");
     }
@@ -69,6 +173,7 @@ int main(int argc, char *argv[]) {
                     strcasecmp(argv[1], "kruskal") == 0 ? KRUSKAL : NONE;
 
     execute(alg, std::atoi(argv[2]), argv[3], argv[4]); // NOLINT(cert-err34-c)
+//    binaryHeapTest();
 
     return EXIT_SUCCESS;
 }

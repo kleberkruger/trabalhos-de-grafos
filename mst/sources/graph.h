@@ -16,6 +16,8 @@
 #include <iostream>
 #include <list>
 #include <vector>
+#include <limits>
+#include <algorithm>
 
 #include "disjointset.h"
 #include "arrayset.h"

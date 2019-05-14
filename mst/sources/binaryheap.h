@@ -14,6 +14,7 @@
 #define MST_BINARYHEAP_H
 
 #include <vector>
+#include <limits>
 #include "heap.h"
 
 class BinaryHeap : public Heap {

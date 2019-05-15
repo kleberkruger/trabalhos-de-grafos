@@ -17,6 +17,25 @@
 
 class ListDisjointSet : public DisjointSet {
 public:
+
+    struct ListNode {
+        int id;
+        ListNode *parent;
+    };
+
+    explicit ListDisjointSet(int n);
+
+    int find(int x);
+
+    void join(int x, int y);
+
+    bool sameSet(int x, int y);
+
+private:
+
+    void makeSet();
+
+    std::vector<ListNode> nodes;
 };
 
 

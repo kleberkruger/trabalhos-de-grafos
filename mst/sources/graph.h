@@ -1,3 +1,5 @@
+#include <utility>
+
 /**
  * Algoritmos em Grafos (MO412)
  *
@@ -16,8 +18,6 @@
 #include <iostream>
 #include <list>
 #include <vector>
-#include <limits>
-#include <algorithm>
 
 #include "disjointset.h"
 #include "arrayset.h"
@@ -89,6 +89,16 @@ struct EdgeTo {
 class Graph {
 public:
 
+    struct MSTAlgorithm {
+        const std::string name;
+        int version;
+
+        double (*execute)(const Graph &graph, Graph &mst);
+
+        MSTAlgorithm(std::string name, const int version, double (*execute)(const Graph &, Graph &))
+                : name(std::move(name)), version(version), execute(execute) {}
+    };
+
     /**
      * Cria um grafo.
      *
@@ -148,7 +158,7 @@ public:
      * @param version
      * @return
      */
-    static double mst(const Graph &graph, Graph &mst, int version = DEFAULT_VERSION);
+    static double mst(const Graph &graph, Graph &mst, int alg, int version);
 
     /**
      * Executa o algoritmo ingênuo de Kruskal no grafo.
@@ -169,6 +179,15 @@ public:
      */
     template<class DS>
     static double kruskal(const Graph &graph, Graph &mst);
+
+    /**
+     * Executa o algoritmo ingênuo de Kruskal no grafo.
+     *
+     * @param graph
+     * @param mst
+     * @return
+     */
+    static double primIngenuo(const Graph &graph, Graph &mst);
 
     /**
      * Executa o algoritmo de Prim no grafo conforme a estrutura recebida.
@@ -198,7 +217,7 @@ public:
 
     /**
      * Retorna a matriz de adjacência do grafo.
-     * 
+     *
      * @return
      */
     float *getMinAdjacencyMatrix() const;
@@ -208,10 +227,9 @@ public:
 
 private:
 
-    const static int DEFAULT_VERSION = 0;
+    const static int DEFAULT_VERSION = 2;
 
     float *minAdjacencyMatrix;
 };
-
 
 #endif //MST_GRAPH_H

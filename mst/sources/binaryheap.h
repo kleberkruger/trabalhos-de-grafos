@@ -14,7 +14,6 @@
 #define MST_BINARYHEAP_H
 
 #include <vector>
-#include <limits>
 #include "heap.h"
 
 class BinaryHeap : public Heap {
@@ -27,13 +26,13 @@ public:
 
     BinaryHeap(int n, int s);
 
-    int extractMin();
+    int extractMin() override;
 
-    void decreaseKey(std::vector<HeapNode>::size_type index, float value);
+    void decreaseKey(std::vector<HeapNode>::size_type index, float value) override;
 
     void print();
 
-    inline bool empty() { return size == 0; }
+    inline bool empty() override { return size == 0; }
 
     inline std::vector<HeapNode>::size_type parent(std::vector<HeapNode>::size_type index) {
         return (index - 1) / 2;

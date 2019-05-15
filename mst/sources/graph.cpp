@@ -1,3 +1,5 @@
+#include <utility>
+
 /**
  * Algoritmos em Grafos (MO412)
  *
@@ -11,6 +13,7 @@
  */
 
 #include "graph.h"
+
 
 Vertex::Vertex(int id) : id(id) {}
 
@@ -77,34 +80,22 @@ void Graph::print() {
     std::cout << "==================================================" << std::endl;
 }
 
-double Graph::mst(const Graph &graph, Graph &mst, int version) {
+double Graph::mst(const Graph &graph, Graph &mst, int alg, int version) {
+    static MSTAlgorithm kruskals[] = {
+            MSTAlgorithm("Kruskal Ingênuo", 0, Graph::kruskalIngenuo),
+            MSTAlgorithm("Kruskal with UnionFind", 1, Graph::kruskal<UnionFind>),
+            MSTAlgorithm("Kruskal with FastUnionFind", 2, Graph::kruskal<FastUnionFind>),
+    };
+    static MSTAlgorithm prims[] = {
+            MSTAlgorithm("Prim Ingênuo", 0, Graph::primIngenuo),
+            MSTAlgorithm("Prim with ArrayHeap", 1, Graph::prim<ArrayHeap>),
+            MSTAlgorithm("Prim with BinaryHeap", 2, Graph::prim<BinaryHeap>),
+            MSTAlgorithm("Prim with FibonacciHeap", 3, Graph::prim<FibonacciHeap>),
+    };
+    static std::vector<MSTAlgorithm *> algorithms = {kruskals, prims};
 
-    std::cout << "Executando algoritmo: " << version << std::endl;
-    double total = 0;
-
-    switch (version) {
-        case 0:
-//            total = kruskal<ArrayDisjointSet>(graph, mst);
-            total = kruskalIngenuo(graph, mst);
-            break;
-        case 1:
-            total = kruskal<FastUnionFind>(graph, mst); // 1:13
-            break;
-        case 2:
-            total = kruskal<UnionFind>(graph, mst); // 1:15
-            break;
-        case 3:
-            total = prim<ArrayHeap>(graph, mst); // 1:15
-            break;
-        case 4:
-            total = prim<BinaryHeap>(graph, mst); // 1:15
-            break;
-        case 5:
-            std::cout << "aaaaa" << std::endl;
-            total = prim<FibonacciHeap>(graph, mst); // 1:15
-            break;
-    }
-    return total;
+    std::cout << "Running: \"" << algorithms[alg][version].name << "\" version " << algorithms[alg][version].version << std::endl;
+    return algorithms[alg][version].execute(graph, mst);
 }
 
 double Graph::kruskalIngenuo(const Graph &graph, Graph &mst) {
@@ -113,6 +104,7 @@ double Graph::kruskalIngenuo(const Graph &graph, Graph &mst) {
 
     std::vector<bool> usedEdges(graph.edges.size());
     std::vector<int> color(graph.vertices.size());
+
     float total = 0;
 
     for (int i = 0; i < graph.vertices.size(); i++) {
@@ -120,6 +112,7 @@ double Graph::kruskalIngenuo(const Graph &graph, Graph &mst) {
     }
 
     while (true) {
+
         int u = -1, v = -1, id = -1;
         float minWeight = std::numeric_limits<float>::infinity();
 
@@ -171,47 +164,89 @@ double Graph::kruskal(const Graph &graph, Graph &mst) {
     return total;
 }
 
-template<class DS>
-double Graph::prim(const Graph &graph, Graph &mst) {
-    mst = Graph(graph.vertices.size(), graph.vertices.size() - 1);
+double Graph::primIngenuo(const Graph &graph, Graph &mst) {
+    mst = graph;
+    mst.clearEdges();
+
+    std::vector<float> parent(graph.vertices.size());
+
+    for (auto &i : parent) i = -1;
+    parent[0] = 0;
 
     double total = 0;
 
+    while (true) {
+
+        float minWeight = std::numeric_limits<float>::infinity();
+        int v0, w0;
+
+        for (auto &w : graph.vertices) {
+            if (parent[w.id] == -1) {
+                for (auto &e : w.adjacency) {
+                    int v = e.end;
+                    if (parent[v] != -1 && minWeight > e.weight) {
+                        minWeight = e.weight;
+                        v0 = v, w0 = w.id;
+                    }
+                }
+            }
+        }
+
+        if (minWeight == std::numeric_limits<float>::infinity())
+            break;
+
+        parent[w0] = v0;
+        mst.insertEdge(w0, v0, minWeight);
+        total += minWeight;
+    }
+
+    return total;
+}
+
+template<class DS>
+double Graph::prim(const Graph &graph, Graph &mst) {
+    struct PrimVertex {
+        bool isPresent;
+        int parent;
+        double value;
+    };
+
+    mst = Graph(graph.vertices.size(), graph.vertices.size() - 1);
+
+    std::vector<PrimVertex> vertices(graph.vertices.size());
     DS ds(mst.vertices.size(), 0);
 
-    std::vector<bool> verticesInDS(graph.vertices.size(), true);
-    std::vector<int> parent(graph.vertices.size(), -1);
-    std::vector<double> valuesInMST(graph.vertices.size(), std::numeric_limits<double>::infinity());
+    for (auto &v : vertices) {
+        v.isPresent = true;
+        v.parent = -1;
+        v.value = std::numeric_limits<double>::infinity();
+    }
+    vertices[0].value = 0;
 
-    valuesInMST[0] = 0;
+    double total = 0;
 
     while (!ds.empty()) {
-        
+
         Vertex u = graph.vertices[ds.extractMin()];
-        verticesInDS[u.id] = false;
+        vertices[u.id].isPresent = false;
+
         for (auto &e : u.adjacency) {
             int v = e.end;
-//            std::cout << "u = " << u.id << std::endl;
-            if (verticesInDS[v] && e.weight < valuesInMST[v]) {
-                parent[v] = u.id;
-//                std::cout << "v = " << v << std::endl;
-                
+            if (vertices[v].isPresent && e.weight < vertices[v].value) {
+                vertices[v].parent = u.id;
+
                 ds.decreaseKey(v, e.weight);
-
-                valuesInMST[v] = e.weight;
+                vertices[v].value = e.weight;
             }
-
-//            for(float i : valuesInMST) std::cout << i << " ";
-//            std::cout << std::endl;
         }
-        
-        if (parent[u.id] != -1) {
+
+        if (vertices[u.id].parent != -1) {
             mst.insertVertex(u.id);
-            mst.insertEdge(parent[u.id], u.id, valuesInMST[u.id]);
-            total += valuesInMST[u.id];
+            mst.insertEdge(vertices[u.id].parent, u.id, vertices[u.id].value);
+            total += vertices[u.id].value;
         }
     }
-    std::cout << total << std::endl;
+
     return total;
 }
 

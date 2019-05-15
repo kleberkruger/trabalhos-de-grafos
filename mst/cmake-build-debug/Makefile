@@ -258,6 +258,33 @@ sources/fastunionfind.cpp.s:
 	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/fastunionfind.cpp.s
 .PHONY : sources/fastunionfind.cpp.s
 
+sources/fibheap.o: sources/fibheap.cpp.o
+
+.PHONY : sources/fibheap.o
+
+# target to build an object file
+sources/fibheap.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/fibheap.cpp.o
+.PHONY : sources/fibheap.cpp.o
+
+sources/fibheap.i: sources/fibheap.cpp.i
+
+.PHONY : sources/fibheap.i
+
+# target to preprocess a source file
+sources/fibheap.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/fibheap.cpp.i
+.PHONY : sources/fibheap.cpp.i
+
+sources/fibheap.s: sources/fibheap.cpp.s
+
+.PHONY : sources/fibheap.s
+
+# target to generate assembly for a file
+sources/fibheap.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/fibheap.cpp.s
+.PHONY : sources/fibheap.cpp.s
+
 sources/fibonacciheap.o: sources/fibonacciheap.cpp.o
 
 .PHONY : sources/fibonacciheap.o
@@ -444,6 +471,9 @@ help:
 	@echo "... sources/fastunionfind.o"
 	@echo "... sources/fastunionfind.i"
 	@echo "... sources/fastunionfind.s"
+	@echo "... sources/fibheap.o"
+	@echo "... sources/fibheap.i"
+	@echo "... sources/fibheap.s"
 	@echo "... sources/fibonacciheap.o"
 	@echo "... sources/fibonacciheap.i"
 	@echo "... sources/fibonacciheap.s"

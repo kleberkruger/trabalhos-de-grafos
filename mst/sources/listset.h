@@ -13,15 +13,11 @@
 #ifndef MST_LISTSET_H
 #define MST_LISTSET_H
 
+#include <list>
 #include "disjointset.h"
 
 class ListDisjointSet : public DisjointSet {
 public:
-
-    struct ListNode {
-        int id;
-        ListNode *parent;
-    };
 
     explicit ListDisjointSet(int n);
 
@@ -34,8 +30,8 @@ public:
 private:
 
     void makeSet();
-
-    std::vector<ListNode> nodes;
+    std::vector<int> parent;
+    std::vector<std::list<int>> children;
 };
 
 

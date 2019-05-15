@@ -90,8 +90,8 @@ double Graph::mst(const Graph &graph, Graph &mst, int alg, int version) {
             MSTAlgorithm("Prim Ingênuo", 0, Graph::primIngenuo),
             MSTAlgorithm("Prim with ArrayHeap", 1, Graph::prim<ArrayHeap>),
             MSTAlgorithm("Prim with BinaryHeap", 2, Graph::prim<BinaryHeap>),
-//            MSTAlgorithm("Prim with FibonacciHeap", 3, Graph::prim<FibonacciHeap>),
-            MSTAlgorithm("Prim with FibonacciHeap", 3, Graph::prim<fib_heap::FibHeap>),
+            MSTAlgorithm("Prim with FibonacciHeap", 3, Graph::prim<FibonacciHeap>),
+            // MSTAlgorithm("Prim with FibonacciHeap", 3, Graph::prim<fib_heap::FibHeap>),
     };
     static std::vector<MSTAlgorithm *> algorithms = {kruskals, prims};
 

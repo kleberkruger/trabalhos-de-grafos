@@ -13,6 +13,7 @@
 #include <iostream>
 #include <fstream>
 #include <unistd.h>
+#include <cstring>
 #include "graph.h"
 #include "arrayheap.h"
 

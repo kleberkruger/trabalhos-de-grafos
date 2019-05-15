@@ -83,6 +83,11 @@ int FibonacciHeap::extractMin(){
         throw std::invalid_argument("Heap is empty");
     }
 
+    if(no_of_nodes == 1){
+        no_of_nodes --;
+        return root->pos;
+    }
+
     HeapNode* temp = root;
     HeapNode* pntr; 
     pntr = temp; 

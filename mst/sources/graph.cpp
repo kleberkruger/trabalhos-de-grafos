@@ -83,8 +83,9 @@ void Graph::print() {
 double Graph::mst(const Graph &graph, Graph &mst, int alg, int version) {
     static MSTAlgorithm kruskals[] = {
             MSTAlgorithm("Kruskal Ingênuo", 0, Graph::kruskalIngenuo),
-            MSTAlgorithm("Kruskal with UnionFind", 1, Graph::kruskal<UnionFind>),
-            MSTAlgorithm("Kruskal with FastUnionFind", 2, Graph::kruskal<FastUnionFind>),
+            MSTAlgorithm("Kruskal with Lists", 1, Graph::kruskal<ListDisjointSet>),
+            MSTAlgorithm("Kruskal with UnionFind", 2, Graph::kruskal<UnionFind>),
+            MSTAlgorithm("Kruskal with FastUnionFind", 3, Graph::kruskal<FastUnionFind>),
     };
     static MSTAlgorithm prims[] = {
             MSTAlgorithm("Prim Ingênuo", 0, Graph::primIngenuo),
@@ -179,7 +180,7 @@ double Graph::primIngenuo(const Graph &graph, Graph &mst) {
     while (true) {
 
         float minWeight = std::numeric_limits<float>::infinity();
-        int v0, w0;
+        int v0 = -1, w0 = -1;
 
         for (auto &w : graph.vertices) {
             if (parent[w.id] == -1) {
@@ -254,6 +255,6 @@ double Graph::prim(const Graph &graph, Graph &mst) {
 /*
  * TODO: Implementar a matriz de adjacência.
  */
-float *Graph::getMinAdjacencyMatrix() const {
-    return minAdjacencyMatrix;
-}
+//float *Graph::getMinAdjacencyMatrix() const {
+//    return minAdjacencyMatrix;
+//}

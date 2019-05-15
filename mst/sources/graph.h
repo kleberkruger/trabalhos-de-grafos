@@ -221,7 +221,7 @@ public:
      *
      * @return
      */
-    float *getMinAdjacencyMatrix() const;
+//    float *getMinAdjacencyMatrix() const;
 
     std::vector<Vertex> vertices;
     std::vector<Edge> edges;
@@ -230,7 +230,7 @@ private:
 
     const static int DEFAULT_VERSION = 2;
 
-    float *minAdjacencyMatrix;
+//    float *minAdjacencyMatrix;
 };
 
 #endif //MST_GRAPH_H

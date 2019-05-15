@@ -18,6 +18,7 @@
 #include <iostream>
 #include <list>
 #include <vector>
+#include <algorithm>
 
 #include "disjointset.h"
 #include "arrayset.h"
@@ -29,7 +30,6 @@
 #include "arrayheap.h"
 #include "binaryheap.h"
 #include "fibonacciheap.h"
-#include "fibheap.h"
 
 struct Vertex;
 struct Edge;

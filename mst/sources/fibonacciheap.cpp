@@ -111,7 +111,6 @@ int FibonacciHeap::extractMin(){
         consolidate();
     }
     no_of_nodes--; 
-    std::cout << no_of_nodes << std::endl;
     return root->pos;
 }
 
@@ -130,12 +129,20 @@ void FibonacciHeap::consolidate() {
         ptr4 = ptr4->next; 
         temp1 = ptr1->degree; 
         while (arr[temp1] != NULL) { 
+
+
+
+            /*------ BUG AQUI -----*/
             ptr2 = arr[temp1]; 
             if (ptr1->key > ptr2->key) { 
                 ptr3 = ptr1; 
                 ptr1 = ptr2; 
                 ptr2 = ptr3; 
             } 
+            /*------ BUG AQUI -----*/
+
+
+
             if (ptr2 == root) 
                 root = ptr1; 
             fibonnaci_link(ptr2, ptr1); 

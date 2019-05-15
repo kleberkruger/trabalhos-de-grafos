@@ -32,7 +32,7 @@ public:
 	    char mark; // Black or white mark of the HeapNode 
 	    char c; // Flag for assisting in the Find HeapNode function 
 	};
-	
+	int debug = 0;
 
     FibonacciHeap(int n, int s);
 

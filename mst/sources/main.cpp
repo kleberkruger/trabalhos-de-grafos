@@ -48,7 +48,7 @@ void execute(Algorithm alg, int version, const std::string &inFilePath, const st
     Graph mst;
     double total = Graph::mst(g, mst, alg - 1, version);
     std::cout << "Total MST: " << total << std::endl;
-    std::cout << "Writing MST in the output file..." << total << std::endl;
+    std::cout << "Writing MST in the output file..." << std::endl;
 
     // Imprime a resposta no arquivo de saída
     std::ofstream outFile;

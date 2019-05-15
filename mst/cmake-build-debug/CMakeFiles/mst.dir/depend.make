@@ -32,6 +32,7 @@ CMakeFiles/mst.dir/sources/graph.cpp.o: ../sources/arrayset.h
 CMakeFiles/mst.dir/sources/graph.cpp.o: ../sources/binaryheap.h
 CMakeFiles/mst.dir/sources/graph.cpp.o: ../sources/disjointset.h
 CMakeFiles/mst.dir/sources/graph.cpp.o: ../sources/fastunionfind.h
+CMakeFiles/mst.dir/sources/graph.cpp.o: ../sources/fibheap.h
 CMakeFiles/mst.dir/sources/graph.cpp.o: ../sources/fibonacciheap.h
 CMakeFiles/mst.dir/sources/graph.cpp.o: ../sources/graph.cpp
 CMakeFiles/mst.dir/sources/graph.cpp.o: ../sources/graph.h
@@ -51,6 +52,7 @@ CMakeFiles/mst.dir/sources/main.cpp.o: ../sources/arrayset.h
 CMakeFiles/mst.dir/sources/main.cpp.o: ../sources/binaryheap.h
 CMakeFiles/mst.dir/sources/main.cpp.o: ../sources/disjointset.h
 CMakeFiles/mst.dir/sources/main.cpp.o: ../sources/fastunionfind.h
+CMakeFiles/mst.dir/sources/main.cpp.o: ../sources/fibheap.h
 CMakeFiles/mst.dir/sources/main.cpp.o: ../sources/fibonacciheap.h
 CMakeFiles/mst.dir/sources/main.cpp.o: ../sources/graph.h
 CMakeFiles/mst.dir/sources/main.cpp.o: ../sources/heap.h

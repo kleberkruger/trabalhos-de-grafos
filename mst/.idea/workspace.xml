@@ -12,30 +12,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a8c03b-a15b-4c9c-bbc3-6eb2994cdc73" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mst" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mst.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mst.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/out_lu980.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/binaryheap.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/binaryheap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/out_lu980.txt" beforeDir="false" afterPath="$PROJECT_DIR$/database/out_lu980.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/fibheap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/fibheap.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/fibheap.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/fibheap.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/heap.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/heap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/listset.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/listset.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/listset.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/listset.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/main" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/test.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,7 +32,41 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+              <folding>
+                <element signature="e#266#285#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/fibheap.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+              <folding>
+                <element signature="e#122#138#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sources/fibheap.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2144">
+              <caret line="134" column="33" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -88,10 +105,10 @@
         <option value="$PROJECT_DIR$/sources/listset.h" />
         <option value="$PROJECT_DIR$/sources/listset.cpp" />
         <option value="$PROJECT_DIR$/sources/binaryheap.h" />
-        <option value="$PROJECT_DIR$/sources/fibheap.h" />
         <option value="$PROJECT_DIR$/sources/graph.h" />
-        <option value="$PROJECT_DIR$/sources/main.cpp" />
         <option value="$PROJECT_DIR$/sources/graph.cpp" />
+        <option value="$PROJECT_DIR$/sources/fibheap.h" />
+        <option value="$PROJECT_DIR$/sources/main.cpp" />
         <option value="$PROJECT_DIR$/sources/fibheap.cpp" />
       </list>
     </option>
@@ -167,7 +184,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="mst" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="prim 2 database/in_lu980.txt database/out_lu980.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mst" TARGET_NAME="mst" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="mst" RUN_TARGET_NAME="mst">
+    <configuration name="mst" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="prim 3 database/in_cormen.txt database/out_cormen.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mst" TARGET_NAME="mst" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="mst" RUN_TARGET_NAME="mst">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -185,28 +202,29 @@
       <option name="presentableId" value="Default" />
       <updated>1557813207825</updated>
       <workItem from="1557813210727" duration="19895000" />
-      <workItem from="1557919608344" duration="1808000" />
+      <workItem from="1557919608344" duration="5527000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21703000" />
+    <option name="totallyTimeSpent" value="25422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="23" width="2560" height="1057" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2922955" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2922955" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3046632" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3046632" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" visible="true" weight="0.32953367" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32953367" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -221,9 +239,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/in_cormen.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/in_ja9847.txt" />
     <entry file="file://$PROJECT_DIR$/database/ja9847_out.txt" />
     <entry file="file://$PROJECT_DIR$/database/cormen_out.txt" />
@@ -293,13 +308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sources/heap.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -352,25 +360,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/out_cormen.txt" />
     <entry file="file://$PROJECT_DIR$/database/out_ja9847.txt" />
-    <entry file="file://$PROJECT_DIR$/sources/binaryheap.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="e#317#334#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/fibheap.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sources/arrayheap.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
@@ -381,34 +371,70 @@
     <entry file="file://$PROJECT_DIR$/database/out_lu980.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/binaryheap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding>
+            <element signature="e#317#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sources/graph.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="160" column="74" lean-forward="true" selection-start-line="160" selection-start-column="74" selection-end-line="160" selection-end-column="74" />
+        <state relative-caret-position="-394">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding>
+            <element signature="e#327#346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/out_cormen.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/in_cormen.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3120">
+          <caret line="195" column="63" selection-start-line="195" selection-start-column="25" selection-end-line="195" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/fibheap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding>
+            <element signature="e#122#138#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        <state relative-caret-position="407">
+          <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
           <folding>
             <element signature="e#266#285#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sources/fibheap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3904">
-          <caret line="244" column="1" selection-start-line="244" selection-start-column="1" selection-end-line="244" selection-end-column="1" />
+        <state relative-caret-position="2144">
+          <caret line="134" column="33" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
         </state>
       </provider>
     </entry>

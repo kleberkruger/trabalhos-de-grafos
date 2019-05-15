@@ -6,36 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/arrayheap.h
-vector
--
-heap.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/heap.h
-
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/arrayset.h
-vector
--
-disjointset.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/disjointset.h
-
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/binaryheap.h
-vector
--
-heap.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/heap.h
-
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/disjointset.h
-iostream
--
-vector
--
-
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/fastunionfind.h
-vector
--
-disjointset.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/disjointset.h
-
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/fibheap.cpp
 fibheap.h
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/fibheap.h
@@ -43,66 +13,8 @@ fibheap.h
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/fibheap.h
 cmath
 -
-
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/fibonacciheap.h
 vector
--
-limits
--
-heap.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/heap.h
-math.h
--
-functional
--
-
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/graph.cpp
-utility
--
-graph.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/graph.h
-
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/graph.h
-utility
 -
 iostream
 -
-list
--
-vector
--
-disjointset.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/disjointset.h
-arrayset.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/arrayset.h
-listset.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/listset.h
-unionfind.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/unionfind.h
-fastunionfind.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/fastunionfind.h
-heap.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/heap.h
-arrayheap.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/arrayheap.h
-binaryheap.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/binaryheap.h
-fibonacciheap.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/fibonacciheap.h
-
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/heap.h
-iostream
--
-vector
--
-
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/listset.h
-disjointset.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/disjointset.h
-
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/unionfind.h
-vector
--
-disjointset.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/swap/grafos-t1-mst/mst/sources/disjointset.h
 

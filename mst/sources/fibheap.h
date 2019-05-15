@@ -7,11 +7,14 @@
 
 
 #include <cmath>
+#include <vector>
+#include <iostream>
 
 namespace fib_heap {
 
     struct FibHeapNode {
-        int key; // assume the element is int...
+        int vertex; // Kleber Kruger modificou
+        float key; // assume the element is int...
         FibHeapNode *left;
         FibHeapNode *right;
         FibHeapNode *parent;
@@ -31,30 +34,41 @@ namespace fib_heap {
             m_numOfNodes = 0;
         }
 
+        FibHeap(int n, int s) : position(n, nullptr) {  // initialize a new and empty Fib Heap
+            m_minNode = nullptr;
+            m_numOfNodes = 0;
+
+            float inf = std::numeric_limits<float>::infinity();
+
+            for (int i = 0; i < n; i++) {
+                insert(i == s ? 0 : inf, i);
+            }
+        }
+
         ~FibHeap() {
             _clear(m_minNode);
         }
 
         /* Insert a node with key value new_key
            and return the inserted node*/
-        FibHeapNode *insert(int newKey);
-
-        /* Merge current heap with another*/
-        void merge(FibHeap &another);
+        FibHeapNode *insert(float newKey, int vertex);
 
         /* Return the key of the minimum node*/
-        int extract_min();
+        int extractMin();
 
         /* Decrease the key of node x to newKey*/
-        void decrease_key(FibHeapNode *x, int newKey);
+        void decrease_key(FibHeapNode *x, float newKey);
 
-        /*Delete a specified node*/
-        void delete_node(FibHeapNode *x);
+        void decreaseKey(int vertex, float newKey);
+
+        bool empty() {
+            return m_numOfNodes == 0;
+        }
 
     private:
         static const int m_minimumKey;
 
-        FibHeapNode *_create_node(int newKey);
+        FibHeapNode *_create_node(float newKey, int vertex);
 
         void _insert_node(FibHeapNode *newNode);
 
@@ -70,13 +84,17 @@ namespace fib_heap {
 
         FibHeapNode *_extract_min_node();
 
-        void _decrease_key(FibHeapNode *x, int newKey);
+        void _decrease_key(FibHeapNode *x, float newKey);
+
+        void _decreaseKey(int vertex, float newKey);
 
         void _cut(FibHeapNode *x, FibHeapNode *y);
 
         void _cascading_cut(FibHeapNode *y);
 
         void _clear(FibHeapNode *x);
+
+        std::vector<FibHeapNode *> position;
     };
 
 }

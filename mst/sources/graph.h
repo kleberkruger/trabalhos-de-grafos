@@ -29,6 +29,7 @@
 #include "arrayheap.h"
 #include "binaryheap.h"
 #include "fibonacciheap.h"
+#include "fibheap.h"
 
 struct Vertex;
 struct Edge;

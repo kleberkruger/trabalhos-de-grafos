@@ -8,36 +8,28 @@ namespace fib_heap {
 
     const int FibHeap::m_minimumKey = 0x80000000; // the minimum int value
 
-    FibHeapNode *FibHeap::insert(int newKey) {
-        FibHeapNode *newNode = _create_node(newKey);
+    FibHeapNode *FibHeap::insert(float newKey, int vertex) {
+        FibHeapNode *newNode = _create_node(newKey, vertex);
         _insert_node(newNode);
+        position[vertex] = newNode;
+
         return newNode;
     }
 
-    void FibHeap::merge(FibHeap &another) {
-        m_minNode = _merge(m_minNode, another.m_minNode);
-        m_numOfNodes += another.m_numOfNodes;
-        another.m_minNode = nullptr; // so that another
-        another.m_numOfNodes = 0;
-    }
-
-    int FibHeap::extract_min() {
+    int FibHeap::extractMin() {
         FibHeapNode *minNode = _extract_min_node();
-        int ret = minNode->key;
+//        int ret = minNode->key; // Kleber Kruger comentou
+        int ret = minNode->vertex; // Kleber Kruger adicionou
+        position[minNode->vertex] = nullptr; // Kleber Kruger adicionou
         delete minNode;
         return ret;
     }
 
-    void FibHeap::decrease_key(FibHeapNode *x, int newKey) {
+    void FibHeap::decrease_key(FibHeapNode *x, float newKey) {
         _decrease_key(x, newKey);
     }
 
-    void FibHeap::delete_node(FibHeapNode *x) {
-        _decrease_key(x, m_minimumKey);
-        extract_min();
-    }
-
-    FibHeapNode *FibHeap::_create_node(int newKey) {
+    FibHeapNode *FibHeap::_create_node(float newKey, int vertex) {
         FibHeapNode *newNode = new FibHeapNode;
         newNode->key = newKey;
         newNode->left = newNode;
@@ -46,6 +38,7 @@ namespace fib_heap {
         newNode->child = nullptr;
         newNode->degree = 0;
         newNode->mark = false;
+        newNode->vertex = vertex;
         return newNode;
     }
 
@@ -178,7 +171,7 @@ namespace fib_heap {
         child->mark = false;
     }
 
-    void FibHeap::_decrease_key(FibHeapNode *x, int newKey) {
+    void FibHeap::_decrease_key(FibHeapNode *x, float newKey) {
         x->key = newKey;
         FibHeapNode *y = x->parent;
         if (y != nullptr && x->key < y->key) {
@@ -216,7 +209,7 @@ namespace fib_heap {
     void FibHeap::_cascading_cut(FibHeapNode *y) {
         FibHeapNode *z = y->parent;
         if (z != nullptr) {
-            if (y->mark == false)
+            if (!y->mark)
                 y->mark = true;
             else {
                 _cut(y, z);
@@ -241,5 +234,12 @@ namespace fib_heap {
                 delete t2;
             } while (t1 != x);
         }
+    }
+
+    void FibHeap::decreaseKey(int vertex, float newKey) {
+        std::cout << "fazendo decreaseKey do vertice " << position[vertex]->vertex <<
+                  " que está na posição de memória " << position[vertex] << std::endl;
+
+        decrease_key(position[vertex], newKey);
     }
 }

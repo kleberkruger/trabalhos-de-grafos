@@ -12,14 +12,17 @@
 
 #include "fibonacciheap.h"
 
-FibonacciHeap::FibonacciHeap(int n, int s){
-    build(s);
+FibonacciHeap::FibonacciHeap(int n, int s) : nodes(n), position(n){
+    build(n,s);
 }
 
-void FibonacciHeap::build(int s) {
+void FibonacciHeap::build(int n,int s) {
     root = NULL;
     no_of_nodes = 0;
-    insertion(s);
+    insertion(0,s);
+    for (int i = 1; i < nodes.size(); i++) {
+        insertion(std::numeric_limits<float>::infinity(),i);
+    }
 }
 
 bool FibonacciHeap::empty(){
@@ -31,14 +34,17 @@ bool FibonacciHeap::empty(){
     }
 }
 
-void FibonacciHeap::insertion (int val) {
-    node* new_node;
-    new_node->key = val; 
+void FibonacciHeap::insertion (float val,int index) {
+    HeapNode* new_node = (struct HeapNode*)malloc(sizeof(struct HeapNode));
+    new_node->key = val;
     new_node->degree = 0;
     new_node->parent = NULL;
     new_node->child = NULL;
     new_node->prev = new_node;
     new_node->next = new_node;
+    new_node->pos = index;
+
+
 
     if(root !=  NULL){
         new_node->prev = root->prev;
@@ -53,10 +59,12 @@ void FibonacciHeap::insertion (int val) {
         root = new_node;
     }
     no_of_nodes++;
+    position[index] = new_node;
+
 }
 
-void FibonacciHeap::Union(node *h1, node *h2){
-    node *h;
+void FibonacciHeap::Union(HeapNode *h1, HeapNode *h2){
+    HeapNode *h;
     root = h1;
 
     h2->prev = h1->prev;
@@ -66,21 +74,19 @@ void FibonacciHeap::Union(node *h1, node *h2){
 
     if((h1 != NULL) || ((h2 != NULL) && (h2->key < h1->key))){
         root = h2;
+
     }
 }
 
 int FibonacciHeap::extractMin(){
     if(root == NULL){
-        std::cout << "empty\n";
-        return -1;
-        //Joga um excessão aqui que é melhor
+        throw std::invalid_argument("Heap is empty");
     }
 
-    int output = root->key;
-    node* temp = root;
-    node* pntr; 
+    HeapNode* temp = root;
+    HeapNode* pntr; 
     pntr = temp; 
-    node* x = NULL; 
+    HeapNode* x = NULL; 
     if (temp->child != NULL) { 
         x = temp->child; 
         do { 
@@ -102,24 +108,24 @@ int FibonacciHeap::extractMin(){
             root = NULL;
     else {
         root = temp->next; 
-        consolidate(); 
-    } 
+        consolidate();
+    }
     no_of_nodes--; 
-
-    return output;
+    std::cout << no_of_nodes << std::endl;
+    return root->pos;
 }
 
 void FibonacciHeap::consolidate() {  
     int temp1; 
     float temp2 = (log(no_of_nodes)) / (log(2)); 
     int temp3 = temp2; 
-    node* arr[temp3]; 
+    HeapNode* arr[temp3]; 
     for (int i = 0; i <= temp3; i++) 
         arr[i] = NULL; 
-    node* ptr1 = root; 
-    node* ptr2; 
-    node* ptr3; 
-    node* ptr4 = ptr1; 
+    HeapNode* ptr1 = root; 
+    HeapNode* ptr2; 
+    HeapNode* ptr3; 
+    HeapNode* ptr4 = ptr1; 
     do { 
         ptr4 = ptr4->next; 
         temp1 = ptr1->degree; 
@@ -165,7 +171,8 @@ void FibonacciHeap::consolidate() {
     } 
 }
 
-void FibonacciHeap::fibonnaci_link(node * ptr2, node * ptr1) { 
+void FibonacciHeap::fibonnaci_link(HeapNode * ptr2, HeapNode * ptr1) { 
+
     (ptr2->prev)->next = ptr2->next; 
     (ptr2->next)->prev = ptr2->prev; 
     if (ptr1->next == ptr1) 
@@ -184,7 +191,7 @@ void FibonacciHeap::fibonnaci_link(node * ptr2, node * ptr1) {
     ptr1->degree++;
 }
 
-void FibonacciHeap::Cut(node * found, node * temp) { 
+void FibonacciHeap::Cut(HeapNode * found, HeapNode * temp) { 
     if (found == found->next) 
         temp->child = NULL; 
   
@@ -204,8 +211,8 @@ void FibonacciHeap::Cut(node * found, node * temp) {
     found->mark = 'B'; 
 }
 
-void FibonacciHeap::Cascase_cut(node* temp) { 
-    node* ptr5 = temp->parent; 
+void FibonacciHeap::Cascase_cut(HeapNode* temp) { 
+    HeapNode* ptr5 = temp->parent; 
     if (ptr5 != NULL) { 
         if (temp->mark == 'W') { 
             temp->mark = 'B'; 
@@ -217,16 +224,20 @@ void FibonacciHeap::Cascase_cut(node* temp) {
     } 
 }
 
-void FibonacciHeap::Decrease_key(node * found, int val) { 
+void FibonacciHeap::decreaseKey(unsigned long index, float val) {
+
+    HeapNode * found = position[index];
+
     if (root == NULL) 
         std::cout << "The Heap is Empty" << std::endl; 
-    	
+        
     if (found == NULL) 
         std::cout << "Node not found in the Heap" << std::endl; 
   
     found->key = val; 
-  
-    node* temp = found->parent; 
+
+
+    HeapNode* temp = found->parent; 
     if (temp != NULL && found->key < temp->key) { 
         Cut(found, temp); 
         Cascase_cut(temp); 
@@ -235,25 +246,22 @@ void FibonacciHeap::Decrease_key(node * found, int val) {
         root = found; 
 }
 
-void FibonacciHeap::Find(node * n,int old_val, int val) { 
-    node* found = NULL; 
-    node* temp5 = root; 
-    temp5->c = 'Y'; 
-    node* found_ptr = NULL; 
-    if (temp5->key == old_val) { 
-        found_ptr = temp5; 
-        temp5->c = 'N'; 
-        found = found_ptr; 
-        Decrease_key(found, val); 
+void FibonacciHeap::print() 
+{ 
+    HeapNode* ptr = root; 
+    if (ptr == NULL) 
+        std::cout << "The Heap is Empty" << std::endl; 
+  
+    else { 
+        std::cout << "The root nodes of Heap are: " << std::endl; 
+        do { 
+            std::cout << ptr->key; 
+            ptr = ptr->next; 
+            if (ptr != root) { 
+                std::cout << "-->"; 
+            } 
+        } while (ptr != root && ptr->next != NULL); 
+        std::cout << std::endl 
+             << "The heap has " << no_of_nodes << " nodes" << std::endl; 
     } 
-    if (found_ptr == NULL) { 
-        if (temp5->child != NULL){
-            Find(temp5->child, old_val, val); 
-        }
-        if ((temp5->next)->c != 'Y'){ 
-            Find(temp5->next, old_val, val);
-        } 
-    } 
-    temp5->c = 'N'; 
-    found = found_ptr; 
 } 

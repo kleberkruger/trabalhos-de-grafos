@@ -17,46 +17,52 @@
 #include <limits>
 #include "heap.h"
 #include <math.h>
+#include <functional>
 
 class FibonacciHeap : public Heap {
 public:
-	struct node { 
-	    node* parent; // Parent pointer 
-	    node* child; // Child pointer 
-	    node* prev; // Pointer to the node on the left 
-	    node* next; // Pointer to the node on the right 
-	    int key; // Value of the node 
-	    int degree; // Degree of the node 
-	    char mark; // Black or white mark of the node 
-	    char c; // Flag for assisting in the Find node function 
+	struct HeapNode { 
+	    HeapNode* parent; // Parent pointer 
+	    HeapNode* child; // Child pointer 
+	    HeapNode* prev; // Pointer to the HeapNode on the left 
+	    HeapNode* next; // Pointer to the HeapNode on the right 
+	    float key; // Value of the HeapNode
+	    int degree; // Degree of the HeapNode 
+	    int pos; // Position of the HeapNode in the position array
+	    char mark; // Black or white mark of the HeapNode 
+	    char c; // Flag for assisting in the Find HeapNode function 
 	};
 	
 
     FibonacciHeap(int n, int s);
 
-    int extractMin();
+    int extractMin() override;
 
-    void decreaseKey(node * found, float value);
+    void decreaseKey(unsigned long index, float val) override;
 
-	void insertion(int val);
+    bool empty() override;
 
-	bool empty();
+	void insertion(float val,int index);
 
+	void print();
 protected:
-	void Union(node * h1, node * h2);
+	void Union(HeapNode * h1, HeapNode * h2);
 	void consolidate();
-	void fibonnaci_link(node * ptr1, node * ptr2);
-	void Cut(node* found, node * temp);
-	void Cascase_cut(node * temp);
-	void Decrease_key(node * found, int val);
-	void Find(node * n, int old_val, int val);
+	void fibonnaci_link(HeapNode * ptr2, HeapNode * ptr1);
+	void Cut(HeapNode* found, HeapNode * temp);
+	void Cascase_cut(HeapNode * temp);
+	void Decrease_key(HeapNode * found, int val);
+	void Find(HeapNode * n, int old_val, int val);
     
 
 private:
-	void build(int s);
+	void build(int n,int s);
 
-	node * root;
+	HeapNode * root;
 	int no_of_nodes;
+    std::vector<HeapNode> nodes;
+    std::vector<HeapNode>::size_type size;
+    std::vector<HeapNode *> position;
 
 };
 

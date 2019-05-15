@@ -100,7 +100,8 @@ double Graph::mst(const Graph &graph, Graph &mst, int version) {
             total = prim<BinaryHeap>(graph, mst); // 1:15
             break;
         case 5:
-            total = prim<BinaryHeap>(graph, mst); // 1:15
+            std::cout << "aaaaa" << std::endl;
+            total = prim<FibonacciHeap>(graph, mst); // 1:15
             break;
     }
     return total;
@@ -185,6 +186,7 @@ double Graph::prim(const Graph &graph, Graph &mst) {
     valuesInMST[0] = 0;
 
     while (!ds.empty()) {
+        
         Vertex u = graph.vertices[ds.extractMin()];
         verticesInDS[u.id] = false;
         for (auto &e : u.adjacency) {
@@ -193,21 +195,23 @@ double Graph::prim(const Graph &graph, Graph &mst) {
             if (verticesInDS[v] && e.weight < valuesInMST[v]) {
                 parent[v] = u.id;
 //                std::cout << "v = " << v << std::endl;
+                
                 ds.decreaseKey(v, e.weight);
+
                 valuesInMST[v] = e.weight;
             }
 
 //            for(float i : valuesInMST) std::cout << i << " ";
 //            std::cout << std::endl;
         }
-
+        
         if (parent[u.id] != -1) {
             mst.insertVertex(u.id);
             mst.insertEdge(parent[u.id], u.id, valuesInMST[u.id]);
             total += valuesInMST[u.id];
         }
     }
-
+    std::cout << total << std::endl;
     return total;
 }
 

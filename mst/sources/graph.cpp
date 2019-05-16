@@ -82,21 +82,23 @@ void Graph::print() {
 
 double Graph::mst(const Graph &graph, Graph &mst, int alg, int version) {
     static MSTAlgorithm kruskals[] = {
-            MSTAlgorithm("Kruskal Ingênuo", 0, Graph::kruskalIngenuo),
-            MSTAlgorithm("Kruskal with Lists", 1, Graph::kruskal<ListDisjointSet>),
-            MSTAlgorithm("Kruskal with UnionFind", 2, Graph::kruskal<UnionFind>),
-            MSTAlgorithm("Kruskal with FastUnionFind", 3, Graph::kruskal<FastUnionFind>),
+            MSTAlgorithm("Kruskal", 0, Graph::kruskalIngenuo, "Kruskal Ingênuo"),
+            MSTAlgorithm("Kruskal", 1, Graph::kruskal<ListDisjointSet>, "Kruskal with Lists"),
+            MSTAlgorithm("Kruskal", 2, Graph::kruskal<UnionFind>, "Kruskal with UnionFind"),
+            MSTAlgorithm("Kruskal", 3, Graph::kruskal<FastUnionFind>, "Kruskal with FastUnionFind"),
     };
     static MSTAlgorithm prims[] = {
-            MSTAlgorithm("Prim Ingênuo", 0, Graph::primIngenuo),
-            MSTAlgorithm("Prim with ArrayHeap", 1, Graph::prim<ArrayHeap>),
-            MSTAlgorithm("Prim with BinaryHeap", 2, Graph::prim<BinaryHeap>),
-            MSTAlgorithm("Prim with FibonacciHeap", 3, Graph::prim<FibonacciHeap>),
-            // MSTAlgorithm("Prim with FibonacciHeap", 3, Graph::prim<fib_heap::FibHeap>),
+            MSTAlgorithm("Prim", 0, Graph::primIngenuo, "Prim Ingênuo"),
+            MSTAlgorithm("Prim", 1, Graph::prim<ArrayHeap>, "Prim with ArrayHeap"),
+            MSTAlgorithm("Prim", 2, Graph::prim<BinaryHeap>, "Prim with BinaryHeap"),
+//            MSTAlgorithm("Prim", 3, Graph::prim<FibonacciHeap>, "Prim with FibonacciHeap"),
+//            MSTAlgorithm("Prim with FibonacciHeap", 3, Graph::prim<fib_heap::FibHeap>),
     };
     static std::vector<MSTAlgorithm *> algorithms = {kruskals, prims};
 
-    std::cout << "Running: \"" << algorithms[alg][version].name << "\" version " << algorithms[alg][version].version << std::endl;
+    std::cout << "Running: " << algorithms[alg][version].name << " version " << algorithms[alg][version].version
+              << " (\"" << algorithms[alg][version].alias << "\")" << std::endl;
+
     return algorithms[alg][version].execute(graph, mst);
 }
 

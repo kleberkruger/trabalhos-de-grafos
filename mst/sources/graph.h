@@ -93,11 +93,12 @@ public:
     struct MSTAlgorithm {
         const std::string name;
         int version;
+        const std::string alias;
 
         double (*execute)(const Graph &graph, Graph &mst);
 
-        MSTAlgorithm(std::string name, const int version, double (*execute)(const Graph &, Graph &))
-                : name(std::move(name)), version(version), execute(execute) {}
+        MSTAlgorithm(std::string name, const int version, double (*execute)(const Graph &, Graph &), const std::string alias = "")
+                : name(std::move(name)), version(version), execute(execute), alias(alias) {}
     };
 
     /**

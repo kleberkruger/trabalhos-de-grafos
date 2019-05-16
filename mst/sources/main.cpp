@@ -26,8 +26,15 @@ void execute(Algorithm alg, int version, const std::string &inFilePath, const st
         throw std::invalid_argument("Incorrect algorithm. Run in <algorithm>: <kruskal> or <prim>");
     }
 
+//    struct TimeTask {
+//        std::chrono::time_point start;
+//        std::chrono::time_point end;
+//    };
+
     int n, m, v1, v2;
     float w;
+
+    auto start1 = std::chrono::steady_clock::now();
 
     // Lê o arquivo de entrada e cria o grafo original
     std::cout << "Reading input file and creating the graph..." << std::endl;
@@ -45,12 +52,19 @@ void execute(Algorithm alg, int version, const std::string &inFilePath, const st
     }
     inFile.close();
 
+    auto end1 = std::chrono::steady_clock::now();
+
+    auto start2 = std::chrono::steady_clock::now();
+
     // Executa o algoritmo de MST
     Graph mst;
     double total = Graph::mst(g, mst, alg - 1, version);
+
+    auto end2 = std::chrono::steady_clock::now();
     std::cout << "Total MST: " << total << std::endl;
     std::cout << "Writing MST in the output file..." << std::endl;
 
+    auto start3 = std::chrono::steady_clock::now();
     // Imprime a resposta no arquivo de saída
     std::ofstream outFile;
     outFile.open(outFilePath);
@@ -60,6 +74,29 @@ void execute(Algorithm alg, int version, const std::string &inFilePath, const st
     }
     outFile.close();
     std::cout << "Finished." << std::endl;
+
+    auto end3 = std::chrono::steady_clock::now();
+
+//    std::cout << "Elapsed time in nanoseconds : "
+//              << std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count()
+//              << " ns" << std::endl;
+//    std::cout << "Elapsed time in microseconds : "
+//              << std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()
+//              << " µs" << std::endl;
+
+    std::cout << "Read input file time: "
+              << std::chrono::duration_cast<std::chrono::milliseconds>(end1 - start1).count()
+              << " ms" << std::endl;
+    std::cout << "Run MST : "
+              << std::chrono::duration_cast<std::chrono::milliseconds>(end2 - start2).count()
+              << " ms" << std::endl;
+    std::cout << "Write output file time : "
+              << std::chrono::duration_cast<std::chrono::milliseconds>(end3 - start3).count()
+              << " ms" << std::endl;
+
+//    std::cout << "Elapsed time in seconds : "
+//              << std::chrono::duration_cast<std::chrono::seconds>(end - start).count()
+//              << " sec";
 }
 
 int main(int argc, char *argv[]) {

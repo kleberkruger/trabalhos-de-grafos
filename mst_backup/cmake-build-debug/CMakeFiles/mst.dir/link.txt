@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/mst.dir/sources/main.cpp.o CMakeFiles/mst.dir/sources/disjoint_set.cpp.o CMakeFiles/mst.dir/sources/graph.cpp.o CMakeFiles/mst.dir/sources/heap.cpp.o  -o mst 

@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/mst.dir/sources/arrayheap.cpp.o"
   "CMakeFiles/mst.dir/sources/binaryheap.cpp.o"
   "CMakeFiles/mst.dir/sources/fibonacciheap.cpp.o"
+  "CMakeFiles/mst.dir/sources/application.cpp.o"
   "mst.pdb"
   "mst"
 )

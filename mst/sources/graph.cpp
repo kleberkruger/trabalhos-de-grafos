@@ -15,8 +15,9 @@
 #include "graph.h"
 
 
-Vertex::Vertex(int id, std::size_t adjCapacity) : id(id) {
-    adjacency.reserve(adjCapacity);
+//Vertex::Vertex(int id, std::size_t adjCapacity) : id(id) {
+Vertex::Vertex(int id) : id(id) {
+//    adjacency.reserve(adjCapacity);
 }
 
 
@@ -27,29 +28,31 @@ EdgeTo::EdgeTo(int end, double weight) : end(end), weight(weight) {}
 EdgeTo::~EdgeTo() = default;
 
 
-Graph::Graph(int n, int m) {
+Graph::Graph(int n, int m) : adjacencyList(n) {
     vertices.reserve(n);
     edges.reserve(m);
 
     // FIXME: Ajustando a capacidade inicial para (n -1), mas e se o grafo não for completo? (desperdício de memória?)
-    std::size_t adjCapacity = n - 1;
-
-    for (int i = 0; i < n; i++) insertVertex(i, adjCapacity);
+//    std::size_t adjCapacity = n - 1;
+//    for (int i = 0; i < n; i++) insertVertex(i, adjCapacity);
+    for (int i = 0; i < n; i++) insertVertex(i);
 }
 
 Graph::Graph(const Graph &orig) = default;
 
 Graph::~Graph() = default;
 
-void Graph::insertVertex(int id, std::size_t adjCapacity) {
-    vertices.emplace_back(id, adjCapacity);
+//void Graph::insertVertex(int id, std::size_t adjCapacity) {
+void Graph::insertVertex(int id) {
+//    vertices.emplace_back(id, adjCapacity);
+    vertices.emplace_back(id);
 }
 
 void Graph::insertEdge(int v1, int v2, double weight) {
     edges.emplace_back(v1, v2, weight);
 
-    vertices[v1].adjacency.emplace_back(v2, weight);
-    vertices[v2].adjacency.emplace_back(v1, weight);
+//    vertices[v1].adjacency.emplace_back(v2, weight);
+//    vertices[v2].adjacency.emplace_back(v1, weight);
 }
 
 void Graph::clearEdges() {
@@ -61,13 +64,20 @@ void Graph::clearAll() {
     vertices.clear();
 }
 
-const std::vector<Vertex> &Graph::getAdjacencyList() const {
-    return vertices;
+const std::vector<std::vector<EdgeTo>> &Graph::getAdjacencyList() const {
+    static bool exists = false;
+    if (!exists) {
+        for (auto &e : edges) {
+            adjacencyList[e.start].push_back(EdgeTo(e.end, e.weight));
+        }
+        exists = true;
+    }
+    return adjacencyList;
 }
 
-//const std::vector<EdgeTo> &Graph::getAdjacencyList(int vertex) const {
-//    return vertices[vertex].adjacency;
-//}
+const std::vector<EdgeTo> &Graph::getAdjacencyList(int vertex) const {
+    return getAdjacencyList()[vertex];
+}
 
 void Graph::print() {
 
@@ -191,7 +201,7 @@ double Graph::primIngenuo(const Graph &graph, Graph &mst) {
 
         for (auto &w : graph.vertices) {
             if (parent[w.id] == -1) {
-                for (auto &e : w.adjacency) {
+                for (auto &e : graph.getAdjacencyList(w.id)) {
                     int v = e.end;
                     if (parent[v] != -1 && minWeight > e.weight) {
                         minWeight = e.weight;
@@ -239,7 +249,7 @@ double Graph::prim(const Graph &graph, Graph &mst) {
         Vertex u = graph.vertices[ds.extractMin()];
         vertices[u.id].isPresent = false;
 
-        for (auto &e : u.adjacency) {
+        for (auto &e : graph.getAdjacencyList(u.id)) {
             int v = e.end;
             if (vertices[v].isPresent && e.weight < vertices[v].value) {
                 vertices[v].parent = u.id;

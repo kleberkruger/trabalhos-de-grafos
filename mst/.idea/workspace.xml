@@ -12,31 +12,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c357efac-0f56-487c-b20e-1175075d8057" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/kleberkruger.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/mst.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/arrayheap.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/arrayheap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/arrayset.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/arrayset.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/binaryheap.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/binaryheap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/disjointset.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/disjointset.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/fastunionfind.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/fastunionfind.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/fibonacciheap.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/fibonacciheap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/graph.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/graph.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/heap.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/heap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/listset.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/listset.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/unionfind.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/unionfind.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/application.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/application.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mst.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mst.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mst.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +42,30 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/graph.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-149">
+              <caret line="206" column="29" selection-start-line="206" selection-start-column="29" selection-end-line="206" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#327#346#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1552">
+              <caret line="97" column="24" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -60,9 +75,12 @@
       <list>
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/sources/main.cpp" />
+        <option value="$PROJECT_DIR$/sources/checkpoint.h" />
+        <option value="$PROJECT_DIR$/sources/application.h" />
+        <option value="$PROJECT_DIR$/sources/application.cpp" />
         <option value="$PROJECT_DIR$/sources/graph.h" />
         <option value="$PROJECT_DIR$/sources/graph.cpp" />
-        <option value="$PROJECT_DIR$/sources/main.cpp" />
       </list>
     </option>
   </component>
@@ -86,16 +104,6 @@
             <path>
               <item name="mst" type="b2602c69:ProjectViewProjectNode" />
               <item name="mst" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mst" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mst" type="462c0819:PsiDirectoryNode" />
-              <item name="dataset" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mst" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mst" type="462c0819:PsiDirectoryNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -154,22 +162,22 @@
       <option name="presentableId" value="Default" />
       <updated>1558315949500</updated>
       <workItem from="1558315951046" duration="8394000" />
-      <workItem from="1558338428926" duration="22249000" />
+      <workItem from="1558338428926" duration="28871000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30643000" />
+    <option name="totallyTimeSpent" value="37265000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1783" y="80" width="1572" height="920" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2529412" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2529412" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32971016" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32971016" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -242,27 +250,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/graph.h">
+    <entry file="file://$PROJECT_DIR$/sources/checkpoint.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="109" column="16" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
+        <state relative-caret-position="144">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/checkpoint.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/arrayheap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/application.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="10" selection-end-column="3" />
           <folding>
-            <element signature="e#327#346#0" expanded="true" />
+            <element signature="e#319#336#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
+    <entry file="file://$PROJECT_DIR$/sources/application.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-326">
-          <caret line="33" column="118" lean-forward="true" selection-start-line="33" selection-start-column="118" selection-end-line="33" selection-end-column="118" />
+        <state relative-caret-position="208">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+        <state relative-caret-position="409">
+          <caret line="52" column="62" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="62" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -271,6 +296,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dataset/ja9847_out.txt">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/graph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-149">
+          <caret line="206" column="29" selection-start-line="206" selection-start-column="29" selection-end-line="206" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#327#346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1552">
+          <caret line="97" column="24" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

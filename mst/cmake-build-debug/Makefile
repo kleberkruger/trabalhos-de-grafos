@@ -123,6 +123,33 @@ mst/fast:
 	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/build
 .PHONY : mst/fast
 
+sources/application.o: sources/application.cpp.o
+
+.PHONY : sources/application.o
+
+# target to build an object file
+sources/application.cpp.o:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/application.cpp.o
+.PHONY : sources/application.cpp.o
+
+sources/application.i: sources/application.cpp.i
+
+.PHONY : sources/application.i
+
+# target to preprocess a source file
+sources/application.cpp.i:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/application.cpp.i
+.PHONY : sources/application.cpp.i
+
+sources/application.s: sources/application.cpp.s
+
+.PHONY : sources/application.s
+
+# target to generate assembly for a file
+sources/application.cpp.s:
+	$(MAKE) -f CMakeFiles/mst.dir/build.make CMakeFiles/mst.dir/sources/application.cpp.s
+.PHONY : sources/application.cpp.s
+
 sources/arrayheap.o: sources/arrayheap.cpp.o
 
 .PHONY : sources/arrayheap.o
@@ -429,6 +456,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... mst"
+	@echo "... sources/application.o"
+	@echo "... sources/application.i"
+	@echo "... sources/application.s"
 	@echo "... sources/arrayheap.o"
 	@echo "... sources/arrayheap.i"
 	@echo "... sources/arrayheap.s"

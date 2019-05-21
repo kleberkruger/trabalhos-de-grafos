@@ -1,5 +1,7 @@
 #include <utility>
 
+#include <utility>
+
 /**
  * Algoritmos em Grafos (MO412)
  *
@@ -42,10 +44,11 @@ struct Vertex {
      *
      * @param id
      */
-    explicit Vertex(int id, std::size_t adjCapacity = 0);
+//    explicit Vertex(int id, std::size_t adjCapacity = 0);
+    explicit Vertex(int id);
 
     int id;
-    std::vector<EdgeTo> adjacency;
+//    std::vector<EdgeTo> adjacency;
 };
 
 struct Edge {
@@ -79,7 +82,7 @@ struct EdgeTo {
      * @param end
      * @param weight
      */
-    EdgeTo(int end = -1, double weight = 0);
+    EdgeTo(int end, double weight);
 
     virtual ~EdgeTo();
 
@@ -97,8 +100,8 @@ public:
 
         double (*execute)(const Graph &graph, Graph &mst);
 
-        MSTAlgorithm(std::string name, const int version, double (*execute)(const Graph &, Graph &), const std::string alias = "")
-                : name(std::move(name)), version(version), execute(execute), alias(alias) {}
+        MSTAlgorithm(std::string name, const int version, double (*execute)(const Graph &, Graph &), std::string  alias = "")
+                : name(std::move(name)), version(version), execute(execute), alias(std::move(alias)) {}
     };
 
     /**
@@ -126,7 +129,8 @@ public:
      *
      * @param id
      */
-    void insertVertex(int id, std::size_t adjCapacity = 0);
+//    void insertVertex(int id, std::size_t adjCapacity = 0);
+    void insertVertex(int id);
 
     /**
      * Insere uma aresta no grafo.
@@ -207,7 +211,7 @@ public:
      *
      * @return
      */
-    const std::vector<Vertex> &getAdjacencyList() const;
+    const std::vector<std::vector<EdgeTo>> &getAdjacencyList() const;
 
     /**
      * Retorna a lista de adjacências de um vértice especificado.
@@ -215,7 +219,7 @@ public:
      * @param vertex
      * @return
      */
-    const std::list<EdgeTo> &getAdjacencyList(int vertex) const;
+    const std::vector<EdgeTo> &getAdjacencyList(int vertex) const;
 
     /**
      * Retorna a matriz de adjacência do grafo.
@@ -229,7 +233,7 @@ public:
 
 private:
 
-    const static int DEFAULT_VERSION = 2;
+    mutable std::vector<std::vector<EdgeTo>> adjacencyList;
 
 //    double *minAdjacencyMatrix;
 };

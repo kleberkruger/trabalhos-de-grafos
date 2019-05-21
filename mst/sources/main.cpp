@@ -42,32 +42,12 @@ std::string readFile(const std::string &filePath) {
 }
 
 void printMST(const std::string &filePath, const Graph &mst, double total) {
-//    std::ofstream outFile;
-//    outFile.open(filePath);
-//
-//    outFile << std::fixed;
-//    outFile << total << std::endl;
-//
-//    for (auto &e : mst.edges) {
-//        outFile << e.start << " " << e.end << " " << e.weight << std::endl;
-//    }
-//    outFile.close();
-
     FILE *fp = fopen(filePath.data(), "w");
     fprintf(fp, "%.2lf\n", total);
     for (auto &e : mst.edges) {
         fprintf(fp, "%d %d %.2lf\n", e.start, e.end, e.weight);
     }
     fclose(fp);
-
-//    std::stringstream response;
-//    response << total << std::endl;
-//    for (auto &e : mst.edges) {
-//        response << e.start << " " << e.end << " " << e.weight << std::endl;
-//    }
-//
-//    int fd = open(filePath.data(), O_WRONLY);
-//    write(fd, response.str().c_str(), response.str().length());
 }
 
 void printTimes(std::chrono::high_resolution_clock::time_point &t1, std::chrono::high_resolution_clock::time_point &t2,
@@ -125,88 +105,6 @@ void execute(Algorithm alg, int version, const std::string &inFilePath, const st
     std::cout << "Finished." << std::endl;
 
     printTimes(t1, t2, t3, t4, t5);
-}
-
-void execute_1(Algorithm alg, int version, const std::string &inFilePath, const std::string &outFilePath) {
-    checkParameters(alg, version, inFilePath, outFilePath);
-    auto t1 = std::chrono::high_resolution_clock::now();
-
-    std::ifstream file(inFilePath);
-    if (file.good()) {
-        int n, m, v1, v2;
-        float w;
-
-        file >> n >> m;
-        for (int i = 0; i < m; i++) {
-            file >> v1 >> v2 >> w;
-            if (i == m - 1) std::cout << v1 << " " << v2 << " " << w << std::endl;
-        }
-    }
-    file.close();
-    auto t2 = std::chrono::high_resolution_clock::now();
-    std::cout << "Time to create graph: " << std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count()
-              << " ms" << std::endl;
-}
-
-void execute_2(Algorithm alg, int version, const std::string &inFilePath, const std::string &outFilePath) {
-    checkParameters(alg, version, inFilePath, outFilePath);
-    auto t1 = std::chrono::high_resolution_clock::now();
-
-    FILE *fp = fopen(inFilePath.data(), "r");
-    if (fp) {
-        int n, m, v1, v2;
-        float w;
-
-        fscanf(fp, "%d\n", &n);
-        fscanf(fp, "%d\n", &m);
-        for (int i = 0; i < m; i++) {
-            fscanf(fp, "%d %d %f\n", &v1, &v2, &w);
-            if (i == m - 1) std::cout << v1 << " " << v2 << " " << w << std::endl;
-        }
-    }
-    fclose(fp);
-
-    auto t2 = std::chrono::high_resolution_clock::now();
-    std::cout << "Time to create graph: " << std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count()
-              << " ms" << std::endl;
-}
-
-void execute_3(Algorithm alg, int version, const std::string &inFilePath, const std::string &outFilePath) {
-    checkParameters(alg, version, inFilePath, outFilePath);
-
-    char buffer[BUFFER_SIZE];
-    int returned;
-
-    auto t1 = std::chrono::high_resolution_clock::now();
-
-    int fd = open(inFilePath.data(), O_RDONLY);
-
-    long long int nbytes;
-    ioctl(fd, FIONREAD, &nbytes);
-    std::string text;
-    text.reserve(nbytes);
-
-    while ((returned = read(fd, buffer, sizeof(buffer))) > 0) {
-        buffer[returned] = 0x00;
-        text.append(buffer);
-    }
-
-    long n, m, v1, v2;
-    double w;
-    char *token;
-
-    n = strtol(text.c_str(), &token, 10);
-    m = strtol(token, &token, 10);
-    for (int i = 0; i < m; i++) {
-        v1 = strtol(token, &token, 10);
-        v2 = strtol(token, &token, 10);
-        w = strtod(token, &token);
-        if (i == m - 1) std::cout << v1 << " " << v2 << " " << w << std::endl;
-    }
-
-    auto t2 = std::chrono::high_resolution_clock::now();
-    std::cout << "Total time: " << std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count()
-              << " ms" << std::endl;
 }
 
 /**

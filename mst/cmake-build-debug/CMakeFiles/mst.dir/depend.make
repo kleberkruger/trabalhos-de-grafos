@@ -3,6 +3,16 @@
 
 CMakeFiles/mst.dir/sources/application.cpp.o: ../sources/application.cpp
 CMakeFiles/mst.dir/sources/application.cpp.o: ../sources/application.h
+CMakeFiles/mst.dir/sources/application.cpp.o: ../sources/arrayheap.h
+CMakeFiles/mst.dir/sources/application.cpp.o: ../sources/arrayset.h
+CMakeFiles/mst.dir/sources/application.cpp.o: ../sources/binaryheap.h
+CMakeFiles/mst.dir/sources/application.cpp.o: ../sources/disjointset.h
+CMakeFiles/mst.dir/sources/application.cpp.o: ../sources/fastunionfind.h
+CMakeFiles/mst.dir/sources/application.cpp.o: ../sources/fibonacciheap.h
+CMakeFiles/mst.dir/sources/application.cpp.o: ../sources/graph.h
+CMakeFiles/mst.dir/sources/application.cpp.o: ../sources/heap.h
+CMakeFiles/mst.dir/sources/application.cpp.o: ../sources/listset.h
+CMakeFiles/mst.dir/sources/application.cpp.o: ../sources/unionfind.h
 
 CMakeFiles/mst.dir/sources/arrayheap.cpp.o: ../sources/arrayheap.cpp
 CMakeFiles/mst.dir/sources/arrayheap.cpp.o: ../sources/arrayheap.h
@@ -46,6 +56,7 @@ CMakeFiles/mst.dir/sources/listset.cpp.o: ../sources/disjointset.h
 CMakeFiles/mst.dir/sources/listset.cpp.o: ../sources/listset.cpp
 CMakeFiles/mst.dir/sources/listset.cpp.o: ../sources/listset.h
 
+CMakeFiles/mst.dir/sources/main.cpp.o: ../sources/application.h
 CMakeFiles/mst.dir/sources/main.cpp.o: ../sources/arrayheap.h
 CMakeFiles/mst.dir/sources/main.cpp.o: ../sources/arrayset.h
 CMakeFiles/mst.dir/sources/main.cpp.o: ../sources/binaryheap.h

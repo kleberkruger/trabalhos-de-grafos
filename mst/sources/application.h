@@ -15,16 +15,44 @@
 
 #include <chrono>
 #include <string>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include "graph.h"
 
-struct CheckPoint {
+enum Algorithm {
+    NONE = 0, KRUSKAL = 1, PRIM = 2
+};
 
+struct Task {
+
+    explicit Task(std::string description);
+
+    std::string description;
     std::chrono::high_resolution_clock::time_point timePoint;
 };
+
 
 class Application {
 public:
 
+    Application();
+
+    void start(Algorithm algorithm, int version, const std::string &inputFilePath, const std::string &outputFilePath);
+
     void checkPoint(const std::string &task);
+
+private:
+
+    static const int BUFFER_SIZE = 65536;
+    std::vector<Task> tasks;
+
+    std::string readInputFile(const std::string &filePath);
+
+    void printMST(const std::string &filePath, const Graph &mst, double total);
+
+    void printCheckPoints();
 };
 
 

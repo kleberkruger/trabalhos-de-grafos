@@ -10,8 +10,6 @@
  * - Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
  */
 
-
-
 #ifndef MST_GRAPHMATRIX_H
 #define MST_GRAPHMATRIX_H
 
@@ -27,12 +25,13 @@ class GraphMatrix{
   public:
     explicit GraphMatrix(int n = 0);
 
+    void FloydWarshall();
     void ShowGraph();
-    void InsertVertex(int a, int b, float value);
-    void initialize(int n);
-
+    void InsertEdge(int a, int b, float value);
     std::vector<std::vector<float>> adjMatrix;
+
   private:
+    void initialize(int n);
 
 };
 

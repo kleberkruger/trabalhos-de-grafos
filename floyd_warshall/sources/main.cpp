@@ -5,9 +5,20 @@
 
 int main(int argc, char *argv[])
 {
-    GraphMatrix m(N);
+    int n, m, a, b;
+    float value;
+    scanf("%d", &n);
+    scanf("%d", &m);
 
-    // m.ShowGraph();
+    GraphMatrix graph(n);
+
+    while(m--)
+    {
+        scanf("%d %d %f", &a, &b, &value);
+        graph.InsertEdge(a, b, value);
+    }
+    
+    graph.ShowGraph();
 
     return 0;
 }

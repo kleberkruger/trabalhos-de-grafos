@@ -10,7 +10,7 @@ GraphMatrix::GraphMatrix(int n)
     initialize(n);
 }
 
-void GraphMatrix::InsertVertex(int a, int b, float value)
+void GraphMatrix::InsertEdge(int a, int b, float value)
 {
     this->adjMatrix[a][b] = value;
 }

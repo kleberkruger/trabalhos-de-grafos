@@ -17,10 +17,12 @@
 #include <string>
 #include <fcntl.h>
 #include <unistd.h>
-// #include <sys/filio.h>
-#include <chrono>
-#include <sys/ioctl.h>
+// #include <sys/filio.h> // mac
+// #include <sys/ioctl.h> // mac
+#include <x86_64-linux-gnu/sys/filio.h>
+#include <x86_64-linux-gnu/sys/ioctl.h>
 #include "graph.h"
+
 
 enum Algorithm {
     NONE = 0, KRUSKAL = 1, PRIM = 2, BELLMANFORD = 3

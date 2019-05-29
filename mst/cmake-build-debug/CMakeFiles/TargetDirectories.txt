@@ -1,3 +1,0 @@
-/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles/mst.dir
-/media/felipe/Arquivos/Disciplinas/MO412/grafos-t1-mst/mst/cmake-build-debug/CMakeFiles/edit_cache.dir

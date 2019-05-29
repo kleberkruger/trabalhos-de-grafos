@@ -176,7 +176,26 @@ public:
      */
     const std::vector<std::vector<double>> &getMinAdjacencyMatrix() const;
 
+//    /**
+//     * Retorna a matriz de adjacência do grafo.
+//     *
+//     * @return
+//     */
+//    const std::vector<std::vector<std::vector<double>>> &getAdjacencyMatrix() const;
+//
+//    /**
+//     * Retorna os valores das arestas na posição (x,y) da matriz de adjacências.
+//     *
+//     * @param x
+//     * @param y
+//     *
+//     * @return
+//     */
+//    const std::vector<double> &getAdjacencyMatrix(int x, int y) const;
+
     static void BellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred);
+
+    static void BellmanFord(const Graph &graph, int source = 0);
 
     std::vector<Vertex> vertices;
     std::vector<Edge> edges;

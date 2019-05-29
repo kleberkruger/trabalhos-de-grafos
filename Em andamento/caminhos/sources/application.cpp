@@ -73,32 +73,42 @@ void Application::start(Algorithm algorithm, int version,
         graph.insertEdge(strtol(token, &token, 10), strtol(token, &token, 10), strtod(token, &token));
     }
 
-    std::vector<float> dist(graph.vertices.size(), -1);
+    std::vector<float> dist(graph.vertices.size(), std::numeric_limits<float>::infinity());
     std::vector<int> pred(graph.vertices.size(), -1);
 
     checkPoint("run algorithm");
-    auto &matrix = graph.getMinAdjacencyMatrix();
 
-    printf("size = %d\n\n", (int) matrix.size());
-    for (int i = 0; i < matrix.size(); i++) {
-        for (int j = 0; j < matrix[i].size(); j++) {
-            if (j == 0)
-                printf("|");
+//    auto &matrix = graph.getMinAdjacencyMatrix();
+//    for (int i = 0; i < matrix.size(); i++) {
+//        for (int j = 0; j < matrix[i].size(); j++) {
+//            if (j == 0)
+//                printf("|");
+//
+//            printf(" %3.1f ", matrix[i][j]);
+//
+//            if (j == matrix.size() - 1)
+//                printf("|");
+//        }
+//        printf("\n");
+//    }
+//    printf("\n");
 
-            printf(" %3.1f ", matrix[i][j]);
+    graph.print();
 
-            if (j == matrix.size() - 1)
-                printf("|");
-        }
-        printf("\n");
-    }
-    printf("\n");
-
-
-    Graph::BellmanFord(graph, 0, dist, pred);
+    Graph::BellmanFord(graph, 3, dist, pred);
+    Graph::BellmanFord(graph, 3);
 
     checkPoint("print the paths");
-    printPath(dist, pred);
+//    printPath(dist, pred);
+
+    for (float f : dist) {
+        std::cout << f << " ";
+    }
+    std::cout << std::endl;
+    for (int i = 0; i < pred.size(); i++) {
+        std::cout << i << ": " << pred[i] << std::endl;
+    }
+    std::cout << std::endl;
 
     checkPoint("finished");
     printCheckPoints();

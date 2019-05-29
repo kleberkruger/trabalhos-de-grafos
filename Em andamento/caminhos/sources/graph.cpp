@@ -122,7 +122,10 @@ void Graph::BellmanFord(const Graph &graph, int source, std::vector<float> &dist
             auto v = e.end;
             auto w = e.weight;
 
-            if (dist[u] != std::numeric_limits<int>::infinity() && dist[u] + w < dist[v]) {
+            std::cout << "analisando (" << u << "," << v << ") " << w << std::endl;
+//            if (dist[u] != std::numeric_limits<int>::infinity() && dist[u] + w < dist[v]) {
+            if (dist[v] > dist[u] + w) {
+                std::cout << "entrei aqui" << std::endl;
                 dist[v] = dist[u] + w;
                 pred[v] = u;
             }
@@ -137,5 +140,45 @@ void Graph::BellmanFord(const Graph &graph, int source, std::vector<float> &dist
         if (dist[u] != std::numeric_limits<int>::infinity() && dist[u] + w < dist[v]) {
             throw std::invalid_argument("Negative cycle"); // FIXME: verificar exceção mais adequada.
         }
+    }
+}
+
+void Graph::BellmanFord(const Graph &graph, int source) {
+    struct BellmanFordVertex {
+        float dist;
+        int pred;
+
+        BellmanFordVertex() : dist(std::numeric_limits<float>::infinity()), pred(-1) {}
+    };
+
+    std::vector<BellmanFordVertex> vertices(graph.vertices.size());
+    vertices[source].dist = 0;
+
+    for (int i = 0; i < graph.vertices.size() - 1; i++) {
+        for (auto e : graph.edges) {
+            auto &u = vertices[e.start];
+            auto &v = vertices[e.end];
+            auto w = e.weight;
+
+            if (v.dist > u.dist + w) {
+                v.dist = u.dist + w;
+                v.pred = e.start; // u
+            }
+        }
+    }
+
+    for (auto e: graph.edges) {
+        auto &u = vertices[e.start];
+        auto &v = vertices[e.end];
+        auto w = e.weight;
+
+        if (v.dist > u.dist + w) {
+            throw std::invalid_argument("Negative cycle"); // FIXME: verificar exceção mais adequada.
+        }
+    }
+
+    for (int i = 0; i < vertices.size(); i++) {
+        auto v = vertices[i];
+        std::cout << i << ": " << v.dist << " " << v.pred << " " << std::endl;
     }
 }

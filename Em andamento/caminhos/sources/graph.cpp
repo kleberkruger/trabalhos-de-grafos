@@ -28,7 +28,11 @@ EdgeTo::EdgeTo(int end, double weight) : end(end), weight(weight) {}
 EdgeTo::~EdgeTo() = default;
 
 
-Graph::Graph(int n, int m) : adjacencyList(n) {
+Graph::Graph(int n, int m) : adjacencyList(n),
+                             adjacencyMatrix(n, std::vector<double>(n, std::numeric_limits<double>::infinity())) {
+
+    for (int i = 0; i < n; i++) adjacencyMatrix[i][i] = 0;
+
     vertices.reserve(n);
     edges.reserve(m);
 
@@ -79,6 +83,19 @@ const std::vector<EdgeTo> &Graph::getAdjacencyList(int vertex) const {
     return getAdjacencyList()[vertex];
 }
 
+const std::vector<std::vector<double>> &Graph::getAdjacencyMatrix() const {
+    static bool exists = false;
+    if (!exists) {
+        for (auto &e : edges) {
+            if (e.weight < adjacencyMatrix[e.start][e.end]) {
+                adjacencyMatrix[e.start][e.end] = e.weight;
+            }
+        }
+        exists = true;
+    }
+    return adjacencyMatrix;
+}
+
 void Graph::print() {
 
     std::cout << "==================================================" << std::endl
@@ -94,13 +111,6 @@ void Graph::print() {
 
     std::cout << "==================================================" << std::endl;
 }
-
-/*
- * TODO: Implementar a matriz de adjacência.
- */
-//double *Graph::getMinAdjacencyMatrix() const {
-//    return minAdjacencyMatrix;
-//}
 
 void Graph::BellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
     dist[source] = 0;
@@ -129,4 +139,3 @@ void Graph::BellmanFord(const Graph &graph, int source, std::vector<float> &dist
         }
     }
 }
-

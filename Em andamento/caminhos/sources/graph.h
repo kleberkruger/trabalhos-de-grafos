@@ -97,7 +97,8 @@ public:
 
         double (*execute)(const Graph &graph, Graph &mst);
 
-        MSTAlgorithm(std::string name, const int version, double (*execute)(const Graph &, Graph &), std::string  alias = "")
+        MSTAlgorithm(std::string name, const int version, double (*execute)(const Graph &, Graph &),
+                     std::string alias = "")
                 : name(std::move(name)), version(version), execute(execute), alias(std::move(alias)) {}
     };
 
@@ -173,9 +174,9 @@ public:
      *
      * @return
      */
-//    double *getMinAdjacencyMatrix() const;
+    const std::vector<std::vector<double>> &getAdjacencyMatrix() const;
 
-    static void BellmanFord(const Graph& graph, int source, std::vector<float> &dist, std::vector<int> &pred);
+    static void BellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred);
 
     std::vector<Vertex> vertices;
     std::vector<Edge> edges;
@@ -183,8 +184,7 @@ public:
 private:
 
     mutable std::vector<std::vector<EdgeTo>> adjacencyList;
-
-//    double *minAdjacencyMatrix;
+    mutable std::vector<std::vector<double>> adjacencyMatrix;
 };
 
 #endif //MST_GRAPH_H

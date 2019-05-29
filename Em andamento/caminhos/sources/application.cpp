@@ -77,6 +77,24 @@ void Application::start(Algorithm algorithm, int version,
     std::vector<int> pred(graph.vertices.size(), -1);
 
     checkPoint("run algorithm");
+    auto &matrix = graph.getAdjacencyMatrix();
+
+    printf("size = %d\n\n", (int) matrix.size());
+    for (int i = 0; i < matrix.size(); i++) {
+        for (int j = 0; j < matrix[i].size(); j++) {
+            if (j == 0)
+                printf("|");
+
+            printf(" %3.1f ", matrix[i][j]);
+
+            if (j == matrix.size() - 1)
+                printf("|");
+        }
+        printf("\n");
+    }
+    printf("\n");
+
+
     Graph::BellmanFord(graph, 0, dist, pred);
 
     checkPoint("print the paths");

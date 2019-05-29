@@ -36,9 +36,35 @@ void GraphMatrix::ShowGraph()
             if(j == 0)
                 printf("|");
 
-            printf(" %d -> %d: %5.2f |", i, j, this->adjMatrix[i][j]);
+            printf(" %5.2f ", this->adjMatrix[i][j]);
+        
+            if(j == this->adjMatrix.size() - 1)
+                printf("|");
         }
         printf("\n");
     }
     printf("\n");
+}
+
+void GraphMatrix::FloydWarshall(std::vector<std::vector<float>> &res)
+{
+    int n =  this->adjMatrix.size();
+
+    auto D = this->adjMatrix;
+
+    for(int k = 0; k < n; k++)
+    {
+        for(int i = 0; i < n; i++)
+        {
+            for(int j = 0; j < n; j++)
+            {
+                if(D[i][j] > D[i][k] + D[k][j])
+                {
+                    D[i][j] = D[i][k] + D[k][j];
+                }
+            }
+        }
+    }
+
+    res = D;
 }

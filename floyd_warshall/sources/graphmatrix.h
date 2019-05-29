@@ -25,7 +25,7 @@ class GraphMatrix{
   public:
     explicit GraphMatrix(int n = 0);
 
-    void FloydWarshall();
+    void FloydWarshall(std::vector<std::vector<float>> &res);
     void ShowGraph();
     void InsertEdge(int a, int b, float value);
     std::vector<std::vector<float>> adjMatrix;

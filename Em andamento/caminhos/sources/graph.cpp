@@ -102,38 +102,30 @@ void Graph::print() {
 //    return minAdjacencyMatrix;
 //}
 
-void Graph::BellmanFord(const Graph& graph, int source, std::vector<float> &dist, std::vector<int> &pred)
-{
+void Graph::BellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
     dist[source] = 0;
     pred[source] = source;
 
-    for(int i = 0; i < graph.vertices.size() - 1; i++)
-    {
-        for(auto e : graph.edges)
-        {
+    for (int i = 0; i < graph.vertices.size() - 1; i++) {
+        for (auto e : graph.edges) {
             auto u = e.start;
             auto v = e.end;
             auto w = e.weight;
 
-            if(dist[u] != std::numeric_limits<int>::infinity() && dist[u] + w < dist[v])
-            {
+            if (dist[u] != std::numeric_limits<int>::infinity() && dist[u] + w < dist[v]) {
                 dist[v] = dist[u] + w;
                 pred[v] = u;
             }
         }
     }
 
-    // negative cicly detection
-    for(auto e : graph.edges)
-    {
+    for (auto e : graph.edges) {
         auto u = e.start;
         auto v = e.end;
         auto w = e.weight;
 
-        if(dist[u] != std::numeric_limits<int>::infinity() && dist[u] + w < dist[v])
-        {
-            printf("Ciclo negativo\n\n");
-            return;
+        if (dist[u] != std::numeric_limits<int>::infinity() && dist[u] + w < dist[v]) {
+            throw std::invalid_argument("Negative cycle"); // FIXME: verificar exceção mais adequada.
         }
     }
 }

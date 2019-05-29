@@ -1,10 +1,12 @@
 #include <iostream>
-#include <unistd.h>
-#include <fcntl.h>
 #include <cstring>
-#include <sstream>
 #include <fstream>
+#include <sstream>
+
+#include <fcntl.h>
+#include <unistd.h>
 #include <sys/ioctl.h>
+
 #include "application.h"
 
 /**
@@ -18,8 +20,10 @@
  * <filepath-out>: arquivo de saída onde será exibida a MST resultante.
  *
  * Exemplos:
- * ./main kruskal 0 dataset/ja9847_in.txt dataset/ja9847_out.txt
- * ./main prim 0 dataset/ja9847_in.txt dataset/ja9847_out.txt
+ * ./main bellman-ford 0 dataset/ja9847_in.txt dataset/ja9847_out.txt
+ * ./main dijkstra 0 dataset/ja9847_in.txt dataset/ja9847_out.txt
+ * ./main floyd-warshall 0 dataset/ja9847_in.txt dataset/ja9847_out.txt
+ * ./main johnson 0 dataset/ja9847_in.txt dataset/ja9847_out.txt
  *
  * @param argc quantidade de parâmetros
  * @param argv valores dos parâmetros
@@ -34,7 +38,7 @@ int main(int argc, char *argv[]) {
     Algorithm alg = strcasecmp(argv[1], "bellman-ford") == 0 ? BELLMANFORD :
                     strcasecmp(argv[1], "dijkstra") == 0 ? DIJKSTRA :
                     strcasecmp(argv[1], "floyd-warshall") == 0 ? FLOYDWARSHALL :
-                    strcasecmp(argv[1], "johnson") == 0 ? JOHNSON :NONE;
+                    strcasecmp(argv[1], "johnson") == 0 ? JOHNSON : NONE;
 
     int version = std::strtol(argv[2], nullptr, 10);
 

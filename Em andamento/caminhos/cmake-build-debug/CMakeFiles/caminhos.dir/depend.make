@@ -12,3 +12,6 @@ CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/application.h
 CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/graph.h
 CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/main.cpp
 
+CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o: ../sources/pathsapp.cpp
+CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o: ../sources/pathsapp.h
+

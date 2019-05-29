@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos"
+CMAKE_SOURCE_DIR = "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/trabalhos-core"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/trabalhos-core/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/trabalhos-core/cmake-build-debug/CMakeFiles" "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/trabalhos-core/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/trabalhos-core/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -111,71 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named caminhos
+# Target rules for targets named trabalhos_core
 
 # Build rule for target.
-caminhos: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 caminhos
-.PHONY : caminhos
+trabalhos_core: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trabalhos_core
+.PHONY : trabalhos_core
 
 # fast build rule for target.
-caminhos/fast:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/build
-.PHONY : caminhos/fast
-
-sources/application.o: sources/application.cpp.o
-
-.PHONY : sources/application.o
-
-# target to build an object file
-sources/application.cpp.o:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/application.cpp.o
-.PHONY : sources/application.cpp.o
-
-sources/application.i: sources/application.cpp.i
-
-.PHONY : sources/application.i
-
-# target to preprocess a source file
-sources/application.cpp.i:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/application.cpp.i
-.PHONY : sources/application.cpp.i
-
-sources/application.s: sources/application.cpp.s
-
-.PHONY : sources/application.s
-
-# target to generate assembly for a file
-sources/application.cpp.s:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/application.cpp.s
-.PHONY : sources/application.cpp.s
-
-sources/graph.o: sources/graph.cpp.o
-
-.PHONY : sources/graph.o
-
-# target to build an object file
-sources/graph.cpp.o:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/graph.cpp.o
-.PHONY : sources/graph.cpp.o
-
-sources/graph.i: sources/graph.cpp.i
-
-.PHONY : sources/graph.i
-
-# target to preprocess a source file
-sources/graph.cpp.i:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/graph.cpp.i
-.PHONY : sources/graph.cpp.i
-
-sources/graph.s: sources/graph.cpp.s
-
-.PHONY : sources/graph.s
-
-# target to generate assembly for a file
-sources/graph.cpp.s:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/graph.cpp.s
-.PHONY : sources/graph.cpp.s
+trabalhos_core/fast:
+	$(MAKE) -f CMakeFiles/trabalhos_core.dir/build.make CMakeFiles/trabalhos_core.dir/build
+.PHONY : trabalhos_core/fast
 
 sources/main.o: sources/main.cpp.o
 
@@ -183,7 +129,7 @@ sources/main.o: sources/main.cpp.o
 
 # target to build an object file
 sources/main.cpp.o:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/main.cpp.o
+	$(MAKE) -f CMakeFiles/trabalhos_core.dir/build.make CMakeFiles/trabalhos_core.dir/sources/main.cpp.o
 .PHONY : sources/main.cpp.o
 
 sources/main.i: sources/main.cpp.i
@@ -192,7 +138,7 @@ sources/main.i: sources/main.cpp.i
 
 # target to preprocess a source file
 sources/main.cpp.i:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/main.cpp.i
+	$(MAKE) -f CMakeFiles/trabalhos_core.dir/build.make CMakeFiles/trabalhos_core.dir/sources/main.cpp.i
 .PHONY : sources/main.cpp.i
 
 sources/main.s: sources/main.cpp.s
@@ -201,35 +147,8 @@ sources/main.s: sources/main.cpp.s
 
 # target to generate assembly for a file
 sources/main.cpp.s:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/main.cpp.s
+	$(MAKE) -f CMakeFiles/trabalhos_core.dir/build.make CMakeFiles/trabalhos_core.dir/sources/main.cpp.s
 .PHONY : sources/main.cpp.s
-
-sources/pathsapp.o: sources/pathsapp.cpp.o
-
-.PHONY : sources/pathsapp.o
-
-# target to build an object file
-sources/pathsapp.cpp.o:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o
-.PHONY : sources/pathsapp.cpp.o
-
-sources/pathsapp.i: sources/pathsapp.cpp.i
-
-.PHONY : sources/pathsapp.i
-
-# target to preprocess a source file
-sources/pathsapp.cpp.i:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/pathsapp.cpp.i
-.PHONY : sources/pathsapp.cpp.i
-
-sources/pathsapp.s: sources/pathsapp.cpp.s
-
-.PHONY : sources/pathsapp.s
-
-# target to generate assembly for a file
-sources/pathsapp.cpp.s:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/pathsapp.cpp.s
-.PHONY : sources/pathsapp.cpp.s
 
 # Help Target
 help:
@@ -239,19 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... caminhos"
-	@echo "... sources/application.o"
-	@echo "... sources/application.i"
-	@echo "... sources/application.s"
-	@echo "... sources/graph.o"
-	@echo "... sources/graph.i"
-	@echo "... sources/graph.s"
+	@echo "... trabalhos_core"
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"
-	@echo "... sources/pathsapp.o"
-	@echo "... sources/pathsapp.i"
-	@echo "... sources/pathsapp.s"
 .PHONY : help
 
 

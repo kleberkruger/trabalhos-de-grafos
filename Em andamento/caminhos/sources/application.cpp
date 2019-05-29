@@ -39,7 +39,7 @@ std::string Application::readInputFile(const std::string &filePath) {
     char buffer[BUFFER_SIZE];
     int returned;
 
-    //std::cout << "Reading input file: \"" << filePath << "\"..." << std::endl;
+    std::cout << "Reading input file: \"" << filePath << "\"..." << std::endl;
 
     int fd = open(filePath.data(), O_RDONLY);
 
@@ -79,8 +79,8 @@ void Application::start(Algorithm algorithm, int version,
     checkPoint("run algorithm");
     Graph::BellmanFord(graph, 0, dist, pred);
 
-    checkPoint("print MST");
-//    printMST(outputFilePath, mst, total);
+    checkPoint("print the paths");
+    printPath(dist, pred);
 
     checkPoint("finished");
     printCheckPoints();
@@ -88,6 +88,26 @@ void Application::start(Algorithm algorithm, int version,
 
 void Application::checkPoint(const std::string &task) {
     tasks.emplace_back(task);
+}
+
+void Application::printPath(std::vector<float> dist, std::vector<int> pred) {
+//    for (int i = 0; i < 11; i++) {
+//        printPath(dist, pred, i);
+//    }
+
+    for (float f : dist) {
+        std::cout << f << " ";
+    }
+    std::cout << std::endl;
+    for (int p : pred) {
+        std::cout << p << " ";
+    }
+    std::cout << std::endl;
+}
+
+
+void Application::printPath(std::vector<float> dist, std::vector<int> pred, int vertex) {
+
 }
 
 void Application::printCheckPoints() {
@@ -107,4 +127,3 @@ void Application::printCheckPoints() {
               << "================================================================================"
               << std::endl;
 }
-

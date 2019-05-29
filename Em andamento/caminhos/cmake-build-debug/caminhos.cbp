@@ -95,6 +95,12 @@
 		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/main.cpp">
 			<Option target="caminhos"/>
 		</Unit>
+		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.cpp">
+			<Option target="caminhos"/>
+		</Unit>
+		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.h">
+			<Option target="caminhos"/>
+		</Unit>
 		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

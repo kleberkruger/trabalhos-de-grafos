@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/caminhos.dir/sources/main.cpp.o"
   "CMakeFiles/caminhos.dir/sources/application.cpp.o"
   "CMakeFiles/caminhos.dir/sources/graph.cpp.o"
+  "CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o"
   "caminhos.pdb"
   "caminhos"
 )

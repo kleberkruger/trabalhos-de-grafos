@@ -77,7 +77,7 @@ void Application::start(Algorithm algorithm, int version,
     std::vector<int> pred(graph.vertices.size(), -1);
 
     checkPoint("run algorithm");
-    auto &matrix = graph.getAdjacencyMatrix();
+    auto &matrix = graph.getMinAdjacencyMatrix();
 
     printf("size = %d\n\n", (int) matrix.size());
     for (int i = 0; i < matrix.size(); i++) {

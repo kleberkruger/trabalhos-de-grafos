@@ -29,9 +29,9 @@ EdgeTo::~EdgeTo() = default;
 
 
 Graph::Graph(int n, int m) : adjacencyList(n),
-                             adjacencyMatrix(n, std::vector<double>(n, std::numeric_limits<double>::infinity())) {
+                             minAdjacencyMatrix(n, std::vector<double>(n, std::numeric_limits<double>::infinity())) {
 
-    for (int i = 0; i < n; i++) adjacencyMatrix[i][i] = 0;
+    for (int i = 0; i < n; i++) minAdjacencyMatrix[i][i] = 0;
 
     vertices.reserve(n);
     edges.reserve(m);
@@ -83,17 +83,17 @@ const std::vector<EdgeTo> &Graph::getAdjacencyList(int vertex) const {
     return getAdjacencyList()[vertex];
 }
 
-const std::vector<std::vector<double>> &Graph::getAdjacencyMatrix() const {
+const std::vector<std::vector<double>> &Graph::getMinAdjacencyMatrix() const {
     static bool exists = false;
     if (!exists) {
         for (auto &e : edges) {
-            if (e.weight < adjacencyMatrix[e.start][e.end]) {
-                adjacencyMatrix[e.start][e.end] = e.weight;
+            if (e.weight < minAdjacencyMatrix[e.start][e.end]) {
+                minAdjacencyMatrix[e.start][e.end] = e.weight;
             }
         }
         exists = true;
     }
-    return adjacencyMatrix;
+    return minAdjacencyMatrix;
 }
 
 void Graph::print() {

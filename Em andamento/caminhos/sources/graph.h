@@ -174,7 +174,7 @@ public:
      *
      * @return
      */
-    const std::vector<std::vector<double>> &getAdjacencyMatrix() const;
+    const std::vector<std::vector<double>> &getMinAdjacencyMatrix() const;
 
     static void BellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred);
 
@@ -184,7 +184,8 @@ public:
 private:
 
     mutable std::vector<std::vector<EdgeTo>> adjacencyList;
-    mutable std::vector<std::vector<double>> adjacencyMatrix;
+    mutable std::vector<std::vector<double>> minAdjacencyMatrix;
+//    mutable std::vector<std::vector<std::vector<double>>> adjacencyMatrix; // e se existir várias arestas de a para b?
 };
 
 #endif //MST_GRAPH_H

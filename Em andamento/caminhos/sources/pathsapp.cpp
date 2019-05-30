@@ -13,9 +13,36 @@ AlgorithmOutput dijkstra(const Graph &g) {
     return AlgorithmOutput();
 }
 
+enum AlgorithmName {
+    NONE = 0, BELLMANFORD = 1, DIJKSTRA = 2, FLOYDWARSHALL = 3, JOHNSON = 4
+};
+
+enum AlgorithmName valueOfEnum(const std::string &algorithm) {
+    return strcasecmp(algorithm.data(), "bellman-ford") == 0 ? BELLMANFORD :
+           strcasecmp(algorithm.data(), "dijkstra") == 0 ? DIJKSTRA :
+           strcasecmp(algorithm.data(), "floyd-warshall") == 0 ? FLOYDWARSHALL :
+           strcasecmp(algorithm.data(), "johnson") == 0 ? JOHNSON : NONE;
+}
+
+
 Algorithm PathsApp::selectAlgorithm(const std::string &algorithm, int version) {
-    Algorithm alg("Dijkstra", 0, dijkstra, "Simple Dijkstra");
-    return alg;
+    static Algorithm bellmanFords[] = {
+            Algorithm("Bellman Ford", 0, dijkstra, "Simple Bellman Ford"),
+    };
+    static Algorithm dijkstras[] = {
+            Algorithm("Dijkstra", 0, dijkstra, "Simple Dijkstra"),
+            Algorithm("Dijkstra", 0, dijkstra, "Simple Dijkstra"),
+    };
+    static Algorithm floydWarshalls[] = {
+            Algorithm("Floyd Warshall", 0, dijkstra, "Simple Floyd Warshall"),
+    };
+    static Algorithm johnsons[] = {
+            Algorithm("Johnson", 0, dijkstra, "Simple Johnson"),
+    };
+
+    static std::vector<Algorithm *> algorithms = {bellmanFords, dijkstras, floydWarshalls, johnsons};
+
+    return algorithms[valueOfEnum(algorithm) - 1][version];
 }
 
 Graph PathsApp::createGraph(const std::string &input) {

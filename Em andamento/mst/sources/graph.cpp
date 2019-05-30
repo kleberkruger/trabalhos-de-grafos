@@ -1,5 +1,3 @@
-#include <utility>
-
 /**
  * Algoritmos em Grafos (MO412)
  *
@@ -13,7 +11,6 @@
  */
 
 #include "graph.h"
-
 
 //Vertex::Vertex(int id, std::size_t adjCapacity) : id(id) {
 Vertex::Vertex(int id) : id(id) {

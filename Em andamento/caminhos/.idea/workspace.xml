@@ -12,10 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9690bed4-6d81-4295-9ffc-dba465488ab5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sources/graph.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/graph.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/pathsalg.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/pathsalg.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/dijkstra.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/dijkstra.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/CXX.includecache" afterDir="false" />
@@ -29,9 +27,10 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/caminhos" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/caminhos" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/caminhos.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/caminhos.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/application.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/application.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/application.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/application.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/pathsalg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/pathsalg.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/pathsalg.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/pathsalg.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/pathsapp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/pathsapp.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mst/sources/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../mst/sources/graph.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,23 +45,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sources/pathsapp.cpp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/pathsalg.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+            <state relative-caret-position="1120">
+              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/application.h">
+        <entry file="file://$PROJECT_DIR$/sources/dijkstra.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sources/dijkstra.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-              <folding>
-                <element signature="e#270#287#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="176">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -82,6 +83,10 @@
         <option value="$PROJECT_DIR$/sources/application.h" />
         <option value="$PROJECT_DIR$/sources/application.cpp" />
         <option value="$PROJECT_DIR$/sources/pathsapp.cpp" />
+        <option value="$PROJECT_DIR$/../mst/sources/graph.cpp" />
+        <option value="$PROJECT_DIR$/sources/pathsalg.h" />
+        <option value="$PROJECT_DIR$/sources/pathsalg.cpp" />
+        <option value="$PROJECT_DIR$/sources/dijkstra.h" />
       </list>
     </option>
   </component>
@@ -162,12 +167,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559224646559</updated>
-      <workItem from="1559224650193" duration="6572000" />
+      <workItem from="1559224650193" duration="8424000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6572000" />
+    <option name="totallyTimeSpent" value="8424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="23" width="2560" height="1057" extended-state="6" />
@@ -250,11 +255,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/pathsalg.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/../mst/sources/graph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mst/sources/graph.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/pathsapp.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/pathsalg.h">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="e#318#328#0" expanded="true" />
+            <element signature="e#450#460#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/application.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -266,10 +300,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/pathsapp.cpp">
+    <entry file="file://$PROJECT_DIR$/sources/pathsalg.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        <state relative-caret-position="1120">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/dijkstra.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/dijkstra.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>

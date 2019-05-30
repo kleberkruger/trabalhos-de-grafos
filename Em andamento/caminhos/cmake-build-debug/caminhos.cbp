@@ -86,6 +86,12 @@
 		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h">
 			<Option target="caminhos"/>
 		</Unit>
+		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.cpp">
+			<Option target="caminhos"/>
+		</Unit>
+		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.h">
+			<Option target="caminhos"/>
+		</Unit>
 		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.cpp">
 			<Option target="caminhos"/>
 		</Unit>

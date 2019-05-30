@@ -150,6 +150,33 @@ sources/application.cpp.s:
 	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/application.cpp.s
 .PHONY : sources/application.cpp.s
 
+sources/dijkstra.o: sources/dijkstra.cpp.o
+
+.PHONY : sources/dijkstra.o
+
+# target to build an object file
+sources/dijkstra.cpp.o:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/dijkstra.cpp.o
+.PHONY : sources/dijkstra.cpp.o
+
+sources/dijkstra.i: sources/dijkstra.cpp.i
+
+.PHONY : sources/dijkstra.i
+
+# target to preprocess a source file
+sources/dijkstra.cpp.i:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/dijkstra.cpp.i
+.PHONY : sources/dijkstra.cpp.i
+
+sources/dijkstra.s: sources/dijkstra.cpp.s
+
+.PHONY : sources/dijkstra.s
+
+# target to generate assembly for a file
+sources/dijkstra.cpp.s:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/dijkstra.cpp.s
+.PHONY : sources/dijkstra.cpp.s
+
 sources/graph.o: sources/graph.cpp.o
 
 .PHONY : sources/graph.o
@@ -270,6 +297,9 @@ help:
 	@echo "... sources/application.o"
 	@echo "... sources/application.i"
 	@echo "... sources/application.s"
+	@echo "... sources/dijkstra.o"
+	@echo "... sources/dijkstra.i"
+	@echo "... sources/dijkstra.s"
 	@echo "... sources/graph.o"
 	@echo "... sources/graph.i"
 	@echo "... sources/graph.s"

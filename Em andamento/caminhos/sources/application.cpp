@@ -17,15 +17,26 @@ timePoint(std::chrono::system_clock::now()) {}
 #endif
 
 
-Algorithm Application::selectAlgorithm(const std::string &algorithm, int version) {
+Algorithm Application::selectAlgorithm(const std::string &algorithm, unsigned short version) {
+    auto map = algorithmsMap();
+    auto it = map.find(algorithm);
+
+    if (it == map.end()) {
+        throw std::invalid_argument("Incorrect algorithm name");
+    } else if (version >= (*it).second.size()) {
+        throw std::invalid_argument("Incorrect version to " + algorithm);
+    }
+
     return algorithmsMap()[algorithm][version];
 }
 
 std::string Application::readInputFile(const std::string &filePath) {
     char buffer[BUFFER_SIZE];
-    int returned;
+    int fd, returned;
 
-    int fd = open(filePath.data(), O_RDONLY);
+    if ((fd = open(filePath.data(), O_RDONLY)) == -1) {
+        throw std::invalid_argument("Incorrect input file path: \"" + filePath + "\"");
+    }
 
     std::size_t size;
     ioctl(fd, FIONREAD, &size);

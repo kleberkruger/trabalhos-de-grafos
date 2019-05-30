@@ -64,7 +64,7 @@ private:
 
     static void printTasks(std::vector<Task> tasks);
 
-    Algorithm selectAlgorithm(const std::string &algorithm, int version);
+    Algorithm selectAlgorithm(const std::string &algorithm, unsigned short version);
 };
 
 

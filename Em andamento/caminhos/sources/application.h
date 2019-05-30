@@ -15,8 +15,9 @@
 #include <string>
 #include <vector>
 #include <fcntl.h>
-#include <zconf.h>
-#include <sys/filio.h>
+#include <unistd.h> //linux
+//#include <zconf.h> //mac
+//#include <sys/filio.h> //mac
 #include <sys/ioctl.h>
 #include "graph.h"
 

@@ -104,6 +104,42 @@ void Dijkstra(const Graph &graph, int source) {
 
 }
 
+std::vector<std::vector<int>> PredInit(const Graph &graph)
+{
+    auto adjMatrix = graph.getMinAdjacencyMatrix();
+
+    std::vector<std::vector<int>> pred;
+    std::vector<int> line(adjMatrix.size(), -1);
+
+    for(int i = 0; i < adjMatrix.size(); i++)
+        pred.emplace_back(line);
+
+    for(int i = 0; i < (int)adjMatrix.size(); i++)
+        for(int j = 0; j < (int)adjMatrix.size(); j++)
+            if(adjMatrix[i][j] != std::numeric_limits<double>::infinity() && i != j)
+                pred[i][j] = i;
+
+    return pred;
+}
+
+void FloydWarshall(const Graph &graph, std::vector<std::vector<double>> &dist, std::vector<std::vector<int>> &pred)
+{
+    auto adjMatrix = graph.getMinAdjacencyMatrix();
+    int n = adjMatrix.size();
+
+    pred = PredInit(graph);
+
+    for(int k = 0; k < n; k++)
+        for(int i = 0; i < n; i++)
+            for(int j = 0; j < n; j++)
+                if(dist[i][j] > dist[i][k] + dist[k][j])
+                {
+                    dist[i][j] = dist[i][k] + dist[k][j];
+                    pred[i][j] = pred[k][j];
+                }
+}
+
+
 void Johnson(const Graph &graph, std::vector<float> &dist, std::vector<int> &pred) {
     Graph copy = graph;
     auto id = graph.vertices.size();

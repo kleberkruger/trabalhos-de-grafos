@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/felipe/Downloads/CLion-2019.1.3/clion-2019.1.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/felipe/Downloads/CLion-2019.1.3/clion-2019.1.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos"
+CMAKE_SOURCE_DIR = "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug"
+CMAKE_BINARY_DIR = "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/caminhos.dir/depend.make
@@ -57,105 +57,105 @@ include CMakeFiles/caminhos.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/caminhos.dir/flags.make
 
-CMakeFiles/caminhos.dir/sources/main.cpp.o: CMakeFiles/caminhos.dir/flags.make
-CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/caminhos.dir/sources/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/main.cpp.o -c "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/main.cpp"
-
-CMakeFiles/caminhos.dir/sources/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/caminhos.dir/sources/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/main.cpp" > CMakeFiles/caminhos.dir/sources/main.cpp.i
-
-CMakeFiles/caminhos.dir/sources/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/caminhos.dir/sources/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/main.cpp" -o CMakeFiles/caminhos.dir/sources/main.cpp.s
-
 CMakeFiles/caminhos.dir/sources/application.cpp.o: CMakeFiles/caminhos.dir/flags.make
 CMakeFiles/caminhos.dir/sources/application.cpp.o: ../sources/application.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/caminhos.dir/sources/application.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/application.cpp.o -c "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/caminhos.dir/sources/application.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/application.cpp.o -c "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/application.cpp"
 
 CMakeFiles/caminhos.dir/sources/application.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/caminhos.dir/sources/application.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.cpp" > CMakeFiles/caminhos.dir/sources/application.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/application.cpp" > CMakeFiles/caminhos.dir/sources/application.cpp.i
 
 CMakeFiles/caminhos.dir/sources/application.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/caminhos.dir/sources/application.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.cpp" -o CMakeFiles/caminhos.dir/sources/application.cpp.s
-
-CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o: CMakeFiles/caminhos.dir/flags.make
-CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o: ../sources/pathsapp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o -c "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.cpp"
-
-CMakeFiles/caminhos.dir/sources/pathsapp.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/caminhos.dir/sources/pathsapp.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.cpp" > CMakeFiles/caminhos.dir/sources/pathsapp.cpp.i
-
-CMakeFiles/caminhos.dir/sources/pathsapp.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/caminhos.dir/sources/pathsapp.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.cpp" -o CMakeFiles/caminhos.dir/sources/pathsapp.cpp.s
-
-CMakeFiles/caminhos.dir/sources/graph.cpp.o: CMakeFiles/caminhos.dir/flags.make
-CMakeFiles/caminhos.dir/sources/graph.cpp.o: ../sources/graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/caminhos.dir/sources/graph.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/graph.cpp.o -c "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.cpp"
-
-CMakeFiles/caminhos.dir/sources/graph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/caminhos.dir/sources/graph.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.cpp" > CMakeFiles/caminhos.dir/sources/graph.cpp.i
-
-CMakeFiles/caminhos.dir/sources/graph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/caminhos.dir/sources/graph.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.cpp" -o CMakeFiles/caminhos.dir/sources/graph.cpp.s
-
-CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o: CMakeFiles/caminhos.dir/flags.make
-CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o: ../sources/pathsalg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o -c "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.cpp"
-
-CMakeFiles/caminhos.dir/sources/pathsalg.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/caminhos.dir/sources/pathsalg.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.cpp" > CMakeFiles/caminhos.dir/sources/pathsalg.cpp.i
-
-CMakeFiles/caminhos.dir/sources/pathsalg.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/caminhos.dir/sources/pathsalg.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.cpp" -o CMakeFiles/caminhos.dir/sources/pathsalg.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/application.cpp" -o CMakeFiles/caminhos.dir/sources/application.cpp.s
 
 CMakeFiles/caminhos.dir/sources/dijkstra.cpp.o: CMakeFiles/caminhos.dir/flags.make
 CMakeFiles/caminhos.dir/sources/dijkstra.cpp.o: ../sources/dijkstra.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/caminhos.dir/sources/dijkstra.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/dijkstra.cpp.o -c "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/caminhos.dir/sources/dijkstra.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/dijkstra.cpp.o -c "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.cpp"
 
 CMakeFiles/caminhos.dir/sources/dijkstra.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/caminhos.dir/sources/dijkstra.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.cpp" > CMakeFiles/caminhos.dir/sources/dijkstra.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.cpp" > CMakeFiles/caminhos.dir/sources/dijkstra.cpp.i
 
 CMakeFiles/caminhos.dir/sources/dijkstra.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/caminhos.dir/sources/dijkstra.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.cpp" -o CMakeFiles/caminhos.dir/sources/dijkstra.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.cpp" -o CMakeFiles/caminhos.dir/sources/dijkstra.cpp.s
+
+CMakeFiles/caminhos.dir/sources/graph.cpp.o: CMakeFiles/caminhos.dir/flags.make
+CMakeFiles/caminhos.dir/sources/graph.cpp.o: ../sources/graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/caminhos.dir/sources/graph.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/graph.cpp.o -c "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.cpp"
+
+CMakeFiles/caminhos.dir/sources/graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/caminhos.dir/sources/graph.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.cpp" > CMakeFiles/caminhos.dir/sources/graph.cpp.i
+
+CMakeFiles/caminhos.dir/sources/graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/caminhos.dir/sources/graph.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.cpp" -o CMakeFiles/caminhos.dir/sources/graph.cpp.s
+
+CMakeFiles/caminhos.dir/sources/main.cpp.o: CMakeFiles/caminhos.dir/flags.make
+CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/caminhos.dir/sources/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/main.cpp.o -c "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/main.cpp"
+
+CMakeFiles/caminhos.dir/sources/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/caminhos.dir/sources/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/main.cpp" > CMakeFiles/caminhos.dir/sources/main.cpp.i
+
+CMakeFiles/caminhos.dir/sources/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/caminhos.dir/sources/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/main.cpp" -o CMakeFiles/caminhos.dir/sources/main.cpp.s
+
+CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o: CMakeFiles/caminhos.dir/flags.make
+CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o: ../sources/pathsalg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o -c "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.cpp"
+
+CMakeFiles/caminhos.dir/sources/pathsalg.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/caminhos.dir/sources/pathsalg.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.cpp" > CMakeFiles/caminhos.dir/sources/pathsalg.cpp.i
+
+CMakeFiles/caminhos.dir/sources/pathsalg.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/caminhos.dir/sources/pathsalg.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.cpp" -o CMakeFiles/caminhos.dir/sources/pathsalg.cpp.s
+
+CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o: CMakeFiles/caminhos.dir/flags.make
+CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o: ../sources/pathsapp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o -c "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.cpp"
+
+CMakeFiles/caminhos.dir/sources/pathsapp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/caminhos.dir/sources/pathsapp.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.cpp" > CMakeFiles/caminhos.dir/sources/pathsapp.cpp.i
+
+CMakeFiles/caminhos.dir/sources/pathsapp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/caminhos.dir/sources/pathsapp.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.cpp" -o CMakeFiles/caminhos.dir/sources/pathsapp.cpp.s
 
 # Object files for target caminhos
 caminhos_OBJECTS = \
-"CMakeFiles/caminhos.dir/sources/main.cpp.o" \
 "CMakeFiles/caminhos.dir/sources/application.cpp.o" \
-"CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o" \
+"CMakeFiles/caminhos.dir/sources/dijkstra.cpp.o" \
 "CMakeFiles/caminhos.dir/sources/graph.cpp.o" \
+"CMakeFiles/caminhos.dir/sources/main.cpp.o" \
 "CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o" \
-"CMakeFiles/caminhos.dir/sources/dijkstra.cpp.o"
+"CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o"
 
 # External object files for target caminhos
 caminhos_EXTERNAL_OBJECTS =
 
-caminhos: CMakeFiles/caminhos.dir/sources/main.cpp.o
 caminhos: CMakeFiles/caminhos.dir/sources/application.cpp.o
-caminhos: CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o
-caminhos: CMakeFiles/caminhos.dir/sources/graph.cpp.o
-caminhos: CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o
 caminhos: CMakeFiles/caminhos.dir/sources/dijkstra.cpp.o
+caminhos: CMakeFiles/caminhos.dir/sources/graph.cpp.o
+caminhos: CMakeFiles/caminhos.dir/sources/main.cpp.o
+caminhos: CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o
+caminhos: CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o
 caminhos: CMakeFiles/caminhos.dir/build.make
 caminhos: CMakeFiles/caminhos.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable caminhos"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable caminhos"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/caminhos.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -168,6 +168,6 @@ CMakeFiles/caminhos.dir/clean:
 .PHONY : CMakeFiles/caminhos.dir/clean
 
 CMakeFiles/caminhos.dir/depend:
-	cd "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos" "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos" "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug" "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug" "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles/caminhos.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos" "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos" "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug" "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug" "/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles/caminhos.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/caminhos.dir/depend
 

@@ -207,6 +207,8 @@ public:
     template<class DS>
     static void Dijkstra(const Graph &graph, int source = 0);
 
+    static void Johnson(const Graph &graph, std::vector<float> &dist, std::vector<int> &pred);
+
     std::vector<Vertex> vertices;
     std::vector<Edge> edges;
 

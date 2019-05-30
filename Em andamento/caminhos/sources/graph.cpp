@@ -223,6 +223,24 @@ void Graph::path(const Graph &graph, int source, std::vector<float> &dist, std::
     Dijkstra<BinaryHeap>(graph, source, dist, pred);
 }
 
+void Graph::Johnson(const Graph &graph, std::vector<float> &dist, std::vector<int> &pred) {
+    Graph copy = graph;
+    auto id = graph.vertices.size();
+    copy.insertVertex(graph.vertices.size());
+
+    for (auto v : graph.vertices) {
+        copy.insertEdge(id, v.id, 0);
+    }
+
+    BellmanFord(copy, id, dist, pred);
+
+    for (auto u : copy.vertices) {
+        for (auto v : copy.vertices) {
+            
+        }
+    }
+}
+
 //template<class DS>
 //double Graph::prim(const Graph &graph, Graph &mst) {
 //    struct PrimVertex {

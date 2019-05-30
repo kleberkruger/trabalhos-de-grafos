@@ -12,28 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0142e00b-0992-4315-8348-1f89cb5a0c18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sources/arrayheap.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/arrayheap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/binaryheap.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/binaryheap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/heap.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/heap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_exemplos/floyd_warshall/sources/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../_exemplos/floyd_warshall/sources/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/caminhos" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/caminhos.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/caminhos.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/application.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/application.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/application.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/application.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.h" afterDir="false" />
     </list>
@@ -50,11 +28,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="222" column="52" lean-forward="true" selection-start-line="222" selection-start-column="52" selection-end-line="222" selection-end-column="52" />
+            <state relative-caret-position="395">
+              <caret line="238" column="12" selection-start-line="238" selection-start-column="12" selection-end-line="238" selection-end-column="12" />
               <folding>
                 <element signature="e#5496#5506#0" expanded="true" />
               </folding>
@@ -62,23 +40,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sources/application.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="110" column="8" lean-forward="true" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="8" />
+            <state relative-caret-position="92">
+              <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="76" selection-end-column="53" />
               <folding>
                 <element signature="e#503#549#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/application.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -97,10 +66,10 @@
         <option value="$PROJECT_DIR$/datasets/kruger_in.txt" />
         <option value="$PROJECT_DIR$/../_exemplos/floyd_warshall/sources/main.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/sources/graph.h" />
-        <option value="$PROJECT_DIR$/sources/graph.cpp" />
         <option value="$PROJECT_DIR$/sources/application.h" />
         <option value="$PROJECT_DIR$/sources/application.cpp" />
+        <option value="$PROJECT_DIR$/sources/graph.h" />
+        <option value="$PROJECT_DIR$/sources/graph.cpp" />
       </list>
     </option>
   </component>
@@ -194,23 +163,23 @@
       <workItem from="1559148311809" duration="177000" />
       <workItem from="1559148562014" duration="2043000" />
       <workItem from="1559154686683" duration="386000" />
-      <workItem from="1559155832077" duration="20617000" />
+      <workItem from="1559155832077" duration="21361000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23223000" />
+    <option name="totallyTimeSpent" value="23967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1881" y="47" width="1680" height="984" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295964" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295964" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -323,33 +292,11 @@
     <entry file="file://$PROJECT_DIR$/sources/arrayheap.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/graph.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="195" column="103" lean-forward="true" selection-start-line="195" selection-start-column="103" selection-end-line="195" selection-end-column="103" />
-          <folding>
-            <element signature="e#307#326#0" expanded="true" />
-            <element signature="e#531#548#0" expanded="true" />
-            <element signature="e#4172#4182#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sources/binaryheap.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/binaryheap.h">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="222" column="52" lean-forward="true" selection-start-line="222" selection-start-column="52" selection-end-line="222" selection-end-column="52" />
-          <folding>
-            <element signature="e#5496#5506#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/application.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -358,12 +305,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sources/graph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="209" column="20" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
+          <folding>
+            <element signature="e#307#326#0" expanded="true" />
+            <element signature="e#531#548#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sources/application.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="110" column="8" lean-forward="true" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="8" />
+        <state relative-caret-position="92">
+          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="76" selection-end-column="53" />
           <folding>
             <element signature="e#503#549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="238" column="12" selection-start-line="238" selection-start-column="12" selection-end-line="238" selection-end-column="12" />
+          <folding>
+            <element signature="e#5496#5506#0" expanded="true" />
           </folding>
         </state>
       </provider>

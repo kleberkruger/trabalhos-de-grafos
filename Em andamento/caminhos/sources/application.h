@@ -27,9 +27,8 @@ struct AlgorithmOutput {
 struct Algorithm {
 
     const std::string name;
-    const std::string alias;
-
     AlgorithmOutput (*execute)(const Graph &graph);
+    const std::string alias;
 
     Algorithm(std::string name, AlgorithmOutput (*execute)(const Graph &), std::string alias = "")
             : name(std::move(name)), execute(execute), alias(std::move(alias)) {}

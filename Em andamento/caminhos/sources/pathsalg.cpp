@@ -8,12 +8,12 @@
 
 #include "pathsalg.h"
 
-AlgorithmOutput PathsAlg::dijkstra(const Graph &graph) {
+AlgorithmOutput dijkstra(const Graph &graph) {
     std::cout << "executando o Dijkstra" << std::endl;
     return AlgorithmOutput();
 }
 
-void PathsAlg::BellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
+void BellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
     dist[source] = 0;
     pred[source] = source;
 
@@ -41,7 +41,7 @@ void PathsAlg::BellmanFord(const Graph &graph, int source, std::vector<float> &d
     }
 }
 
-void PathsAlg::BellmanFord(const Graph &graph, int source) {
+void BellmanFord(const Graph &graph, int source) {
     struct BellmanFordVertex {
         float dist;
         int pred;
@@ -77,7 +77,7 @@ void PathsAlg::BellmanFord(const Graph &graph, int source) {
 }
 
 template<class DS>
-void PathsAlg::Dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
+void Dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
     DS Q(graph.vertices.size(), source);
 
     dist[source] = 0;
@@ -100,11 +100,11 @@ void PathsAlg::Dijkstra(const Graph &graph, int source, std::vector<float> &dist
 }
 
 template<class DS>
-void PathsAlg::Dijkstra(const Graph &graph, int source) {
+void Dijkstra(const Graph &graph, int source) {
 
 }
 
-void PathsAlg::Johnson(const Graph &graph, std::vector<float> &dist, std::vector<int> &pred) {
+void Johnson(const Graph &graph, std::vector<float> &dist, std::vector<int> &pred) {
     Graph copy = graph;
     auto id = graph.vertices.size();
     copy.insertVertex(graph.vertices.size());

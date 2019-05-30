@@ -236,7 +236,7 @@ void Graph::Johnson(const Graph &graph, std::vector<float> &dist, std::vector<in
 
     for (auto u : copy.vertices) {
         for (auto v : copy.vertices) {
-            
+
         }
     }
 }

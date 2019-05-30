@@ -35,13 +35,6 @@ int main(int argc, char *argv[]) {
         throw std::invalid_argument("Run: <algorithm> <version> <filepath-in> <filepath-out>");
     }
 
-//    Algorithm alg = strcasecmp(argv[1], "bellman-ford") == 0 ? BELLMANFORD :
-//                    strcasecmp(argv[1], "dijkstra") == 0 ? DIJKSTRA :
-//                    strcasecmp(argv[1], "floyd-warshall") == 0 ? FLOYDWARSHALL :
-//                    strcasecmp(argv[1], "johnson") == 0 ? JOHNSON : NONE;
-//
-//    int version = std::strtol(argv[2], nullptr, 10);
-
     PathsApp().start(argv[1], std::strtol(argv[2], nullptr, 10), argv[3], argv[4]);
 
     return 0;

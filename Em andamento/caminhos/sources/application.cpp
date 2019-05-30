@@ -17,6 +17,10 @@ timePoint(std::chrono::system_clock::now()) {}
 #endif
 
 
+Algorithm Application::selectAlgorithm(const std::string &algorithm, int version) {
+    return algorithmsMap()[algorithm][version];
+}
+
 std::string Application::readInputFile(const std::string &filePath) {
     char buffer[BUFFER_SIZE];
     int returned;

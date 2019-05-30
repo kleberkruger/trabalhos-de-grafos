@@ -11,6 +11,7 @@
 
 #include <chrono>
 #include <iostream>
+#include <map>
 #include <string>
 #include <vector>
 #include <fcntl.h>
@@ -26,16 +27,12 @@ struct AlgorithmOutput {
 struct Algorithm {
 
     const std::string name;
-    int version;
     const std::string alias;
 
     AlgorithmOutput (*execute)(const Graph &graph);
 
-    Algorithm(std::string name, const int version, AlgorithmOutput (*execute)(const Graph &),
-            std::string alias = "")
-    : name(std::move(name)), version(version), execute(execute), alias(std::move(alias)) {}
-
-//    AlgorithmOutput execute(const Graph &graph);
+    Algorithm(std::string name, AlgorithmOutput (*execute)(const Graph &), std::string alias = "")
+            : name(std::move(name)), execute(execute), alias(std::move(alias)) {}
 };
 
 struct Task {
@@ -54,7 +51,7 @@ public:
 
 protected:
 
-    virtual Algorithm selectAlgorithm(const std::string &algorithm, int version) = 0;
+    virtual std::map<std::string, std::vector<Algorithm>> algorithmsMap() = 0;
 
     virtual Graph createGraph(const std::string &input) = 0;
 
@@ -67,6 +64,8 @@ private:
     static std::string readInputFile(const std::string &filePath);
 
     static void printTasks(std::vector<Task> tasks);
+
+    Algorithm selectAlgorithm(const std::string &algorithm, int version);
 };
 
 

@@ -17,10 +17,7 @@
 #include <zconf.h>
 #include <sys/filio.h>
 #include <sys/ioctl.h>
-
-struct Graph {
-
-};
+#include "graph.h"
 
 struct AlgorithmOutput {
 
@@ -28,7 +25,17 @@ struct AlgorithmOutput {
 
 struct Algorithm {
 
-    AlgorithmOutput execute(const Graph &graph);
+    const std::string name;
+    int version;
+    const std::string alias;
+
+    AlgorithmOutput (*execute)(const Graph &graph);
+
+    Algorithm(std::string name, const int version, AlgorithmOutput (*execute)(const Graph &),
+            std::string alias = "")
+    : name(std::move(name)), version(version), execute(execute), alias(std::move(alias)) {}
+
+//    AlgorithmOutput execute(const Graph &graph);
 };
 
 struct Task {

@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.cpp
-application.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h
-
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h
 chrono
 -
@@ -27,12 +23,14 @@ sys/filio.h
 -
 sys/ioctl.h
 -
+graph.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.h
 
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/main.cpp
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.h
 iostream
 -
-pathsapp.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.h
+vector
+-
 
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.cpp
 pathsapp.h

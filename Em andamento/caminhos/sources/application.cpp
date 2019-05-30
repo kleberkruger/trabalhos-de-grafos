@@ -76,7 +76,3 @@ void Application::start(const std::string &algorithm, int version, const std::st
 
     printTasks(tasks);
 }
-
-AlgorithmOutput Algorithm::execute(const Graph &graph) {
-    return AlgorithmOutput();
-}

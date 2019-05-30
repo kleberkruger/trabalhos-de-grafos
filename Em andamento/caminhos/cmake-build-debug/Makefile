@@ -150,6 +150,33 @@ sources/application.cpp.s:
 	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/application.cpp.s
 .PHONY : sources/application.cpp.s
 
+sources/graph.o: sources/graph.cpp.o
+
+.PHONY : sources/graph.o
+
+# target to build an object file
+sources/graph.cpp.o:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/graph.cpp.o
+.PHONY : sources/graph.cpp.o
+
+sources/graph.i: sources/graph.cpp.i
+
+.PHONY : sources/graph.i
+
+# target to preprocess a source file
+sources/graph.cpp.i:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/graph.cpp.i
+.PHONY : sources/graph.cpp.i
+
+sources/graph.s: sources/graph.cpp.s
+
+.PHONY : sources/graph.s
+
+# target to generate assembly for a file
+sources/graph.cpp.s:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/graph.cpp.s
+.PHONY : sources/graph.cpp.s
+
 sources/main.o: sources/main.cpp.o
 
 .PHONY : sources/main.o
@@ -176,6 +203,33 @@ sources/main.s: sources/main.cpp.s
 sources/main.cpp.s:
 	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/main.cpp.s
 .PHONY : sources/main.cpp.s
+
+sources/pathsalg.o: sources/pathsalg.cpp.o
+
+.PHONY : sources/pathsalg.o
+
+# target to build an object file
+sources/pathsalg.cpp.o:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o
+.PHONY : sources/pathsalg.cpp.o
+
+sources/pathsalg.i: sources/pathsalg.cpp.i
+
+.PHONY : sources/pathsalg.i
+
+# target to preprocess a source file
+sources/pathsalg.cpp.i:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/pathsalg.cpp.i
+.PHONY : sources/pathsalg.cpp.i
+
+sources/pathsalg.s: sources/pathsalg.cpp.s
+
+.PHONY : sources/pathsalg.s
+
+# target to generate assembly for a file
+sources/pathsalg.cpp.s:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/pathsalg.cpp.s
+.PHONY : sources/pathsalg.cpp.s
 
 sources/pathsapp.o: sources/pathsapp.cpp.o
 
@@ -216,9 +270,15 @@ help:
 	@echo "... sources/application.o"
 	@echo "... sources/application.i"
 	@echo "... sources/application.s"
+	@echo "... sources/graph.o"
+	@echo "... sources/graph.i"
+	@echo "... sources/graph.s"
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"
+	@echo "... sources/pathsalg.o"
+	@echo "... sources/pathsalg.i"
+	@echo "... sources/pathsalg.s"
 	@echo "... sources/pathsapp.o"
 	@echo "... sources/pathsapp.i"
 	@echo "... sources/pathsapp.s"

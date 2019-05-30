@@ -1,28 +1,34 @@
 /**
  * Algoritmos em Grafos (MO412)
  *
- * Primeiro Trabalho Prático
- * - MST - Minimum Spanning Tree
- *
- * @authors:
- * - Kleber Kruger <kleberkruger@gmail.com>,
- * - Felipe Barbosa <felipebarbosa@uft.edu.com>,
- * - Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
+ * @author: Kleber Kruger <kleberkruger@gmail.com>
+ * @author: Felipe Barbosa <felipebarbosa@uft.edu.com>
+ * @author: Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
  */
 
-#ifndef MST_APPLICATION_H
-#define MST_APPLICATION_H
+#ifndef CAMINHOS_APPLICATION_H
+#define CAMINHOS_APPLICATION_H
 
 #include <chrono>
+#include <iostream>
 #include <string>
 #include <vector>
 #include <fcntl.h>
-#include <unistd.h>
+#include <zconf.h>
+#include <sys/filio.h>
 #include <sys/ioctl.h>
-#include "graph.h"
 
-enum Algorithm {
-    NONE = 0, BELLMANFORD = 1, DIJKSTRA = 2, FLOYDWARSHALL = 3, JOHNSON = 4
+struct Graph {
+
+};
+
+struct AlgorithmOutput {
+
+};
+
+struct Algorithm {
+
+    AlgorithmOutput execute(const Graph &graph);
 };
 
 struct Task {
@@ -33,29 +39,28 @@ struct Task {
     std::chrono::high_resolution_clock::time_point timePoint;
 };
 
-
 class Application {
 public:
 
-    Application();
+    void start(const std::string &algorithm, int version, const std::string &inputFilePath,
+               const std::string &outputFilePath);
 
-    void start(Algorithm algorithm, int version, const std::string &inputFilePath, const std::string &outputFilePath);
+protected:
 
-    void checkPoint(const std::string &task);
+    virtual Algorithm selectAlgorithm(const std::string &algorithm, int version) = 0;
+
+    virtual Graph createGraph(const std::string &input) = 0;
+
+    virtual void printOutput(AlgorithmOutput output) = 0;
 
 private:
 
     static const int BUFFER_SIZE = 65536;
-    std::vector<Task> tasks;
 
-    std::string readInputFile(const std::string &filePath);
+    static std::string readInputFile(const std::string &filePath);
 
-    void printPath(std::vector<float> dist, std::vector<int> pred, int source);
-
-    void printPath(std::vector<std::vector<float>> dist, std::vector<std::vector<int>> pred);
-
-    void printCheckPoints();
+    static void printTasks(std::vector<Task> tasks);
 };
 
 
-#endif //MST_APPLICATION_H
+#endif //CAMINHOS_APPLICATION_H

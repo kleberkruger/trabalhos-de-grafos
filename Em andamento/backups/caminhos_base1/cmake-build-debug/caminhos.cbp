@@ -86,6 +86,30 @@
 		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h">
 			<Option target="caminhos"/>
 		</Unit>
+		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/arrayheap.cpp">
+			<Option target="caminhos"/>
+		</Unit>
+		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/arrayheap.h">
+			<Option target="caminhos"/>
+		</Unit>
+		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/binaryheap.cpp">
+			<Option target="caminhos"/>
+		</Unit>
+		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/binaryheap.h">
+			<Option target="caminhos"/>
+		</Unit>
+		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.cpp">
+			<Option target="caminhos"/>
+		</Unit>
+		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.h">
+			<Option target="caminhos"/>
+		</Unit>
+		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/heap.cpp">
+			<Option target="caminhos"/>
+		</Unit>
+		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/heap.h">
+			<Option target="caminhos"/>
+		</Unit>
 		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/main.cpp">
 			<Option target="caminhos"/>
 		</Unit>

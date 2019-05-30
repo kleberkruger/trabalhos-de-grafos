@@ -1,23 +1,23 @@
-/**
- * Algoritmos em Grafos (MO412)
- *
- * @author: Kleber Kruger <kleberkruger@gmail.com>
- * @author: Felipe Barbosa <felipebarbosa@uft.edu.com>
- * @author: Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
- */
-
 #include <iostream>
-#include "pathsapp.h"
+#include <cstring>
+#include <fstream>
+#include <sstream>
+
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
+
+#include "application.h"
 
 /**
  * Executa a aplicação de acordo com os parâmetros de inicialização.
  *
  * <algorithm> <version> <filepath-in> <filepath-out>
  *
- * <algorithm>: algoritmo de execução (Bellman Ford, Dijkstra, Floyd Warshall, Johnson");
+ * <algorithm>: algoritmo de execução (Kruskal ou Prim);
  * <version>: versão do algoritmo (um número inteiro, começando em 0);
  * <filepath-in>: arquivo de entrada que contém as informações do grafo;
- * <filepath-out>: arquivo de saída onde será exibido o resultado.
+ * <filepath-out>: arquivo de saída onde será exibida a MST resultante.
  *
  * Exemplos:
  * ./main bellman-ford 0 dataset/ja9847_in.txt dataset/ja9847_out.txt
@@ -35,14 +35,14 @@ int main(int argc, char *argv[]) {
         throw std::invalid_argument("Run: <algorithm> <version> <filepath-in> <filepath-out>");
     }
 
-//    Algorithm alg = strcasecmp(argv[1], "bellman-ford") == 0 ? BELLMANFORD :
-//                    strcasecmp(argv[1], "dijkstra") == 0 ? DIJKSTRA :
-//                    strcasecmp(argv[1], "floyd-warshall") == 0 ? FLOYDWARSHALL :
-//                    strcasecmp(argv[1], "johnson") == 0 ? JOHNSON : NONE;
-//
-//    int version = std::strtol(argv[2], nullptr, 10);
+    Algorithm alg = strcasecmp(argv[1], "bellman-ford") == 0 ? BELLMANFORD :
+                    strcasecmp(argv[1], "dijkstra") == 0 ? DIJKSTRA :
+                    strcasecmp(argv[1], "floyd-warshall") == 0 ? FLOYDWARSHALL :
+                    strcasecmp(argv[1], "johnson") == 0 ? JOHNSON : NONE;
 
-    PathsApp().start(argv[1], std::strtol(argv[2], nullptr, 10), argv[3], argv[4]);
+    int version = std::strtol(argv[2], nullptr, 10);
 
-    return 0;
+    Application().start(alg, version, argv[3], argv[4]);
+
+    return EXIT_SUCCESS;
 }

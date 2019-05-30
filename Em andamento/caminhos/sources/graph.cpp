@@ -122,10 +122,8 @@ void Graph::BellmanFord(const Graph &graph, int source, std::vector<float> &dist
             auto v = e.end;
             auto w = e.weight;
 
-            std::cout << "analisando (" << u << "," << v << ") " << w << std::endl;
 //            if (dist[u] != std::numeric_limits<int>::infinity() && dist[u] + w < dist[v]) {
             if (dist[v] > dist[u] + w) {
-                std::cout << "entrei aqui" << std::endl;
                 dist[v] = dist[u] + w;
                 pred[v] = u;
             }
@@ -176,9 +174,98 @@ void Graph::BellmanFord(const Graph &graph, int source) {
             throw std::invalid_argument("Negative cycle"); // FIXME: verificar exceção mais adequada.
         }
     }
+//    for (int i = 0; i < vertices.size(); i++) {
+//        auto v = vertices[i];
+//        std::cout << i << ": " << v.dist << " " << v.pred << " " << std::endl;
+//    }
+}
 
-    for (int i = 0; i < vertices.size(); i++) {
-        auto v = vertices[i];
-        std::cout << i << ": " << v.dist << " " << v.pred << " " << std::endl;
+//template<class DS>
+//void Graph::Dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
+//
+//}
+//
+//template<class DS>
+//void Graph::Dijkstra(const Graph &graph, int source) {
+//
+//}
+
+template<class DS>
+void Graph::Dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
+    DS Q(graph.vertices.size(), source);
+
+    dist[source] = 0;
+    pred[source] = source;
+
+    while (!Q.empty()) {
+        Vertex u = graph.vertices[Q.extractMin()];
+
+        for (auto &e : graph.getAdjacencyList(u.id)) {
+            auto v = e.end;
+            auto w = e.weight;
+
+//            if (dist[u.id] != std::numeric_limits<int>::infinity() && dist[u.id] + w < dist[v]) {
+            if (dist[v] > dist[u.id] + w) {
+                dist[v] = dist[u.id] + w;
+                pred[v] = u.id;
+                Q.decreaseKey(v, w);
+            }
+        }
     }
 }
+
+template<class DS>
+void Graph::Dijkstra(const Graph &graph, int source) {
+
+}
+
+void Graph::path(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
+    Dijkstra<BinaryHeap>(graph, source, dist, pred);
+}
+
+//template<class DS>
+//double Graph::prim(const Graph &graph, Graph &mst) {
+//    struct PrimVertex {
+//        bool isPresent;
+//        int parent;
+//        double value;
+//    };
+//
+//    mst = Graph(graph.vertices.size(), graph.vertices.size() - 1);
+//
+//    std::vector<PrimVertex> vertices(graph.vertices.size());
+//    DS ds(mst.vertices.size(), 0);
+//
+//    for (auto &v : vertices) {
+//        v.isPresent = true;
+//        v.parent = -1;
+//        v.value = std::numeric_limits<double>::infinity();
+//    }
+//    vertices[0].value = 0;
+//
+//    double total = 0;
+//
+//    while (!ds.empty()) {
+//
+//        Vertex u = graph.vertices[ds.extractMin()];
+//        vertices[u.id].isPresent = false;
+//
+//        for (auto &e : graph.getAdjacencyList(u.id)) {
+//            int v = e.end;
+//            if (vertices[v].isPresent && e.weight < vertices[v].value) {
+//                vertices[v].parent = u.id;
+//
+//                ds.decreaseKey(v, e.weight);
+//                vertices[v].value = e.weight;
+//            }
+//        }
+//
+//        if (vertices[u.id].parent != -1) {
+//            mst.insertVertex(u.id);
+//            mst.insertEdge(vertices[u.id].parent, u.id, vertices[u.id].value);
+//            total += vertices[u.id].value;
+//        }
+//    }
+//
+//    return total;
+//}

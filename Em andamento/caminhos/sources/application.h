@@ -50,9 +50,9 @@ private:
 
     std::string readInputFile(const std::string &filePath);
 
-    void printPath(std::vector<float> dist, std::vector<int> pred);
+    void printPath(std::vector<float> dist, std::vector<int> pred, int source);
 
-    void printPath(std::vector<float> dist, std::vector<int> pred, int vertex);
+    void printPath(std::vector<std::vector<float>> dist, std::vector<std::vector<int>> pred);
 
     void printCheckPoints();
 };

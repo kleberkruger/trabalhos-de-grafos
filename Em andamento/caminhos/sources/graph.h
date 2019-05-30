@@ -25,9 +25,9 @@
 //#include "unionfind.h"
 //#include "fastunionfind.h"
 
-//#include "heap.h"
-//#include "arrayheap.h"
-//#include "binaryheap.h"
+#include "heap.h"
+#include "arrayheap.h"
+#include "binaryheap.h"
 //#include "fibonacciheap.h"
 
 struct Vertex;
@@ -193,9 +193,19 @@ public:
 //     */
 //    const std::vector<double> &getAdjacencyMatrix(int x, int y) const;
 
+    static void path(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred);
+
     static void BellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred);
 
     static void BellmanFord(const Graph &graph, int source = 0);
+
+
+
+    template<class DS>
+    static void Dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred);
+
+    template<class DS>
+    static void Dijkstra(const Graph &graph, int source = 0);
 
     std::vector<Vertex> vertices;
     std::vector<Edge> edges;

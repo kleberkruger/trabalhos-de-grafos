@@ -93,22 +93,26 @@ void Application::start(Algorithm algorithm, int version,
 //    }
 //    printf("\n");
 
-    graph.print();
+    Graph::path(graph, 3, dist, pred);
 
-    Graph::BellmanFord(graph, 3, dist, pred);
-    Graph::BellmanFord(graph, 3);
+//    graph.print();
+//
+//    Graph::BellmanFord(graph, 3, dist, pred);
+//    Graph::BellmanFord(graph, 3);
+//
+//    checkPoint("print the paths");
+////    printPath(dist, pred);
+//
+//    for (float f : dist) {
+//        std::cout << f << " ";
+//    }
+//    std::cout << std::endl;
+//    for (int i = 0; i < pred.size(); i++) {
+//        std::cout << i << ": " << pred[i] << std::endl;
+//    }
+//    std::cout << std::endl;
 
-    checkPoint("print the paths");
-//    printPath(dist, pred);
-
-    for (float f : dist) {
-        std::cout << f << " ";
-    }
-    std::cout << std::endl;
-    for (int i = 0; i < pred.size(); i++) {
-        std::cout << i << ": " << pred[i] << std::endl;
-    }
-    std::cout << std::endl;
+    printPath(dist, pred, 3);
 
     checkPoint("finished");
     printCheckPoints();
@@ -118,24 +122,35 @@ void Application::checkPoint(const std::string &task) {
     tasks.emplace_back(task);
 }
 
-void Application::printPath(std::vector<float> dist, std::vector<int> pred) {
-//    for (int i = 0; i < 11; i++) {
-//        printPath(dist, pred, i);
-//    }
+void Application::printPath(std::vector<float> dist, std::vector<int> pred, int source) {
 
-    for (float f : dist) {
-        std::cout << f << " ";
+    for (int i = 0; i < dist.size(); i++) {
+        std::vector<int> path(dist.size(), -1);
+        std::cout << dist[i] << " " << source << " ";
+
+        int aux = 0;
+        int curr = pred[i];
+
+        do {
+            path[aux] = curr;
+            curr = pred[curr];
+            aux++;
+        } while (curr != source);
+
+        std::reverse(path.begin(), path.end());
+
+        for (int j : path) {
+            if (j != -1) std::cout << " v" << j << " ";
+        }
+
+        std::cout << i << std::endl;
     }
-    std::cout << std::endl;
-    for (int p : pred) {
-        std::cout << p << " ";
-    }
-    std::cout << std::endl;
 }
 
-
-void Application::printPath(std::vector<float> dist, std::vector<int> pred, int vertex) {
-
+void Application::printPath(std::vector<std::vector<float>> dist, std::vector<std::vector<int>> pred) {
+    for (int i = 0; i < dist.size(); i++) {
+        printPath(dist[i], pred[i], i);
+    }
 }
 
 void Application::printCheckPoints() {

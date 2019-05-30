@@ -150,6 +150,60 @@ sources/application.cpp.s:
 	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/application.cpp.s
 .PHONY : sources/application.cpp.s
 
+sources/arrayheap.o: sources/arrayheap.cpp.o
+
+.PHONY : sources/arrayheap.o
+
+# target to build an object file
+sources/arrayheap.cpp.o:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/arrayheap.cpp.o
+.PHONY : sources/arrayheap.cpp.o
+
+sources/arrayheap.i: sources/arrayheap.cpp.i
+
+.PHONY : sources/arrayheap.i
+
+# target to preprocess a source file
+sources/arrayheap.cpp.i:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/arrayheap.cpp.i
+.PHONY : sources/arrayheap.cpp.i
+
+sources/arrayheap.s: sources/arrayheap.cpp.s
+
+.PHONY : sources/arrayheap.s
+
+# target to generate assembly for a file
+sources/arrayheap.cpp.s:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/arrayheap.cpp.s
+.PHONY : sources/arrayheap.cpp.s
+
+sources/binaryheap.o: sources/binaryheap.cpp.o
+
+.PHONY : sources/binaryheap.o
+
+# target to build an object file
+sources/binaryheap.cpp.o:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o
+.PHONY : sources/binaryheap.cpp.o
+
+sources/binaryheap.i: sources/binaryheap.cpp.i
+
+.PHONY : sources/binaryheap.i
+
+# target to preprocess a source file
+sources/binaryheap.cpp.i:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/binaryheap.cpp.i
+.PHONY : sources/binaryheap.cpp.i
+
+sources/binaryheap.s: sources/binaryheap.cpp.s
+
+.PHONY : sources/binaryheap.s
+
+# target to generate assembly for a file
+sources/binaryheap.cpp.s:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/binaryheap.cpp.s
+.PHONY : sources/binaryheap.cpp.s
+
 sources/graph.o: sources/graph.cpp.o
 
 .PHONY : sources/graph.o
@@ -176,6 +230,33 @@ sources/graph.s: sources/graph.cpp.s
 sources/graph.cpp.s:
 	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/graph.cpp.s
 .PHONY : sources/graph.cpp.s
+
+sources/heap.o: sources/heap.cpp.o
+
+.PHONY : sources/heap.o
+
+# target to build an object file
+sources/heap.cpp.o:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/heap.cpp.o
+.PHONY : sources/heap.cpp.o
+
+sources/heap.i: sources/heap.cpp.i
+
+.PHONY : sources/heap.i
+
+# target to preprocess a source file
+sources/heap.cpp.i:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/heap.cpp.i
+.PHONY : sources/heap.cpp.i
+
+sources/heap.s: sources/heap.cpp.s
+
+.PHONY : sources/heap.s
+
+# target to generate assembly for a file
+sources/heap.cpp.s:
+	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/heap.cpp.s
+.PHONY : sources/heap.cpp.s
 
 sources/main.o: sources/main.cpp.o
 
@@ -243,9 +324,18 @@ help:
 	@echo "... sources/application.o"
 	@echo "... sources/application.i"
 	@echo "... sources/application.s"
+	@echo "... sources/arrayheap.o"
+	@echo "... sources/arrayheap.i"
+	@echo "... sources/arrayheap.s"
+	@echo "... sources/binaryheap.o"
+	@echo "... sources/binaryheap.i"
+	@echo "... sources/binaryheap.s"
 	@echo "... sources/graph.o"
 	@echo "... sources/graph.i"
 	@echo "... sources/graph.s"
+	@echo "... sources/heap.o"
+	@echo "... sources/heap.i"
+	@echo "... sources/heap.s"
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"

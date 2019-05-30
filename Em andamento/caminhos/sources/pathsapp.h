@@ -12,7 +12,9 @@
 
 
 #include <map>
+
 #include "application.h"
+#include "pathsalg.h"
 
 
 class PathsApp : public Application {

@@ -8,11 +8,6 @@
 
 #include "pathsapp.h"
 
-AlgorithmOutput dijkstra(const Graph &graph) {
-    std::cout << "executando o Dijkstra" << std::endl;
-    return AlgorithmOutput();
-}
-
 Graph PathsApp::createGraph(const std::string &input) {
     char *token;
     int n = strtol(input.c_str(), &token, 10);
@@ -35,10 +30,10 @@ void PathsApp::printOutput(AlgorithmOutput output) {
 std::map<std::string, std::vector<Algorithm>> PathsApp::algorithmsMap() {
     std::map<std::string, std::vector<Algorithm>> algorithms;
 
-    algorithms[BELLMAN_FORD].push_back(Algorithm("Bellman Ford", dijkstra, "Simple Bellman Ford"));
-    algorithms[DIJKSTRA].push_back(Algorithm("Dijkstra", dijkstra, "Simple Dijkstra"));
-    algorithms[FLOYD_WARSHALL].push_back(Algorithm("Floyd Warshall", dijkstra, "Simple Floyd Warshall"));
-    algorithms[JOHNSON].push_back(Algorithm("Johnson", dijkstra, "Simple Johnson"));
+    algorithms[BELLMAN_FORD].push_back(Algorithm("Bellman Ford", PathsAlg::dijkstra, "Simple Bellman Ford"));
+    algorithms[DIJKSTRA].push_back(Algorithm("Dijkstra", PathsAlg::dijkstra, "Simple Dijkstra"));
+    algorithms[FLOYD_WARSHALL].push_back(Algorithm("Floyd Warshall", PathsAlg::dijkstra, "Simple Floyd Warshall"));
+    algorithms[JOHNSON].push_back(Algorithm("Johnson", PathsAlg::dijkstra, "Simple Johnson"));
 
     return algorithms;
 }

@@ -8,6 +8,11 @@
 
 #include "pathsalg.h"
 
+AlgorithmOutput PathsAlg::dijkstra(const Graph &graph) {
+    std::cout << "executando o Dijkstra" << std::endl;
+    return AlgorithmOutput();
+}
+
 void PathsAlg::BellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
     dist[source] = 0;
     pred[source] = source;

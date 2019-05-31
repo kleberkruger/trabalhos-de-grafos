@@ -27,14 +27,13 @@ public:
 	    HeapNode* prev; // Pointer to the HeapNode on the left 
 	    HeapNode* next; // Pointer to the HeapNode on the right 
         double key; // Value of the HeapNode
-	    int degree; // Degree of the HeapNode 
 	    int pos; // Position of the HeapNode in the position array
-	    char mark; // Black or white mark of the HeapNode 
-	    char c; // Flag for assisting in the Find HeapNode function 
+	    int degree; // Degree of the HeapNode
+	    char mark; // Black or white mark of the HeapNode
 	};
-	int debug = 0;
 
-    FibonacciHeap(int n, int s);
+    FibonacciHeap(int n);
+    //~FibonacciHeap(void);
 
     int extractMin() override;
 
@@ -45,24 +44,25 @@ public:
 	void insertion(double val,int index);
 
 	void print();
+
 protected:
-	void Union(HeapNode * h1, HeapNode * h2);
 	void consolidate();
 	void fibonnaci_link(HeapNode * ptr2, HeapNode * ptr1);
 	void Cut(HeapNode* found, HeapNode * temp);
 	void Cascase_cut(HeapNode * temp);
 	void Decrease_key(HeapNode * found, int val);
-	void Find(HeapNode * n, int old_val, int val);
     
 
 private:
 	void build(int n,int s);
+	void insert_on_root(HeapNode * x);
 
-	HeapNode * root;
-	int no_of_nodes;
+	HeapNode * min;
+	int total_nodes;
     std::vector<HeapNode> nodes;
     std::vector<HeapNode>::size_type size;
     std::vector<HeapNode *> position;
+    std::vector<HeapNode *> A;
 
 };
 

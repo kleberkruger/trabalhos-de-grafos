@@ -49,7 +49,7 @@ private:
     const char *FLOYD_WARSHALL = "floyd-warshall";
     const char *JOHNSON = "johnson";
 
-    void printPath(std::vector<float> dist, std::vector<int> pred, int source);
+    static void printPath(std::vector<float> dist, std::vector<int> pred, int source);
 };
 
 

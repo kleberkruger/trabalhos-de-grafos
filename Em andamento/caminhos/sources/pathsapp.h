@@ -6,33 +6,30 @@
  * @author: Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
  */
 
-
 #ifndef CAMINHOS_PATHSAPP_H
 #define CAMINHOS_PATHSAPP_H
 
 
-#include <map>
-
 #include "application.h"
-#include "pathsalg.h"
-#include "arrayheap.h"
-#include "binaryheap.h"
 
-class PathsApp : public Application {
-private:
 
-    std::map<std::string, std::vector<Algorithm>> algorithmsMap() override;
+struct InputInfo {
 
-    Graph createGraph(const std::string &input) override;
+};
 
-    void printOutput(AlgorithmOutput output) override;
+struct OutputInfo {
 
-private:
+};
 
-    const char *BELLMAN_FORD = "bellman-ford";
-    const char *DIJKSTRA = "dijkstra";
-    const char *FLOYD_WARSHALL = "floyd-warshall";
-    const char *JOHNSON = "johnson";
+
+class PathsApp : public Application<InputInfo, OutputInfo> {
+protected:
+
+    std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> algorithmsMap() override;
+
+    void createInputInfo(const std::string &text, InputInfo &input) override;
+
+    void printOutput(OutputInfo output) override;
 };
 
 

@@ -8,7 +8,6 @@
 
 #include <iostream>
 #include "pathsapp.h"
-#include "application.h"
 
 /**
  * Executa a aplicação de acordo com os parâmetros de inicialização.
@@ -38,5 +37,5 @@ int main(int argc, char *argv[]) {
 
     PathsApp().start(argv[1], std::strtol(argv[2], nullptr, 10), argv[3], argv[4]);
 
-    return EXIT_SUCCESS;
+    return 0;
 }

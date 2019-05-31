@@ -69,17 +69,17 @@ void PathsApp::createInputInfo(const std::string &text, InputInfo &in) {
     in.source = s;
 }
 
-void PathsApp::printOutput(const InputInfo &in, const OutputInfo &out) {
+void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, const OutputInfo &out) {
     if (in.source != -1) {
-        printPath(out.dist[0], out.pred[0], in.source);
+        printPath(filePath, out.dist[0], out.pred[0], in.source);
     } else {
         for (int i = 0; i < out.dist.size(); i++) {
-            printPath(out.dist[i], out.pred[i], i);
+            printPath(filePath, out.dist[i], out.pred[i], i);
         }
     }
 }
 
-void PathsApp::printPath(std::vector<float> dist, std::vector<int> pred, int source) {
+void PathsApp::printPath(const std::string &filePath, std::vector<float> dist, std::vector<int> pred, int source) {
     std::vector<int> path;
 
     for (int i = 0; i < pred.size(); i++) {

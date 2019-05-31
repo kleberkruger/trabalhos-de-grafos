@@ -40,7 +40,7 @@ protected:
 
     void createInputInfo(const std::string &text, InputInfo &input) override;
 
-    void printOutput(const InputInfo &in, const OutputInfo &out) override;
+    void printOutput(const std::string &filePath, const InputInfo &in, const OutputInfo &out) override;
 
 private:
 
@@ -49,7 +49,7 @@ private:
     const char *FLOYD_WARSHALL = "floyd-warshall";
     const char *JOHNSON = "johnson";
 
-    static void printPath(std::vector<float> dist, std::vector<int> pred, int source);
+    static void printPath(const std::string &filePath, std::vector<float> dist, std::vector<int> pred, int source);
 };
 
 

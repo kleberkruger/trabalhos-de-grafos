@@ -16,9 +16,6 @@ CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o: ../sources/heap.h
 CMakeFiles/caminhos.dir/sources/graph.cpp.o: ../sources/graph.cpp
 CMakeFiles/caminhos.dir/sources/graph.cpp.o: ../sources/graph.h
 
-CMakeFiles/caminhos.dir/sources/heap.cpp.o: ../sources/heap.cpp
-CMakeFiles/caminhos.dir/sources/heap.cpp.o: ../sources/heap.h
-
 CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/application.h
 CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/arrayheap.h
 CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/binaryheap.h

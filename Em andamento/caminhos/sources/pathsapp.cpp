@@ -8,7 +8,7 @@
 
 #include "pathsapp.h"
 
-void bellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
+void bellmanFord(const Graph &graph, int source, std::vector<double> &dist, std::vector<int> &pred) {
     dist[source] = 0;
     pred[source] = source;
 
@@ -29,21 +29,21 @@ void bellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::
         auto v = e.end;
         auto w = e.weight;
 
-        if (dist[u] != std::numeric_limits<int>::infinity() && dist[u] + w < dist[v]) {
+        if (dist[v] > (dist[u] + w)) {
             throw std::invalid_argument("Negative cycle"); // FIXME: verificar exceção mais adequada.
         }
     }
 }
 
 void bellmanFord(const InputInfo &in, OutputInfo &out) {
-    out.dist.emplace_back(in.graph.vertices.size(), std::numeric_limits<float>::infinity());
+    out.dist.emplace_back(in.graph.vertices.size(), std::numeric_limits<double>::infinity());
     out.pred.emplace_back(in.graph.vertices.size(), -1);
 
     bellmanFord(in.graph, in.source, out.dist[0], out.pred[0]);
 }
 
 template<class DS>
-void dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
+void dijkstra(const Graph &graph, int source, std::vector<double> &dist, std::vector<int> &pred) {
     DS Q(graph.vertices.size(), source);
 
     dist[source] = 0;
@@ -66,7 +66,7 @@ void dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vec
 
 template<class DS>
 void dijkstra(const InputInfo &in, OutputInfo &out) {
-    out.dist.emplace_back(in.graph.vertices.size(), std::numeric_limits<float>::infinity());
+    out.dist.emplace_back(in.graph.vertices.size(), std::numeric_limits<double>::infinity());
     out.pred.emplace_back(in.graph.vertices.size(), -1);
 
     dijkstra<DS>(in.graph, in.source, out.dist[0], out.pred[0]);
@@ -113,7 +113,7 @@ void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, con
     }
 }
 
-void PathsApp::printPath(const std::string &filePath, std::vector<float> dist, std::vector<int> pred, int source) {
+void PathsApp::printPath(const std::string &filePath, std::vector<double> dist, std::vector<int> pred, int source) {
     std::vector<int> path;
 
     for (int i = 0; i < pred.size(); i++) {

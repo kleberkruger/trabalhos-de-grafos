@@ -231,33 +231,6 @@ sources/graph.cpp.s:
 	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/graph.cpp.s
 .PHONY : sources/graph.cpp.s
 
-sources/heap.o: sources/heap.cpp.o
-
-.PHONY : sources/heap.o
-
-# target to build an object file
-sources/heap.cpp.o:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/heap.cpp.o
-.PHONY : sources/heap.cpp.o
-
-sources/heap.i: sources/heap.cpp.i
-
-.PHONY : sources/heap.i
-
-# target to preprocess a source file
-sources/heap.cpp.i:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/heap.cpp.i
-.PHONY : sources/heap.cpp.i
-
-sources/heap.s: sources/heap.cpp.s
-
-.PHONY : sources/heap.s
-
-# target to generate assembly for a file
-sources/heap.cpp.s:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/heap.cpp.s
-.PHONY : sources/heap.cpp.s
-
 sources/main.o: sources/main.cpp.o
 
 .PHONY : sources/main.o
@@ -360,9 +333,6 @@ help:
 	@echo "... sources/graph.o"
 	@echo "... sources/graph.i"
 	@echo "... sources/graph.s"
-	@echo "... sources/heap.o"
-	@echo "... sources/heap.i"
-	@echo "... sources/heap.s"
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"

@@ -96,22 +96,9 @@ CMakeFiles/caminhos.dir/sources/graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/caminhos.dir/sources/graph.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.cpp" -o CMakeFiles/caminhos.dir/sources/graph.cpp.s
 
-CMakeFiles/caminhos.dir/sources/heap.cpp.o: CMakeFiles/caminhos.dir/flags.make
-CMakeFiles/caminhos.dir/sources/heap.cpp.o: ../sources/heap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/caminhos.dir/sources/heap.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/heap.cpp.o -c "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/heap.cpp"
-
-CMakeFiles/caminhos.dir/sources/heap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/caminhos.dir/sources/heap.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/heap.cpp" > CMakeFiles/caminhos.dir/sources/heap.cpp.i
-
-CMakeFiles/caminhos.dir/sources/heap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/caminhos.dir/sources/heap.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/heap.cpp" -o CMakeFiles/caminhos.dir/sources/heap.cpp.s
-
 CMakeFiles/caminhos.dir/sources/arrayheap.cpp.o: CMakeFiles/caminhos.dir/flags.make
 CMakeFiles/caminhos.dir/sources/arrayheap.cpp.o: ../sources/arrayheap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/caminhos.dir/sources/arrayheap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/caminhos.dir/sources/arrayheap.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/arrayheap.cpp.o -c "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/arrayheap.cpp"
 
 CMakeFiles/caminhos.dir/sources/arrayheap.cpp.i: cmake_force
@@ -124,7 +111,7 @@ CMakeFiles/caminhos.dir/sources/arrayheap.cpp.s: cmake_force
 
 CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o: CMakeFiles/caminhos.dir/flags.make
 CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o: ../sources/binaryheap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o -c "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/binaryheap.cpp"
 
 CMakeFiles/caminhos.dir/sources/binaryheap.cpp.i: cmake_force
@@ -137,7 +124,7 @@ CMakeFiles/caminhos.dir/sources/binaryheap.cpp.s: cmake_force
 
 CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o: CMakeFiles/caminhos.dir/flags.make
 CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o: ../sources/fibonacciheap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o -c "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/fibonacciheap.cpp"
 
 CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.i: cmake_force
@@ -150,7 +137,7 @@ CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.s: cmake_force
 
 CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o: CMakeFiles/caminhos.dir/flags.make
 CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o: ../sources/pathsalg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o -c "/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.cpp"
 
 CMakeFiles/caminhos.dir/sources/pathsalg.cpp.i: cmake_force
@@ -166,7 +153,6 @@ caminhos_OBJECTS = \
 "CMakeFiles/caminhos.dir/sources/main.cpp.o" \
 "CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o" \
 "CMakeFiles/caminhos.dir/sources/graph.cpp.o" \
-"CMakeFiles/caminhos.dir/sources/heap.cpp.o" \
 "CMakeFiles/caminhos.dir/sources/arrayheap.cpp.o" \
 "CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o" \
 "CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o" \
@@ -178,14 +164,13 @@ caminhos_EXTERNAL_OBJECTS =
 caminhos: CMakeFiles/caminhos.dir/sources/main.cpp.o
 caminhos: CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o
 caminhos: CMakeFiles/caminhos.dir/sources/graph.cpp.o
-caminhos: CMakeFiles/caminhos.dir/sources/heap.cpp.o
 caminhos: CMakeFiles/caminhos.dir/sources/arrayheap.cpp.o
 caminhos: CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o
 caminhos: CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o
 caminhos: CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o
 caminhos: CMakeFiles/caminhos.dir/build.make
 caminhos: CMakeFiles/caminhos.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable caminhos"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable caminhos"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/caminhos.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

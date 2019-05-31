@@ -26,7 +26,7 @@ struct InputInfo {
 };
 
 struct OutputInfo {
-    std::vector<std::vector<float>> dist;
+    std::vector<std::vector<double>> dist;
     std::vector<std::vector<int>> pred;
 };
 
@@ -49,7 +49,7 @@ private:
     const char *FLOYD_WARSHALL = "floyd-warshall";
     const char *JOHNSON = "johnson";
 
-    static void printPath(const std::string &filePath, std::vector<float> dist, std::vector<int> pred, int source);
+    static void printPath(const std::string &filePath, std::vector<double> dist, std::vector<int> pred, int source);
 };
 
 

@@ -5,7 +5,7 @@
 #include "pathsalg.h"
 
 //template<class DS>
-//void dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
+//void dijkstra(const Graph &graph, int source, std::vector<double> &dist, std::vector<int> &pred) {
 //    DS Q(graph.vertices.size(), source);
 //
 //    dist[source] = 0;
@@ -27,7 +27,7 @@
 //
 //template<class DS>
 //void dijkstra(const InputInfo &in, OutputInfo &out) {
-//    out.dist.emplace_back(in.graph.vertices.size(), std::numeric_limits<float>::infinity());
+//    out.dist.emplace_back(in.graph.vertices.size(), std::numeric_limits<double>::infinity());
 //    out.pred.emplace_back(in.graph.vertices.size(), -1);
 //
 //    dijkstra<DS>(in.graph, in.source, out.dist[0], out.pred[0]);

@@ -14,7 +14,10 @@
 #include <vector>
 #include "application.h"
 #include "graph.h"
+#include "arrayheap.h"
 #include "binaryheap.h"
+#include "fibonacciheap.h"
+//#include "pathsalg.h"
 
 
 struct InputInfo {
@@ -37,7 +40,7 @@ protected:
 
     void createInputInfo(const std::string &text, InputInfo &input) override;
 
-    void printOutput(OutputInfo output) override;
+    void printOutput(const InputInfo &in, const OutputInfo &out) override;
 
 private:
 
@@ -45,6 +48,8 @@ private:
     const char *DIJKSTRA = "dijkstra";
     const char *FLOYD_WARSHALL = "floyd-warshall";
     const char *JOHNSON = "johnson";
+
+    void printPath(std::vector<float> dist, std::vector<int> pred, int source);
 };
 
 

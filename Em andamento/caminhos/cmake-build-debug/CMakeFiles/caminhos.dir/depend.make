@@ -9,6 +9,10 @@ CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o: ../sources/binaryheap.cpp
 CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o: ../sources/binaryheap.h
 CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o: ../sources/heap.h
 
+CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o: ../sources/fibonacciheap.cpp
+CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o: ../sources/fibonacciheap.h
+CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o: ../sources/heap.h
+
 CMakeFiles/caminhos.dir/sources/graph.cpp.o: ../sources/graph.cpp
 CMakeFiles/caminhos.dir/sources/graph.cpp.o: ../sources/graph.h
 
@@ -16,14 +20,21 @@ CMakeFiles/caminhos.dir/sources/heap.cpp.o: ../sources/heap.cpp
 CMakeFiles/caminhos.dir/sources/heap.cpp.o: ../sources/heap.h
 
 CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/application.h
+CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/arrayheap.h
 CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/binaryheap.h
+CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/fibonacciheap.h
 CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/graph.h
 CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/heap.h
 CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/main.cpp
 CMakeFiles/caminhos.dir/sources/main.cpp.o: ../sources/pathsapp.h
 
+CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o: ../sources/pathsalg.cpp
+CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o: ../sources/pathsalg.h
+
 CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o: ../sources/application.h
+CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o: ../sources/arrayheap.h
 CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o: ../sources/binaryheap.h
+CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o: ../sources/fibonacciheap.h
 CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o: ../sources/graph.h
 CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o: ../sources/heap.h
 CMakeFiles/caminhos.dir/sources/pathsapp.cpp.o: ../sources/pathsapp.cpp

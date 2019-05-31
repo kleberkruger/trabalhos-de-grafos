@@ -15,14 +15,9 @@ void dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vec
     dist[source] = 0;
     pred[source] = source;
 
-//    for (int i = 0; i < graph.vertices.size(); i++) {
-//        std::cout << i << ": " << dist[i] << " " << pred[i] << " " << std::endl;
-//    }
-
     while (!Q.empty()) {
         Vertex u = graph.vertices[Q.extractMin()];
         for (auto &e : graph.getAdjacencyList(u.id)) {
-//            std::cout << "pegando adjacentes do " << u.id << ": " << e.end << std::endl;
             auto v = e.end;
             auto w = e.weight;
 
@@ -33,10 +28,6 @@ void dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vec
             }
         }
     }
-
-//    for (int i = 0; i < graph.vertices.size(); i++) {
-//        std::cout << i << ": " << dist[i] << " " << pred[i] << " " << std::endl;
-//    }
 }
 
 template<class DS>
@@ -51,7 +42,11 @@ std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> PathsApp::a
     std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> algorithms;
 
     algorithms[BELLMAN_FORD].push_back(PathAlg("Bellman Ford", dijkstra<BinaryHeap>, "Simple Bellman Ford"));
-    algorithms[DIJKSTRA].push_back(PathAlg("Dijkstra", dijkstra<BinaryHeap>, "Simple Dijkstra"));
+
+    algorithms[DIJKSTRA].push_back(PathAlg("Dijkstra", dijkstra<ArrayHeap>, "Dijkstra with ArrayHeap"));
+    algorithms[DIJKSTRA].push_back(PathAlg("Dijkstra", dijkstra<BinaryHeap>, "Dijkstra with BinaryHeap"));
+    algorithms[DIJKSTRA].push_back(PathAlg("Dijkstra", dijkstra<FibonacciHeap>, "Dijkstra with FibonacciHeap"));
+
     algorithms[FLOYD_WARSHALL].push_back(PathAlg("Floyd Warshall", dijkstra<BinaryHeap>, "Simple Floyd Warshall"));
     algorithms[JOHNSON].push_back(PathAlg("Johnson", dijkstra<BinaryHeap>, "Simple Johnson"));
 
@@ -74,5 +69,30 @@ void PathsApp::createInputInfo(const std::string &text, InputInfo &in) {
     in.source = s;
 }
 
-void PathsApp::printOutput(OutputInfo output) {
+void PathsApp::printOutput(const InputInfo &in, const OutputInfo &out) {
+    if (in.source != -1) {
+        printPath(out.dist[0], out.pred[0], in.source);
+    } else {
+        for (int i = 0; i < out.dist.size(); i++) {
+            printPath(out.dist[i], out.pred[i], i);
+        }
+    }
+}
+
+void PathsApp::printPath(std::vector<float> dist, std::vector<int> pred, int source) {
+    std::vector<int> path;
+
+    for (int i = 0; i < pred.size(); i++) {
+        path.clear();
+        for (int v = i; v != source; v = pred[v]) {
+            path.insert(path.begin(), v);
+        }
+        path.insert(path.begin(), source);
+
+        std::cout << "(" << i << ") = " << dist[i] << " path ";
+        for (int v : path) {
+            std::cout << v << " ";
+        }
+        std::cout << std::endl;
+    }
 }

@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/caminhos.dir/sources/heap.cpp.o"
   "CMakeFiles/caminhos.dir/sources/arrayheap.cpp.o"
   "CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o"
+  "CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o"
+  "CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o"
   "caminhos.pdb"
   "caminhos"
 )

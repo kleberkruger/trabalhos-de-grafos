@@ -28,11 +28,29 @@ sys/filio.h
 sys/ioctl.h
 -
 
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/arrayheap.h
+vector
+-
+heap.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/heap.h
+
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/binaryheap.h
 vector
 -
 heap.h
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/heap.h
+
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/fibonacciheap.h
+vector
+-
+limits
+-
+heap.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/heap.h
+math.h
+-
+functional
+-
 
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.h
 iostream
@@ -61,6 +79,10 @@ application.h
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h
 graph.h
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.h
+arrayheap.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/arrayheap.h
 binaryheap.h
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/binaryheap.h
+fibonacciheap.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/fibonacciheap.h
 

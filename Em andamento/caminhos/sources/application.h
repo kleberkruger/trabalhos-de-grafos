@@ -56,8 +56,8 @@ public:
     void start(const std::string &algorithm, unsigned short version, const std::string &inputFilePath,
                const std::string &outputFilePath) {
 
-        AIn input;
-        AOut output;
+        AIn in;
+        AOut out;
         std::vector<Task> tasks;
 
         tasks.emplace_back("select algorithm");
@@ -67,13 +67,13 @@ public:
         std::string text = readInputFile(inputFilePath);
 
         tasks.emplace_back("create input info");
-        createInputInfo(text, input);
+        createInputInfo(text, in);
 
         tasks.emplace_back("execute algorithm");
-        alg.execute(input, output);
+        alg.execute(in, out);
 
         tasks.emplace_back("print output");
-        printOutput(output);
+        printOutput(in, out);
 
         printTasks(tasks);
     }
@@ -86,7 +86,7 @@ protected:
 
     virtual void createInputInfo(const std::string &text, AIn &input) = 0;
 
-    virtual void printOutput(AOut output) = 0;
+    virtual void printOutput(const AIn &input, const AOut &output) = 0;
 
 private:
 

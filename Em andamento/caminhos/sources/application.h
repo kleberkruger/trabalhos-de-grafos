@@ -25,7 +25,7 @@
 #ifdef __OSX_AVAILABLE
 typedef std::chrono::steady_clock OS_CLOCK;
 #else
-std::chrono::system_clock CLOCK;
+std::chrono::system_clock OS_CLOCK;
 #endif
 
 struct Task {

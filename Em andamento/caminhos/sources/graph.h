@@ -78,7 +78,7 @@ public:
      * @param n
      * @param m
      */
-    explicit Graph(int n = 0, int m = 0);
+    explicit Graph(int n = 0, int m = 0, int s = 0);
 
     /**
      * Cria a cópia de um grafo especificado.
@@ -122,7 +122,17 @@ public:
     /**
      * Imprime o grafo (usado para debug).
      */
-    void print();
+    void print() const;
+
+    /**
+     * Imprime a lista de adjacências do grafo (usado para debug).
+     */
+    void printAdjacencyList() const;
+
+    /**
+     * Imprime a matriz de adjacências (usado para debug).
+     */
+    void printAdjacencyMatrix() const;
 
     /**
      * Retorna a lista de adjacências do grafo.
@@ -168,6 +178,7 @@ public:
 
 private:
 
+    mutable int source;
     mutable std::vector<std::vector<EdgeTo>> adjacencyList;
     mutable std::vector<std::vector<double>> minAdjacencyMatrix;
 //    mutable std::vector<std::vector<std::vector<double>>> adjacencyMatrix; // e se existir várias arestas de a para b?

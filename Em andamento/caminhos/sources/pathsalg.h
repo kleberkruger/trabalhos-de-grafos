@@ -13,20 +13,30 @@
 #include "graph.h"
 #include "application.h"
 
+//class PathsAlg {
+//public:
+//
+//    template<class DS>
+//    static AlgorithmOutput dijkstra(const Graph &graph, int source = 0);
+//
+//    template<class DS>
+//    void Dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred);
+//};
 
-AlgorithmOutput dijkstra(const Graph &graph);
-
-void BellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred);
-
-void BellmanFord(const Graph &graph, int source = 0);
-
-template<class DS>
-void Dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred);
-
-template<class DS>
-void Dijkstra(const Graph &graph, int source = 0);
-
-void Johnson(const Graph &graph, std::vector<float> &dist, std::vector<int> &pred);
+//AlgorithmOutput dijkstra(const Graph &graph, int source = 0);
+//
+//void BellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred);
+//
+//void BellmanFord(const Graph &graph, int source = 0);
+//
+//template<class DS>
+//void Dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred);
+//
+//template<class DS>
+//void Dijkstra(const Graph &graph, int source = 0);
+//
+//
+//void Johnson(const Graph &graph, std::vector<float> &dist, std::vector<int> &pred);
 
 
 #endif //CAMINHOS_PATHSALG_H

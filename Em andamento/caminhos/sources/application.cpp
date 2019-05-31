@@ -17,6 +17,8 @@ timePoint(std::chrono::system_clock::now()) {}
 #endif
 
 
+//template<typename R>
+//Algorithm Application<R>::selectAlgorithm(const std::string &algorithm, unsigned short version) {
 Algorithm Application::selectAlgorithm(const std::string &algorithm, unsigned short version) {
     auto map = algorithmsMap();
     auto it = map.find(algorithm);
@@ -30,6 +32,8 @@ Algorithm Application::selectAlgorithm(const std::string &algorithm, unsigned sh
     return algorithmsMap()[algorithm][version];
 }
 
+//template<typename R>
+//std::string Application<R>::readInputFile(const std::string &filePath) {
 std::string Application::readInputFile(const std::string &filePath) {
     char buffer[BUFFER_SIZE];
     int fd, returned;
@@ -51,6 +55,8 @@ std::string Application::readInputFile(const std::string &filePath) {
     return text;
 }
 
+//template<typename R>
+//void Application<R>::printTasks(std::vector<Task> tasks) {
 void Application::printTasks(std::vector<Task> tasks) {
     std::cout << std::endl
               << "================================================================================" << std::endl;
@@ -69,8 +75,11 @@ void Application::printTasks(std::vector<Task> tasks) {
               << std::endl;
 }
 
+//template<typename R>
+//void Application<R>::start(const std::string &algorithm, int version, const std::string &inputFilePath,
+//                        const std::string &outputFilePath) {
 void Application::start(const std::string &algorithm, int version, const std::string &inputFilePath,
-                        const std::string &outputFilePath) {
+                           const std::string &outputFilePath) {
 
     std::vector<Task> tasks;
 
@@ -84,7 +93,7 @@ void Application::start(const std::string &algorithm, int version, const std::st
     Graph graph = createGraph(input);
 
     tasks.emplace_back("execute algorithm");
-    AlgorithmOutput output = alg.execute(graph);
+    AlgorithmOutput output = alg.execute(graph, 0);
 
     tasks.emplace_back("print output");
     printOutput(output);

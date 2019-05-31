@@ -21,8 +21,9 @@ EdgeTo::EdgeTo(int end, double weight) : end(end), weight(weight) {}
 EdgeTo::~EdgeTo() = default;
 
 
-Graph::Graph(int n, int m) : adjacencyList(n),
-                             minAdjacencyMatrix(n, std::vector<double>(n, std::numeric_limits<double>::infinity())) {
+Graph::Graph(int n, int m, int s) : source(s), adjacencyList(n),
+                                    minAdjacencyMatrix(n, std::vector<double>(
+                                            n, std::numeric_limits<double>::infinity())) {
 
     for (int i = 0; i < n; i++) minAdjacencyMatrix[i][i] = 0;
 
@@ -89,7 +90,7 @@ const std::vector<std::vector<double>> &Graph::getMinAdjacencyMatrix() const {
     return minAdjacencyMatrix;
 }
 
-void Graph::print() {
+void Graph::print() const {
 
     std::cout << "==================================================" << std::endl
               << " Print Graph: " << this << std::endl
@@ -100,6 +101,32 @@ void Graph::print() {
         std::cout << "--------------------------------------------------" << std::endl;
         for (auto e : edges)
             std::cout << " (v" << e.start << ", v" << e.end << ") w(" << e.weight << ")" << std::endl;
+    }
+
+    std::cout << "==================================================" << std::endl;
+}
+
+void Graph::printAdjacencyList() const {
+    std::cout << "==================================================" << std::endl;
+    auto &list = getAdjacencyList();
+    for (int i = 0; i < list.size(); ++i) {
+        std::cout << "adjacency of " << i << ": ";
+        for (auto &e : list[i]) {
+            std::cout << e.end << " ";
+        }
+        std::cout << std::endl;
+    }
+    std::cout << "==================================================" << std::endl;
+}
+
+void Graph::printAdjacencyMatrix() const {
+    std::cout << "==================================================" << std::endl;
+    auto &matrix = getMinAdjacencyMatrix();
+    for (int i = 0; i < matrix.size(); ++i) {
+        for (int j = 0; j < matrix[i].size(); ++j) {
+            std::cout << matrix[i][j] << " ";
+        }
+        std::cout << std::endl;
     }
 
     std::cout << "==================================================" << std::endl;

@@ -15,7 +15,8 @@
 
 #include "application.h"
 #include "pathsalg.h"
-
+#include "arrayheap.h"
+#include "binaryheap.h"
 
 class PathsApp : public Application {
 private:

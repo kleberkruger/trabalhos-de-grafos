@@ -20,17 +20,22 @@
 #include <sys/ioctl.h>
 #include "graph.h"
 
-struct AlgorithmOutput {
 
+struct AlgorithmOutput {
+    std::vector<std::vector<float>> dist;
+    std::vector<std::vector<int>> pred;
 };
 
+//template <typename R>
 struct Algorithm {
 
     const std::string name;
-    AlgorithmOutput (*execute)(const Graph &graph);
+
+    AlgorithmOutput (*execute)(const Graph &graph, int source);
+
     const std::string alias;
 
-    Algorithm(std::string name, AlgorithmOutput (*execute)(const Graph &), std::string alias = "")
+    Algorithm(std::string name, AlgorithmOutput (*execute)(const Graph &, int), std::string alias = "")
             : name(std::move(name)), execute(execute), alias(std::move(alias)) {}
 };
 
@@ -42,6 +47,7 @@ struct Task {
     std::chrono::high_resolution_clock::time_point timePoint;
 };
 
+//template <typename R>
 class Application {
 public:
 

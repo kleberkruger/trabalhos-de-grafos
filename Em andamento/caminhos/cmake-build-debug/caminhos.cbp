@@ -8,112 +8,116 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug"/>
+				<Option working_dir="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug"/>
+				<Option working_dir="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="caminhos">
-				<Option output="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/caminhos" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug"/>
+				<Option output="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/caminhos" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 caminhos"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 caminhos"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="caminhos/fast">
-				<Option output="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/caminhos" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug"/>
+				<Option output="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug/caminhos" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 caminhos/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Volumes/KrugerDrive/kleberkruger/Clouds/Box\ Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos\ em\ Grafos/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 caminhos/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em\ andamento/caminhos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.cpp">
+		<Unit filename="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/application.cpp">
 			<Option target="caminhos"/>
 		</Unit>
-		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h">
+		<Unit filename="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h">
 			<Option target="caminhos"/>
 		</Unit>
-		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.cpp">
+		<Unit filename="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.cpp">
 			<Option target="caminhos"/>
 		</Unit>
-		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.h">
+		<Unit filename="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.h">
 			<Option target="caminhos"/>
 		</Unit>
-		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.cpp">
+		<Unit filename="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.cpp">
 			<Option target="caminhos"/>
 		</Unit>
-		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.h">
+		<Unit filename="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.h">
 			<Option target="caminhos"/>
 		</Unit>
-		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/main.cpp">
+		<Unit filename="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/main.cpp">
 			<Option target="caminhos"/>
 		</Unit>
-		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.cpp">
+		<Unit filename="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.cpp">
 			<Option target="caminhos"/>
 		</Unit>
-		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.h">
+		<Unit filename="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.h">
 			<Option target="caminhos"/>
 		</Unit>
-		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.cpp">
+		<Unit filename="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.cpp">
 			<Option target="caminhos"/>
 		</Unit>
-		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.h">
+		<Unit filename="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.h">
 			<Option target="caminhos"/>
 		</Unit>
-		<Unit filename="/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/CMakeLists.txt">
+		<Unit filename="/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

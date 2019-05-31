@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.cpp
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/application.cpp
 application.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h
 
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h
 chrono
 -
 iostream
@@ -23,18 +23,52 @@ vector
 -
 fcntl.h
 -
-zconf.h
--
-sys/filio.h
+unistd.h
 -
 sys/ioctl.h
 -
 graph.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.h
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.h
 
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.h
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.cpp
+dijkstra.h
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.h
+
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/dijkstra.h
+application.h
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h
+
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.h
 iostream
 -
 vector
 -
+
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/main.cpp
+iostream
+-
+pathsapp.h
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.h
+
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.cpp
+pathsalg.h
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.h
+
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.h
+graph.h
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/graph.h
+application.h
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h
+
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.cpp
+pathsapp.h
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.h
+
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.h
+map
+-
+application.h
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h
+pathsalg.h
+/media/felipe/Arquivos/Disciplinas/MO412/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsalg.h
 

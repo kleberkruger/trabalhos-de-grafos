@@ -10,17 +10,25 @@
 #define CAMINHOS_PATHSAPP_H
 
 
+#include <string>
+#include <vector>
 #include "application.h"
+#include "graph.h"
+#include "binaryheap.h"
 
 
 struct InputInfo {
-
+    Graph graph;
+    int source;
 };
 
 struct OutputInfo {
-
+    std::vector<std::vector<float>> dist;
+    std::vector<std::vector<int>> pred;
 };
 
+
+typedef Algorithm<InputInfo, OutputInfo> PathAlg;
 
 class PathsApp : public Application<InputInfo, OutputInfo> {
 protected:
@@ -30,6 +38,13 @@ protected:
     void createInputInfo(const std::string &text, InputInfo &input) override;
 
     void printOutput(OutputInfo output) override;
+
+private:
+
+    const char *BELLMAN_FORD = "bellman-ford";
+    const char *DIJKSTRA = "dijkstra";
+    const char *FLOYD_WARSHALL = "floyd-warshall";
+    const char *JOHNSON = "johnson";
 };
 
 

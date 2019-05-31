@@ -8,6 +8,40 @@
 
 #include "pathsapp.h"
 
+void bellmanFord(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
+    dist[source] = 0;
+    pred[source] = source;
+
+    for (int i = 0; i < graph.vertices.size() - 1; i++) {
+        for (auto e : graph.edges) {
+            auto u = e.start;
+            auto v = e.end;
+            auto w = e.weight;
+            if (dist[v] > dist[u] + w) {
+                dist[v] = dist[u] + w;
+                pred[v] = u;
+            }
+        }
+    }
+
+    for (auto e : graph.edges) {
+        auto u = e.start;
+        auto v = e.end;
+        auto w = e.weight;
+
+        if (dist[u] != std::numeric_limits<int>::infinity() && dist[u] + w < dist[v]) {
+            throw std::invalid_argument("Negative cycle"); // FIXME: verificar exceção mais adequada.
+        }
+    }
+}
+
+void bellmanFord(const InputInfo &in, OutputInfo &out) {
+    out.dist.emplace_back(in.graph.vertices.size(), std::numeric_limits<float>::infinity());
+    out.pred.emplace_back(in.graph.vertices.size(), -1);
+
+    bellmanFord(in.graph, in.source, out.dist[0], out.pred[0]);
+}
+
 template<class DS>
 void dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
     DS Q(graph.vertices.size(), source);
@@ -41,7 +75,7 @@ void dijkstra(const InputInfo &in, OutputInfo &out) {
 std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> PathsApp::algorithmsMap() {
     std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> algorithms;
 
-    algorithms[BELLMAN_FORD].push_back(PathAlg("Bellman Ford", dijkstra<BinaryHeap>, "Simple Bellman Ford"));
+    algorithms[BELLMAN_FORD].push_back(PathAlg("Bellman Ford", bellmanFord, "Simple Bellman Ford"));
 
     algorithms[DIJKSTRA].push_back(PathAlg("Dijkstra", dijkstra<ArrayHeap>, "Dijkstra with ArrayHeap"));
     algorithms[DIJKSTRA].push_back(PathAlg("Dijkstra", dijkstra<BinaryHeap>, "Dijkstra with BinaryHeap"));

@@ -9,9 +9,42 @@
 #include "pathsapp.h"
 
 template<class DS>
+void dijkstra(const Graph &graph, int source, std::vector<float> &dist, std::vector<int> &pred) {
+    DS Q(graph.vertices.size(), source);
+
+    dist[source] = 0;
+    pred[source] = source;
+
+//    for (int i = 0; i < graph.vertices.size(); i++) {
+//        std::cout << i << ": " << dist[i] << " " << pred[i] << " " << std::endl;
+//    }
+
+    while (!Q.empty()) {
+        Vertex u = graph.vertices[Q.extractMin()];
+        for (auto &e : graph.getAdjacencyList(u.id)) {
+//            std::cout << "pegando adjacentes do " << u.id << ": " << e.end << std::endl;
+            auto v = e.end;
+            auto w = e.weight;
+
+            if (dist[v] > dist[u.id] + w) {
+                dist[v] = dist[u.id] + w;
+                pred[v] = u.id;
+                Q.decreaseKey(v, w);
+            }
+        }
+    }
+
+//    for (int i = 0; i < graph.vertices.size(); i++) {
+//        std::cout << i << ": " << dist[i] << " " << pred[i] << " " << std::endl;
+//    }
+}
+
+template<class DS>
 void dijkstra(const InputInfo &in, OutputInfo &out) {
-    std::cout << "executando o Dijkstra a partir do " << in.source << std::endl;
-    in.graph.print();
+    out.dist.emplace_back(in.graph.vertices.size(), std::numeric_limits<float>::infinity());
+    out.pred.emplace_back(in.graph.vertices.size(), -1);
+
+    dijkstra<DS>(in.graph, in.source, out.dist[0], out.pred[0]);
 }
 
 std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> PathsApp::algorithmsMap() {
@@ -42,5 +75,4 @@ void PathsApp::createInputInfo(const std::string &text, InputInfo &in) {
 }
 
 void PathsApp::printOutput(OutputInfo output) {
-    std::cout << "eu venci" << std::endl;
 }

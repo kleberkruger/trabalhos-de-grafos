@@ -12,43 +12,51 @@
 
 #include "fibonacciheap.h"
 
-FibonacciHeap::FibonacciHeap(int n, int s) : nodes(n), position(n) {
-    build(n, s);
+FibonacciHeap::FibonacciHeap(int n, int s) : nodes(n), position(n), A(n){
+    // printf("AAA\n\n");
+    build(n,s);
 }
 
-FibonacciHeap::~FibonacciHeap(void) {
-    for (auto &i : position) {
-        free(i);
+FibonacciHeap::~FibonacciHeap(void){
+    for(unsigned int i = 0; i < position.size(); i++){
+        free(position[i]);
     }
-    for (auto &i : A) {
-        free(i);
-    }
+    // for(unsigned int i = 0; i < A.size(); i++){
+    //     free(A[i]);
+    // }
 }
 
-void FibonacciHeap::build(int n, int s) {
-    min = nullptr;
+void FibonacciHeap::build(int n,int s) {
+    min = NULL;
     total_nodes = 0;
-    insertion(0, s);
-    for (unsigned int i = 1; i < n; i++) {
-        insertion(std::numeric_limits<double>::infinity(), i);
+
+    for(unsigned int i = 0; i < A.size(); i++){
+        A[i] = NULL;
     }
 
-    A.resize(n);
-    for (unsigned int i = 0; i < A.size(); i++) {
-        A[i] = nullptr;
+    insertion(0,s);
+    for (int i = 1; i < n; i++) {
+        insertion(std::numeric_limits<double>::infinity(),i);
+    }
+
+    
+}
+
+bool FibonacciHeap::empty(){
+    if (total_nodes == 0){
+        return true;
+    }
+    else{
+        return false;
     }
 }
 
-bool FibonacciHeap::empty() {
-    return total_nodes == 0;
-}
-
-void FibonacciHeap::insertion(double val, int pos) {
-    auto *new_node = (struct HeapNode *) malloc(sizeof(struct HeapNode));
+void FibonacciHeap::insertion (double val,int pos) {
+    HeapNode* new_node = (struct HeapNode*)malloc(sizeof(struct HeapNode));
     new_node->key = val;
     new_node->degree = 0;
-    new_node->parent = nullptr;
-    new_node->child = nullptr;
+    new_node->parent = NULL;
+    new_node->child = NULL;
     new_node->prev = new_node;
     new_node->next = new_node;
     new_node->pos = pos;
@@ -58,61 +66,61 @@ void FibonacciHeap::insertion(double val, int pos) {
 
     total_nodes++;
     position[pos] = new_node;
-
 }
 
-void FibonacciHeap::insert_on_root(HeapNode *x) {
-    HeapNode *z = min;
-    if (z != nullptr) {
+void FibonacciHeap::insert_on_root(HeapNode * x){
+    HeapNode * z = min;
+    if(z != NULL){
         z = min;
         x->prev = z;
         x->next = z->next;
         z->next->prev = x;
         z->next = x;
-        if (z->key > x->key) {
+        if(z->key > x->key){
             min = x;
         }
-    } else {
+    }
+    else{
         x->prev = x;
         x->next = x;
-        min = x;
+        min = x;    
     }
 }
 
-void FibonacciHeap::remove_from_root(HeapNode *x) {
-    if (total_nodes > 0) {
-        x->next->prev = x->prev;
-        x->prev->next = x->next;
-        x->next = x;
-        x->prev = x;
-    }
-    if (total_nodes == 0)
-        min = nullptr;
+void FibonacciHeap::remove_from_root(HeapNode * x){
+        if(total_nodes > 0){
+            x->next->prev = x->prev;
+            x->prev->next = x->next;
+            x->next = x;
+            x->prev = x;
+        }
+        if(total_nodes == 0)
+            min = NULL;
 }
 
 
-int FibonacciHeap::extractMin() {
-    if (min == nullptr) {
-        std::cout << "Error: Heap is empty" << std::endl;
+int FibonacciHeap::extractMin(){
+    if(min == NULL){
+        std::cout <<  "Error: Heap is empty" << std::endl;
         return -1;
     }
 
-    HeapNode *z = min;
-    if (z != nullptr) {
-        if (z->child != nullptr) {
-            HeapNode *x;
-            do {
+    HeapNode * z = min;
+    if(z != NULL){
+        if (z->child != NULL){
+            HeapNode * x;
+            do{
                 x = z->child;
                 insert_on_root(x);
-                x->parent = nullptr;
-                x = x->child;
-            } while (x != z->child);
+                x->parent = NULL;
+                x=x->child;
+            }while(x != z->child);
         }
     }
     remove_from_root(z);
     if (total_nodes == 0)
-        min = nullptr;
-    else {
+        min = NULL;
+    else{
         min = z->next;
         consolidate();
     }
@@ -121,54 +129,69 @@ int FibonacciHeap::extractMin() {
     return index;
 }
 
-void FibonacciHeap::consolidate() {
-    int golden_ratio = log(total_nodes) / log(1.6810);
-    golden_ratio++;
-    for (unsigned int i = 0; i < golden_ratio; i++) {
-        A[i] = nullptr;
+void FibonacciHeap::consolidate() { 
+    // static int h = 0;
+    int golden_ratio = (log(total_nodes)/log(1.6810));
+    golden_ratio += 2;
+    for (int i = 0; i < golden_ratio; i++){
+        A[i] = NULL;
     }
 
-    HeapNode *w = min;
-    do {
-        HeapNode *x = w;
+    // printf("%d\n", h);
+    // h++;
+
+    HeapNode * w = min;
+    do{
+        HeapNode * x = w;
         int d = x->degree;
-        while (A[d] != nullptr) {
-            HeapNode *y = A[d];
-            if (x->key > y->key) {
-                std::swap(x, y);
+        while(A[d] != NULL){
+            HeapNode * y = A[d];
+            if(x->key > y->key){
+                std::swap(x,y);
             }
-            fibonnaci_link(y, x);
-            A[d] = nullptr;
+            fibonnaci_link(y,x);
+            A[d] = NULL;
             d++;
         }
         A[d] = x;
         w = w->next;
-    } while (w != min);
+    }while(w != min);
+    min = NULL;
+    for(int i = 0; i < golden_ratio; i++){
+        if(A[i] != NULL){
+            insert_on_root(A[i]);
+            if(min == NULL || A[i]->key < min->key){
+                min = A[i];
+            }
+        }
+    }
 }
 
-void FibonacciHeap::fibonnaci_link(HeapNode *y, HeapNode *x) {
+void FibonacciHeap::fibonnaci_link(HeapNode * y, HeapNode * x) {
     remove_from_root(y);
     y->mark = false;
-    insert_on_child(y, x);
+    insert_on_child(y,x);
 }
 
-void FibonacciHeap::insert_on_child(HeapNode *y, HeapNode *x) {
-    if (y->child != nullptr) {
+void FibonacciHeap::insert_on_child(HeapNode * y, HeapNode * x){
+    if(y->child != NULL){
         x->prev = y->child;
         x->next = y->child->next;
         y->child->next->prev = x;
         y->child->next = x;
-    } else {
+    }
+    else{
         y->child = x;
         x->next = x;
         x->prev = x;
     }
 }
 
-void FibonacciHeap::remove_from_child(HeapNode *x, HeapNode *y) {
-    if (x == x->next) {
-        y->child = nullptr;
-    } else if (y->child == x) {
+void FibonacciHeap::remove_from_child(HeapNode * x, HeapNode * y){
+    if(x == x->next){
+        y->child = NULL;
+    }
+    else if(y->child == x){
         y->child = x->next;
         y->next->parent = y;
     }
@@ -178,19 +201,19 @@ void FibonacciHeap::remove_from_child(HeapNode *x, HeapNode *y) {
     y->degree--;
 }
 
-void FibonacciHeap::Cut(HeapNode *x, HeapNode *y) {
-    remove_from_child(x, y);
+void FibonacciHeap::Cut(HeapNode * x, HeapNode * y) {
+    remove_from_child(x,y);
     insert_on_root(x);
-    x->parent = nullptr;
+    x->parent = NULL;
     x->mark = false;
 }
 
-void FibonacciHeap::Cascase_cut(HeapNode *y) {
-    HeapNode *z = y->parent;
-    if (z != nullptr) {
-        if (!y->mark)
+void FibonacciHeap::Cascase_cut(HeapNode* y) { 
+    HeapNode * z = y->parent;
+    if(z != NULL){
+        if(y->mark == false)
             y->mark = true;
-        else {
+        else{
             Cut(y, z);
             Cascase_cut(z);
         }
@@ -198,15 +221,16 @@ void FibonacciHeap::Cascase_cut(HeapNode *y) {
 }
 
 void FibonacciHeap::decreaseKey(unsigned long index, double val) {
-    HeapNode *x = position[index];
-    if (x->key > val) {
+    HeapNode * z = min;
+    HeapNode * x = position[index];
+    if(x->key > val){
         x->key = val;
-        HeapNode *y = x->parent;
-        if (y != nullptr and x->key < y->key) {
-            Cut(x, y);
+        HeapNode * y = x->parent;
+        if(y != NULL and x->key < y->key){
+            Cut(x,y);
             Cascase_cut(y);
         }
-        if (x->key < min->key)
+        if(x->key < z->key)
             min = x;
     }
 }

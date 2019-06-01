@@ -21,19 +21,19 @@
 
 class FibonacciHeap : public Heap {
 public:
-    struct HeapNode {
-        HeapNode *parent; // Parent pointer
-        HeapNode *child; // Child pointer
-        HeapNode *prev; // Pointer to the HeapNode on the left
-        HeapNode *next; // Pointer to the HeapNode on the right
+	struct HeapNode { 
+	    HeapNode* parent; // Parent pointer 
+	    HeapNode* child; // Child pointer 
+	    HeapNode* prev; // Pointer to the HeapNode on the left 
+	    HeapNode* next; // Pointer to the HeapNode on the right
         double key; // Value of the HeapNode
-        int pos; // Position of the HeapNode in the position array
-        int degree; // Degree of the HeapNode
-        bool mark; // Black or white mark of the HeapNode
-    };
+	    int pos; // Position of the HeapNode in the position array
+	    int vertex;
+	    int degree; // Degree of the HeapNode
+	    bool mark; // Black or white mark of the HeapNode
+	};
 
     FibonacciHeap(int n, int s);
-
     ~FibonacciHeap();
 
     int extractMin() override;
@@ -42,39 +42,32 @@ public:
 
     bool empty() override;
 
-    void insertion(double val, int index);
+	void insertion(double val,int index);
 
-    void print();
+	void print();
 
 protected:
-    void consolidate();
-
-    void fibonnaci_link(HeapNode *y, HeapNode *x);
-
-    void Cut(HeapNode *found, HeapNode *temp);
-
-    void Cascase_cut(HeapNode *temp);
-
-    void Decrease_key(HeapNode *found, int val);
-
+	void consolidate();
+	void fibonnaci_link(HeapNode * y, HeapNode * x);
+	void Cut(HeapNode* found, HeapNode * temp);
+	void Cascase_cut(HeapNode * temp);
+	void Decrease_key(HeapNode * found, int val);
+    
 
 private:
-    void build(int n, int s);
+	void build(int n,int s);
+	void insert_on_root(HeapNode * x);
+	void remove_from_root(HeapNode * x);
+	void insert_on_child(HeapNode * y, HeapNode * x);
+	void remove_from_child(HeapNode * x, HeapNode * y);
 
-    void insert_on_root(HeapNode *x);
-
-    void remove_from_root(HeapNode *x);
-
-    void insert_on_child(HeapNode *y, HeapNode *x);
-
-    void remove_from_child(HeapNode *x, HeapNode *y);
-
-    HeapNode *min;
-    int total_nodes;
+	HeapNode * min;
+	int total_nodes;
     std::vector<HeapNode> nodes;
     std::vector<HeapNode>::size_type size;
     std::vector<HeapNode *> position;
     std::vector<HeapNode *> A;
+	
 
 };
 

@@ -68,6 +68,9 @@ void dijkstra(const InputInfo &in, OutputInfo &out) {
     out.pred.emplace_back(in.graph.vertices.size(), -1);
 
     dijkstra<DS>(in.graph, in.source, out.dist[0], out.pred[0]);
+    
+    printf("XXX\n\n");
+
 }
 
 //std::vector<std::vector<int>> PredInit(const Graph &graph) {
@@ -176,8 +179,7 @@ std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> PathsApp::a
 
     algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<ArrayHeap>, "Johnson using Dijkstra with ArrayHeap"));
     algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<BinaryHeap>, "Johnson using Dijkstra with BinaryHeap"));
-    algorithms[JOHNSON].push_back(
-            PathAlg("Dijkstra", johnson<FibonacciHeap>, "Johnson using Dijkstra with FibonacciHeap"));
+    algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<FibonacciHeap>, "Johnson using Dijkstra with FibonacciHeap"));
 
     return algorithms;
 }

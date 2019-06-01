@@ -22,15 +22,16 @@
 #include <sys/ioctl.h>
 
 
-// #ifdef __OSX_AVAILABLE
-// typedef std::chrono::steady_clock OS_CLOCK;
-// #else
-// std::chrono::system_clock OS_CLOCK;
-// #endif
+#ifdef __OSX_AVAILABLE
+typedef std::chrono::steady_clock OS_CLOCK;
+#else
+typedef std::chrono::system_clock OS_CLOCK;
+#endif
 
 struct Task {
 
-    explicit Task(std::string description) : description(std::move(description)), timePoint(std::chrono::system_clock::now()) {}
+    explicit Task(std::string description) : description(std::move(description)),
+                                             timePoint(OS_CLOCK::now()) {}
 
     std::string description;
     std::chrono::high_resolution_clock::time_point timePoint;

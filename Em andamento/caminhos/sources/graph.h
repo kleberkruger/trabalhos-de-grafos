@@ -173,6 +173,18 @@ public:
 //     */
 //    const std::vector<double> &getAdjacencyMatrix(int x, int y) const;
 
+    template<typename T>
+    static void printMatrix(const std::vector<std::vector<T>> matrix) {
+        printf("==================================================\n");
+        for (const auto &i : matrix) {
+            for (double j : i) {
+                printf("%4.0lf", (double) j);
+            }
+            printf("\n");
+        }
+        printf("==================================================\n");
+    }
+
     std::vector<Vertex> vertices;
     std::vector<Edge> edges;
 

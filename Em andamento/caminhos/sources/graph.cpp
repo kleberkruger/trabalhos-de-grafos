@@ -22,8 +22,8 @@ EdgeTo::~EdgeTo() = default;
 
 
 Graph::Graph(int n, int m) : adjacencyList(n),
-                                    minAdjacencyMatrix(n, std::vector<double>(
-                                            n, std::numeric_limits<double>::infinity())) {
+                             minAdjacencyMatrix(n, std::vector<double>(
+                                     n, std::numeric_limits<double>::infinity())) {
 
     for (int i = 0; i < n; i++) minAdjacencyMatrix[i][i] = 0;
 
@@ -122,9 +122,9 @@ void Graph::printAdjacencyList() const {
 void Graph::printAdjacencyMatrix() const {
     std::cout << "==================================================" << std::endl;
     auto &matrix = getMinAdjacencyMatrix();
-    for (int i = 0; i < matrix.size(); ++i) {
-        for (int j = 0; j < matrix[i].size(); ++j) {
-            std::cout << matrix[i][j] << " ";
+    for (const auto &i : matrix) {
+        for (double j : i) {
+            printf("%4.0lf", j);
         }
         std::cout << std::endl;
     }

@@ -72,6 +72,91 @@ void dijkstra(const InputInfo &in, OutputInfo &out) {
     dijkstra<DS>(in.graph, in.source, out.dist[0], out.pred[0]);
 }
 
+//std::vector<std::vector<int>> PredInit(const Graph &graph) {
+//    auto adjMatrix = graph.getMinAdjacencyMatrix();
+//
+//    std::vector<std::vector<int>> pred;
+//    std::vector<int> line(adjMatrix.size(), -1);
+//
+//    for (int i = 0; i < adjMatrix.size(); i++)
+//        pred.emplace_back(line);
+//
+//    for (int i = 0; i < (int) adjMatrix.size(); i++) {
+//        for (int j = 0; j < (int) adjMatrix.size(); j++) {
+//            if (adjMatrix[i][j] != std::numeric_limits<double>::infinity() && i != j) {
+//                pred[i][j] = i;
+//            }
+//        }
+//    }
+//
+//    return pred;
+//}
+
+void floydWarshall(const Graph &graph, std::vector<std::vector<double>> &dist, std::vector<std::vector<int>> &pred) {
+    auto n = graph.getMinAdjacencyMatrix().size();
+
+    for (int k = 0; k < n; k++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (dist[i][j] > dist[i][k] + dist[k][j]) {
+                    dist[i][j] = dist[i][k] + dist[k][j];
+                    pred[i][j] = pred[k][j];
+                }
+            }
+        }
+    }
+}
+
+void floydWarshall(const InputInfo &in, OutputInfo &out) {
+    in.source = -1;
+
+    int n = in.graph.vertices.size();
+    std::vector<int> line(n, -1);
+    for (int i = 0; i < n; i++)
+        out.pred.emplace_back(line);
+
+//    std::vector<std::vector<int>> vec(n, std::vector<int>(n, -1));
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (in.graph.getMinAdjacencyMatrix()[i][j] != std::numeric_limits<double>::infinity() && i != j) {
+                out.pred[i][j] = i;
+            }
+        }
+    }
+    out.dist = in.graph.getMinAdjacencyMatrix();
+
+    floydWarshall(in.graph, out.dist, out.pred);
+}
+
+template<class DS>
+void johnson(const Graph &graph, std::vector<std::vector<double>> &dist, std::vector<std::vector<int>> &pred) {
+
+}
+
+template<class DS>
+void johnson(const InputInfo &in, OutputInfo &out) {
+    in.source = -1;
+
+    int n = in.graph.vertices.size();
+    std::vector<int> line(n, -1);
+    for (int i = 0; i < n; i++)
+        out.pred.emplace_back(line);
+
+//    std::vector<std::vector<int>> vec(n, std::vector<int>(n, -1));
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (in.graph.getMinAdjacencyMatrix()[i][j] != std::numeric_limits<double>::infinity() && i != j) {
+                out.pred[i][j] = i;
+            }
+        }
+    }
+    out.dist = in.graph.getMinAdjacencyMatrix();
+
+    johnson<DS>(in.graph, out.dist, out.pred);
+}
+
 std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> PathsApp::algorithmsMap() {
     std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> algorithms;
 
@@ -81,8 +166,11 @@ std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> PathsApp::a
     algorithms[DIJKSTRA].push_back(PathAlg("Dijkstra", dijkstra<BinaryHeap>, "Dijkstra with BinaryHeap"));
     algorithms[DIJKSTRA].push_back(PathAlg("Dijkstra", dijkstra<FibonacciHeap>, "Dijkstra with FibonacciHeap"));
 
-    algorithms[FLOYD_WARSHALL].push_back(PathAlg("Floyd Warshall", dijkstra<BinaryHeap>, "Simple Floyd Warshall"));
-    algorithms[JOHNSON].push_back(PathAlg("Johnson", dijkstra<BinaryHeap>, "Simple Johnson"));
+    algorithms[FLOYD_WARSHALL].push_back(PathAlg("Floyd Warshall", floydWarshall, "Simple Floyd Warshall"));
+
+    algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<ArrayHeap>, "Dijkstra with ArrayHeap"));
+    algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<BinaryHeap>, "Dijkstra with BinaryHeap"));
+    algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<FibonacciHeap>, "Dijkstra with FibonacciHeap"));
 
     return algorithms;
 }
@@ -107,9 +195,14 @@ void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, con
     if (in.source != -1) {
         printPath(filePath, out.dist[0], out.pred[0], in.source);
     } else {
-        for (int i = 0; i < out.dist.size(); i++) {
-            printPath(filePath, out.dist[i], out.pred[i], i);
-        }
+//        for (int i = 0; i < out.dist.size(); i++) {
+//            printPath(filePath, out.dist[i], out.pred[i], i);
+//        }
+        std::cout << "Predecessores:" << std::endl;
+        Graph::printMatrix(out.pred);
+
+        std::cout << "Distâncias:" << std::endl;
+        Graph::printMatrix(out.dist);
     }
 }
 

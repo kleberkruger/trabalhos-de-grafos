@@ -22,7 +22,7 @@
 
 struct InputInfo {
     Graph graph;
-    int source;
+    mutable int source;
 };
 
 struct OutputInfo {

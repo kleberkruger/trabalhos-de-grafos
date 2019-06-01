@@ -40,6 +40,10 @@ vector
 heap.h
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/heap.h
 
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/fibonacciheap.cpp
+fibonacciheap.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/fibonacciheap.h
+
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/fibonacciheap.h
 vector
 -
@@ -66,7 +70,17 @@ vector
 limits
 -
 
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/main.cpp
+iostream
+-
+pathsapp.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.h
+application.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/application.h
+
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.cpp
+sstream
+-
 pathsapp.h
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/pathsapp.h
 

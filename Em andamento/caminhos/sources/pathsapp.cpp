@@ -6,6 +6,7 @@
  * @author: Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
  */
 
+#include <sstream>
 #include "pathsapp.h"
 
 void bellmanFord(const Graph &graph, int source, std::vector<double> &dist, std::vector<int> &pred) {
@@ -175,7 +176,8 @@ std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> PathsApp::a
 
     algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<ArrayHeap>, "Johnson using Dijkstra with ArrayHeap"));
     algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<BinaryHeap>, "Johnson using Dijkstra with BinaryHeap"));
-    algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<FibonacciHeap>, "Johnson using Dijkstra with FibonacciHeap"));
+    algorithms[JOHNSON].push_back(
+            PathAlg("Dijkstra", johnson<FibonacciHeap>, "Johnson using Dijkstra with FibonacciHeap"));
 
     return algorithms;
 }
@@ -200,10 +202,13 @@ void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, con
     if (in.source != -1) {
         printPath(filePath, out.dist[0], out.pred[0], in.source);
     } else {
-        std::cout << "Predecessores:" << std::endl;
-        Graph::printMatrix(out.pred);
-        std::cout << "Distâncias:" << std::endl;
-        Graph::printMatrix(out.dist);
+//        std::cout << "Predecessores:" << std::endl;
+//        Graph::printMatrix(out.pred);
+//        std::cout << "Distâncias:" << std::endl;
+//        Graph::printMatrix(out.dist);
+        for (int i = 0; i < in.graph.vertices.size(); i++) {
+            printPath(filePath, out.dist[i], out.pred[i], i);
+        }
     }
 }
 
@@ -217,10 +222,27 @@ void PathsApp::printPath(const std::string &filePath, std::vector<double> dist, 
         }
         path.insert(path.begin(), source);
 
-        std::cout << "(" << i << ") = " << dist[i] << " path ";
+        std::stringstream text;
+        text << dist[i] << " ";
         for (int v : path) {
-            std::cout << v << " ";
+            text << "v" << v << " ";
         }
-        std::cout << std::endl;
+        text << std::endl;
+
+        std::cout << text.str();
+
+//        int fd;
+//        if ((fd = open(filePath.data(), O_CREAT | O_WRONLY)) == -1) {
+//            throw std::invalid_argument("Incorrect output file path: \"" + filePath + "\"");
+//        }
+//        write(fd, text.str().c_str(), text.str().size());
+//        close(fd);
+
+        FILE *fp = fopen(filePath.data(), "w");
+        if (!fp) {
+            throw std::invalid_argument("Incorrect output file path: \"" + filePath + "\"");
+        }
+        fprintf(fp, "%s\n", text.str().c_str());
+        fclose(fp);
     }
 }

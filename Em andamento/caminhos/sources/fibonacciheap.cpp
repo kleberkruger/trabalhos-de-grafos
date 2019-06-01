@@ -217,7 +217,6 @@ void FibonacciHeap::Cascase_cut(HeapNode* y) {
 void FibonacciHeap::decreaseKey(unsigned long index, double val) {
     HeapNode * z = min;
     HeapNode * x = position[index];
-    std::cout << position[index] << std::endl;
     if(x->key > val){
         x->key = val;
         HeapNode * y = x->parent;

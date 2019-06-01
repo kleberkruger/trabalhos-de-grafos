@@ -49,7 +49,7 @@ void dijkstra(const Graph &graph, int source, std::vector<double> &dist, std::ve
 
     while (!Q.empty()) {
         Vertex u = graph.vertices[Q.extractMin()];
-        
+
         for (auto &e : graph.getAdjacencyList(u.id)) {
             auto v = e.end;
             auto w = e.weight;
@@ -60,7 +60,7 @@ void dijkstra(const Graph &graph, int source, std::vector<double> &dist, std::ve
             }
         }
     }
-    
+
 }
 
 template<class DS>
@@ -96,8 +96,8 @@ void floydWarshall(const Graph &graph, std::vector<std::vector<double>> &dist, s
     auto n = graph.getMinAdjacencyMatrix().size();
 
     for (unsigned int k = 0; k < n; k++) {
-        for (unsigned  int i = 0; i < n; i++) {
-            for (unsigned  int j = 0; j < n; j++) {
+        for (unsigned int i = 0; i < n; i++) {
+            for (unsigned int j = 0; j < n; j++) {
                 if (dist[i][j] > dist[i][k] + dist[k][j]) {
                     dist[i][j] = dist[i][k] + dist[k][j];
                     pred[i][j] = pred[k][j];
@@ -136,7 +136,7 @@ void johnson(const InputInfo &in, OutputInfo &out) {
     auto graph = in.graph;
     int id = graph.vertices.size();
     graph.insertVertex(id);
-    for (unsigned  int i = 0; i < in.graph.vertices.size(); i++) {
+    for (unsigned int i = 0; i < in.graph.vertices.size(); i++) {
         graph.insertEdge(id, i, 0);
     }
 
@@ -153,7 +153,7 @@ void johnson(const InputInfo &in, OutputInfo &out) {
     out.pred = std::vector<std::vector<int>>(n, std::vector<int>(n, -1));
 
     Graph g = in.graph;
-    for (unsigned  int i = 0; i < in.graph.edges.size(); i++) {
+    for (unsigned int i = 0; i < in.graph.edges.size(); i++) {
         g.edges[i].weight = graph.edges[i].weight;
     }
 
@@ -178,7 +178,8 @@ std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> PathsApp::a
 
     algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<ArrayHeap>, "Johnson using Dijkstra with ArrayHeap"));
     algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<BinaryHeap>, "Johnson using Dijkstra with BinaryHeap"));
-    algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<FibonacciHeap>, "Johnson using Dijkstra with FibonacciHeap"));
+    algorithms[JOHNSON].push_back(
+            PathAlg("Dijkstra", johnson<FibonacciHeap>, "Johnson using Dijkstra with FibonacciHeap"));
 
     return algorithms;
 }
@@ -215,35 +216,26 @@ void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, con
 
 void PathsApp::printPath(const std::string &filePath, std::vector<double> dist, std::vector<int> pred, int source) {
     std::vector<int> path;
+    std::stringstream text;
 
-    for (unsigned int i = 0; i < pred.size(); i++) {
+    for (int i = 0; i < pred.size(); i++) {
         path.clear();
         for (int v = i; v != source; v = pred[v]) {
             path.insert(path.begin(), v);
         }
         path.insert(path.begin(), source);
 
-        std::stringstream text;
         text << dist[i] << " ";
         for (int v : path) {
             text << "v" << v << " ";
         }
         text << std::endl;
-
-        std::cout << text.str();
-
-//        int fd;
-//        if ((fd = open(filePath.data(), O_CREAT | O_WRONLY)) == -1) {
-//            throw std::invalid_argument("Incorrect output file path: \"" + filePath + "\"");
-//        }
-//        write(fd, text.str().c_str(), text.str().size());
-//        close(fd);
-
-        FILE *fp = fopen(filePath.data(), "w");
-        if (!fp) {
-            throw std::invalid_argument("Incorrect output file path: \"" + filePath + "\"");
-        }
-        fprintf(fp, "%s\n", text.str().c_str());
-        fclose(fp);
     }
+
+    int fd;
+    if ((fd = open(filePath.data(), O_CREAT | O_WRONLY)) == -1) {
+        throw std::invalid_argument("Incorrect output file path: \"" + filePath + "\"");
+    }
+    write(fd, text.str().c_str(), text.str().size());
+    close(fd);
 }

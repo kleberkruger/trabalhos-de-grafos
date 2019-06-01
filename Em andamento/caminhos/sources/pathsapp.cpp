@@ -10,7 +10,6 @@
 
 void bellmanFord(const Graph &graph, int source, std::vector<double> &dist, std::vector<int> &pred) {
     dist[source] = 0;
-    pred[source] = source;
 
     for (int i = 0; i < graph.vertices.size() - 1; i++) {
         for (auto e : graph.edges) {
@@ -47,14 +46,12 @@ void dijkstra(const Graph &graph, int source, std::vector<double> &dist, std::ve
     DS Q(graph.vertices.size(), source);
 
     dist[source] = 0;
-    pred[source] = source;
 
     while (!Q.empty()) {
         Vertex u = graph.vertices[Q.extractMin()];
         for (auto &e : graph.getAdjacencyList(u.id)) {
             auto v = e.end;
             auto w = e.weight;
-
             if (dist[v] > dist[u.id] + w) {
                 dist[v] = dist[u.id] + w;
                 pred[v] = u.id;
@@ -130,31 +127,39 @@ void floydWarshall(const InputInfo &in, OutputInfo &out) {
 }
 
 template<class DS>
-void johnson(const Graph &graph, std::vector<std::vector<double>> &dist, std::vector<std::vector<int>> &pred) {
-
-}
-
-template<class DS>
 void johnson(const InputInfo &in, OutputInfo &out) {
     in.source = -1;
 
-    int n = in.graph.vertices.size();
-    std::vector<int> line(n, -1);
-    for (int i = 0; i < n; i++)
-        out.pred.emplace_back(line);
+    auto graph = in.graph;
+    int id = graph.vertices.size();
+    graph.insertVertex(id);
+    for (int i = 0; i < in.graph.vertices.size(); i++) {
+        graph.insertEdge(id, i, 0);
+    }
 
-//    std::vector<std::vector<int>> vec(n, std::vector<int>(n, -1));
+    std::vector<double> dist(graph.vertices.size(), std::numeric_limits<double>::infinity());
+    std::vector<int> pred(graph.vertices.size(), -1);
+    bellmanFord(graph, id, dist, pred);
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            if (in.graph.getMinAdjacencyMatrix()[i][j] != std::numeric_limits<double>::infinity() && i != j) {
-                out.pred[i][j] = i;
-            }
+    for (auto &e : graph.edges) {
+        e.weight = e.weight + dist[e.start] - dist[e.end];
+    }
+
+    auto n = in.graph.vertices.size();
+    out.dist = std::vector<std::vector<double>>(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
+    out.pred = std::vector<std::vector<int>>(n, std::vector<int>(n, -1));
+
+    Graph g = in.graph;
+    for (int i = 0; i < in.graph.edges.size(); i++) {
+        g.edges[i].weight = graph.edges[i].weight;
+    }
+
+    for (auto &u : in.graph.vertices) {
+        dijkstra<DS>(g, u.id, out.dist[u.id], out.pred[u.id]);
+        for (auto &v : in.graph.vertices) {
+            out.dist[u.id][v.id] = out.dist[u.id][v.id] + dist[v.id] - dist[u.id];
         }
     }
-    out.dist = in.graph.getMinAdjacencyMatrix();
-
-    johnson<DS>(in.graph, out.dist, out.pred);
 }
 
 std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> PathsApp::algorithmsMap() {
@@ -168,9 +173,9 @@ std::map<std::string, std::vector<Algorithm<InputInfo, OutputInfo>>> PathsApp::a
 
     algorithms[FLOYD_WARSHALL].push_back(PathAlg("Floyd Warshall", floydWarshall, "Simple Floyd Warshall"));
 
-    algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<ArrayHeap>, "Dijkstra with ArrayHeap"));
-    algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<BinaryHeap>, "Dijkstra with BinaryHeap"));
-    algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<FibonacciHeap>, "Dijkstra with FibonacciHeap"));
+    algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<ArrayHeap>, "Johnson using Dijkstra with ArrayHeap"));
+    algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<BinaryHeap>, "Johnson using Dijkstra with BinaryHeap"));
+    algorithms[JOHNSON].push_back(PathAlg("Dijkstra", johnson<FibonacciHeap>, "Johnson using Dijkstra with FibonacciHeap"));
 
     return algorithms;
 }
@@ -195,12 +200,8 @@ void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, con
     if (in.source != -1) {
         printPath(filePath, out.dist[0], out.pred[0], in.source);
     } else {
-//        for (int i = 0; i < out.dist.size(); i++) {
-//            printPath(filePath, out.dist[i], out.pred[i], i);
-//        }
         std::cout << "Predecessores:" << std::endl;
         Graph::printMatrix(out.pred);
-
         std::cout << "Distâncias:" << std::endl;
         Graph::printMatrix(out.dist);
     }

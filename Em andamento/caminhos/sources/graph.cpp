@@ -36,7 +36,9 @@ Graph::Graph(int n, int m) : adjacencyList(n),
     for (int i = 0; i < n; i++) insertVertex(i);
 }
 
-Graph::Graph(const Graph &orig) = default;
+Graph::Graph(const Graph &orig) : vertices(orig.vertices), edges(orig.edges), adjacencyList(orig.vertices.size()),
+                                  minAdjacencyMatrix(orig.vertices.size(), std::vector<double>(
+                                          orig.vertices.size(), std::numeric_limits<double>::infinity())) {}
 
 Graph::~Graph() = default;
 
@@ -64,12 +66,19 @@ void Graph::clearAll() {
 
 const std::vector<std::vector<EdgeTo>> &Graph::getAdjacencyList() const {
     static bool exists = false;
+//    std::cout << (exists ? "true" : "false") << std::endl;
+//    std::cout << edges.size() << std::endl;
+//    std::cout << adjacencyList.size() << std::endl;
+//    std::cout << adjacencyList.capacity() << std::endl;
     if (!exists) {
         for (auto &e : edges) {
+//            std::cout << "(" << e.start << "," << e.end << ")" << std::endl;
             adjacencyList[e.start].push_back(EdgeTo(e.end, e.weight));
+//            std::cout << "confirmado" << std::endl;
         }
         exists = true;
     }
+//    std::cout << "as" << std::endl;
     return adjacencyList;
 }
 

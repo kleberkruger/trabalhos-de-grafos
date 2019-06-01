@@ -203,15 +203,22 @@ void PathsApp::printPath(const std::string &filePath, std::vector<double> dist, 
 
         text << dist[i] << " ";
         for (int v : path) {
-            text << "v" << v << " ";
+            text << v << " ";
         }
         text << std::endl;
     }
 
-    int fd;
-    if ((fd = open(filePath.data(), O_CREAT | O_WRONLY)) == -1) {
+//    int fd;
+//    if ((fd = open(filePath.data(), O_CREAT | O_WRONLY) == -1)) {
+//        throw std::invalid_argument("Incorrect output file path: \"" + filePath + "\"");
+//    }
+//    write(fd, text.str().data(), text.str().size());
+//    close(fd);
+
+    FILE *fp = fopen(filePath.data(), "w");
+    if (fp == nullptr) {
         throw std::invalid_argument("Incorrect output file path: \"" + filePath + "\"");
     }
-    write(fd, text.str().c_str(), text.str().size());
-    close(fd);
+    fprintf(fp, "%s", text.str().data());
+    fclose(fp);
 }

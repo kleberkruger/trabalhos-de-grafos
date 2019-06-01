@@ -12,7 +12,7 @@
 void bellmanFord(const Graph &graph, int source, std::vector<double> &dist, std::vector<int> &pred) {
     dist[source] = 0;
 
-    for (int i = 0; i < graph.vertices.size() - 1; i++) {
+    for (unsigned int i = 0; i < graph.vertices.size() - 1; i++) {
         for (auto e : graph.edges) {
             auto u = e.start;
             auto v = e.end;
@@ -45,14 +45,15 @@ void bellmanFord(const InputInfo &in, OutputInfo &out) {
 template<class DS>
 void dijkstra(const Graph &graph, int source, std::vector<double> &dist, std::vector<int> &pred) {
     DS Q(graph.vertices.size(), source);
-
     dist[source] = 0;
 
     while (!Q.empty()) {
         Vertex u = graph.vertices[Q.extractMin()];
+        
         for (auto &e : graph.getAdjacencyList(u.id)) {
             auto v = e.end;
             auto w = e.weight;
+            std::cout << u.id << " " << v <<std::endl;
             if (dist[v] > dist[u.id] + w) {
                 dist[v] = dist[u.id] + w;
                 pred[v] = u.id;
@@ -60,6 +61,7 @@ void dijkstra(const Graph &graph, int source, std::vector<double> &dist, std::ve
             }
         }
     }
+    
 }
 
 template<class DS>
@@ -68,8 +70,6 @@ void dijkstra(const InputInfo &in, OutputInfo &out) {
     out.pred.emplace_back(in.graph.vertices.size(), -1);
 
     dijkstra<DS>(in.graph, in.source, out.dist[0], out.pred[0]);
-    
-    printf("XXX\n\n");
 
 }
 
@@ -96,9 +96,9 @@ void dijkstra(const InputInfo &in, OutputInfo &out) {
 void floydWarshall(const Graph &graph, std::vector<std::vector<double>> &dist, std::vector<std::vector<int>> &pred) {
     auto n = graph.getMinAdjacencyMatrix().size();
 
-    for (int k = 0; k < n; k++) {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+    for (unsigned int k = 0; k < n; k++) {
+        for (unsigned  int i = 0; i < n; i++) {
+            for (unsigned  int j = 0; j < n; j++) {
                 if (dist[i][j] > dist[i][k] + dist[k][j]) {
                     dist[i][j] = dist[i][k] + dist[k][j];
                     pred[i][j] = pred[k][j];
@@ -137,7 +137,7 @@ void johnson(const InputInfo &in, OutputInfo &out) {
     auto graph = in.graph;
     int id = graph.vertices.size();
     graph.insertVertex(id);
-    for (int i = 0; i < in.graph.vertices.size(); i++) {
+    for (unsigned  int i = 0; i < in.graph.vertices.size(); i++) {
         graph.insertEdge(id, i, 0);
     }
 
@@ -154,7 +154,7 @@ void johnson(const InputInfo &in, OutputInfo &out) {
     out.pred = std::vector<std::vector<int>>(n, std::vector<int>(n, -1));
 
     Graph g = in.graph;
-    for (int i = 0; i < in.graph.edges.size(); i++) {
+    for (unsigned  int i = 0; i < in.graph.edges.size(); i++) {
         g.edges[i].weight = graph.edges[i].weight;
     }
 
@@ -208,7 +208,7 @@ void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, con
 //        Graph::printMatrix(out.pred);
 //        std::cout << "Distâncias:" << std::endl;
 //        Graph::printMatrix(out.dist);
-        for (int i = 0; i < in.graph.vertices.size(); i++) {
+        for (unsigned int i = 0; i < in.graph.vertices.size(); i++) {
             printPath(filePath, out.dist[i], out.pred[i], i);
         }
     }
@@ -217,7 +217,7 @@ void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, con
 void PathsApp::printPath(const std::string &filePath, std::vector<double> dist, std::vector<int> pred, int source) {
     std::vector<int> path;
 
-    for (int i = 0; i < pred.size(); i++) {
+    for (unsigned int i = 0; i < pred.size(); i++) {
         path.clear();
         for (int v = i; v != source; v = pred[v]) {
             path.insert(path.begin(), v);

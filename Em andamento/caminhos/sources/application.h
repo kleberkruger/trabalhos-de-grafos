@@ -109,7 +109,7 @@ private:
             buffer[returned] = 0x00;
             text.append(buffer);
         }
-
+        
         return text;
     }
 

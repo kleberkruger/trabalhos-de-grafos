@@ -13,7 +13,6 @@
 #include "fibonacciheap.h"
 
 FibonacciHeap::FibonacciHeap(int n, int s) : nodes(n), position(n), A(n){
-    // printf("AAA\n\n");
     build(n,s);
 }
 
@@ -21,9 +20,6 @@ FibonacciHeap::~FibonacciHeap(void){
     for(unsigned int i = 0; i < position.size(); i++){
         free(position[i]);
     }
-    // for(unsigned int i = 0; i < A.size(); i++){
-    //     free(A[i]);
-    // }
 }
 
 void FibonacciHeap::build(int n,int s) {
@@ -34,12 +30,10 @@ void FibonacciHeap::build(int n,int s) {
         A[i] = NULL;
     }
 
-    insertion(0,s);
-    for (int i = 1; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         insertion(std::numeric_limits<double>::infinity(),i);
     }
-
-    
+    decreaseKey(s,0);
 }
 
 bool FibonacciHeap::empty(){
@@ -223,7 +217,8 @@ void FibonacciHeap::Cascase_cut(HeapNode* y) {
 void FibonacciHeap::decreaseKey(unsigned long index, double val) {
     HeapNode * z = min;
     HeapNode * x = position[index];
-    if(x->key > val){
+    std::cout << position[index] << std::endl;
+    if((z != NULL && x != NULL) && x->key > val){
         x->key = val;
         HeapNode * y = x->parent;
         if(y != NULL and x->key < y->key){
@@ -233,4 +228,6 @@ void FibonacciHeap::decreaseKey(unsigned long index, double val) {
         if(x->key < z->key)
             min = x;
     }
+    else
+        throw std::invalid_argument("Decrease error!");
 }

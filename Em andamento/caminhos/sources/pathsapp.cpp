@@ -53,7 +53,6 @@ void dijkstra(const Graph &graph, int source, std::vector<double> &dist, std::ve
         for (auto &e : graph.getAdjacencyList(u.id)) {
             auto v = e.end;
             auto w = e.weight;
-            std::cout << u.id << " " << v <<std::endl;
             if (dist[v] > dist[u.id] + w) {
                 dist[v] = dist[u.id] + w;
                 pred[v] = u.id;

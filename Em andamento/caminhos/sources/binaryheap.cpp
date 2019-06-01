@@ -17,7 +17,7 @@ BinaryHeap::BinaryHeap(int n, int s) : nodes(n), position(n) {
 }
 
 void BinaryHeap::build(int n, int s) {
-    for (int i = 0; i < nodes.size(); i++) {
+    for (unsigned int i = 0; i < nodes.size(); i++) {
         nodes[i].vertex = i;
         nodes[i].value = std::numeric_limits<double>::infinity();
 
@@ -48,17 +48,19 @@ int BinaryHeap::extractMin() {
 
 void BinaryHeap::decreaseKey(unsigned long vertice, double value) {
     unsigned long index = position[vertice];
+    if (nodes[index].value > value) {
+        //std::cout << nodes[index].value << " " << value << std::endl;
+        //throw std::invalid_argument("Decrease error!");
+    
 
-    if (nodes[index].value < value) {
-        throw std::invalid_argument("Decrease error!");
+        nodes[index].value = value;
+
+        while (index > 0 && nodes[index].value < nodes[parent(index)].value) {
+            swap(index, parent(index));
+            index = parent(index);
+        }
     }
 
-    nodes[index].value = value;
-
-    while (index > 0 && nodes[index].value < nodes[parent(index)].value) {
-        swap(index, parent(index));
-        index = parent(index);
-    }
 }
 
 void BinaryHeap::heapify(unsigned long i) {
@@ -93,7 +95,7 @@ void BinaryHeap::swap(unsigned long i, unsigned long j) {
 }
 
 void BinaryHeap::print() {
-    for (int i = 0; i < size; i++)
+    for (unsigned int i = 0; i < size; i++)
         std::cout << i << "=[(" << nodes[i].value << ") v" << nodes[i].vertex << "=" << position[nodes[i].vertex]
                   << "] ";
     std::cout << std::endl;

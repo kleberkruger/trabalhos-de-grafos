@@ -218,7 +218,7 @@ void FibonacciHeap::decreaseKey(unsigned long index, double val) {
     HeapNode * z = min;
     HeapNode * x = position[index];
     std::cout << position[index] << std::endl;
-    if((z != NULL && x != NULL) && x->key > val){
+    if(x->key > val){
         x->key = val;
         HeapNode * y = x->parent;
         if(y != NULL and x->key < y->key){
@@ -228,6 +228,4 @@ void FibonacciHeap::decreaseKey(unsigned long index, double val) {
         if(x->key < z->key)
             min = x;
     }
-    else
-        throw std::invalid_argument("Decrease error!");
 }

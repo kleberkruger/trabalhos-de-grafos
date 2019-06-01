@@ -6,7 +6,6 @@
  * @author: Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
  */
 
-#include <sstream>
 #include "pathsapp.h"
 
 void bellmanFord(const Graph &graph, int source, std::vector<double> &dist, std::vector<int> &pred) {

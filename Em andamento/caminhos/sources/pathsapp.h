@@ -10,6 +10,7 @@
 #define CAMINHOS_PATHSAPP_H
 
 
+#include <sstream>
 #include <string>
 #include <vector>
 #include "application.h"

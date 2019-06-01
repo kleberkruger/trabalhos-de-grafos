@@ -60,7 +60,6 @@ public:
         AOut out;
         std::vector<Task> tasks;
 
-        tasks.emplace_back("select algorithm");
         Algorithm alg = selectAlgorithm(algorithm, version);
 
         tasks.emplace_back("read input file");
@@ -75,6 +74,7 @@ public:
         tasks.emplace_back("print output");
         printOutput(outputFilePath, in, out);
 
+        tasks.emplace_back("finished");
         printTasks(tasks);
     }
 
@@ -118,7 +118,7 @@ private:
                   << "================================================================================" << std::endl;
 
         for (int i = 0; i < tasks.size() - 1; i++) {
-            std::cout << "Time to " << tasks[i].description << ": "
+            std::cout << " Time to " << tasks[i].description << ": "
                       << std::chrono::duration_cast<std::chrono::milliseconds>(
                               tasks[i + 1].timePoint - tasks[i].timePoint).count()
                       << " ms" << std::endl;

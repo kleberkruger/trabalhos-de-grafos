@@ -12,11 +12,12 @@ CFLAGS = -std=c++17 -Wall -O3
 .PHONY: all tdd clean
 
 all: $(EXE)
-
+	
 $(EXE): $(OBJ)
 	$(C++) $^ -o $@
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
+	mkdir -p $(OBJ_DIR)
 	$(C++) $(CFLAGS) -c $< -o $@
 
 tdd:

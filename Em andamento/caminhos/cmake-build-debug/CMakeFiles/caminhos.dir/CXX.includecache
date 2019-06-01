@@ -23,8 +23,6 @@ fcntl.h
 -
 unistd.h
 -
-sys/filio.h
--
 sys/ioctl.h
 -
 
@@ -39,10 +37,6 @@ vector
 -
 heap.h
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/heap.h
-
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/fibonacciheap.cpp
-fibonacciheap.h
-/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/fibonacciheap.h
 
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/fibonacciheap.h
 vector

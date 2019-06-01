@@ -12,9 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55fe85cc-5fd2-49b9-bf43-db53f133d5dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/sources/fibonacciheap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/fibonacciheap.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/fibonacciheap.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/fibonacciheap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/pathsapp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/pathsapp.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/caminhos" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/caminhos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/application.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/application.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,11 +34,10 @@
         <entry file="file://$PROJECT_DIR$/sources/pathsapp.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="240" column="47" selection-start-line="240" selection-start-column="47" selection-end-line="240" selection-end-column="47" />
+              <caret line="242" column="47" selection-start-line="242" selection-start-column="47" selection-end-line="242" selection-end-column="47" />
               <folding>
                 <element signature="e#207#225#0" expanded="true" />
                 <element signature="e#1850#1860#0" expanded="true" />
-                <marker date="1559374254480" expanded="true" signature="4891:5027" ph="..." />
               </folding>
             </state>
           </provider>
@@ -66,13 +66,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sources/application.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="112" column="20" lean-forward="true" selection-start-line="96" selection-start-column="8" selection-end-line="112" selection-end-column="20" />
+            <state relative-caret-position="205">
+              <caret line="33" column="74" lean-forward="true" selection-start-line="33" selection-start-column="74" selection-end-line="33" selection-end-column="74" />
               <folding>
                 <element signature="e#271#288#0" expanded="true" />
+                <element signature="e#545#588#0" expanded="true" />
                 <element signature="e#814#843#0" expanded="true" />
                 <element signature="e#1159#1188#0" expanded="true" />
               </folding>
@@ -119,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1984">
-              <caret line="124" column="54" lean-forward="true" selection-start-line="124" selection-start-column="54" selection-end-line="124" selection-end-column="54" />
+            <state relative-caret-position="336">
+              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -151,12 +152,12 @@
         <option value="$PROJECT_DIR$/sources/pathsalg.cpp" />
         <option value="$PROJECT_DIR$/datasets/felipe_in.txt" />
         <option value="$PROJECT_DIR$/sources/pathsapp.h" />
-        <option value="$PROJECT_DIR$/sources/application.h" />
         <option value="$PROJECT_DIR$/sources/graph.h" />
         <option value="$PROJECT_DIR$/sources/graph.cpp" />
         <option value="$PROJECT_DIR$/sources/pathsapp.cpp" />
         <option value="$PROJECT_DIR$/sources/fibonacciheap.h" />
         <option value="$PROJECT_DIR$/sources/fibonacciheap.cpp" />
+        <option value="$PROJECT_DIR$/sources/application.h" />
       </list>
     </option>
   </component>
@@ -228,7 +229,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="caminhos" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="johnson 0 datasets/kruger_in.txt datasets/kruger_out.txt" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="caminhos" TARGET_NAME="caminhos" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="caminhos" RUN_TARGET_NAME="caminhos">
+    <configuration name="caminhos" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="dijkstra 0 datasets/lu980_in.txt datasets/lu980_out.txt" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="caminhos" TARGET_NAME="caminhos" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="caminhos" RUN_TARGET_NAME="caminhos">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -248,12 +249,12 @@
       <workItem from="1559300850391" duration="18515000" />
       <workItem from="1559321192833" duration="2023000" />
       <workItem from="1559339328583" duration="2326000" />
-      <workItem from="1559341749716" duration="27735000" />
+      <workItem from="1559341749716" duration="29294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50599000" />
+    <option name="totallyTimeSpent" value="52158000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="23" width="2560" height="1014" extended-state="0" />
@@ -264,14 +265,14 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3449024" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3449024" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.3286334" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32953367" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3286334" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286334" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32953367" />
@@ -494,18 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/application.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="112" column="20" lean-forward="true" selection-start-line="96" selection-start-column="8" selection-end-line="112" selection-end-column="20" />
-          <folding>
-            <element signature="e#271#288#0" expanded="true" />
-            <element signature="e#814#843#0" expanded="true" />
-            <element signature="e#1159#1188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/unistd.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -530,11 +519,10 @@
     <entry file="file://$PROJECT_DIR$/sources/pathsapp.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="240" column="47" selection-start-line="240" selection-start-column="47" selection-end-line="240" selection-end-column="47" />
+          <caret line="242" column="47" selection-start-line="242" selection-start-column="47" selection-end-line="242" selection-end-column="47" />
           <folding>
             <element signature="e#207#225#0" expanded="true" />
             <element signature="e#1850#1860#0" expanded="true" />
-            <marker date="1559374254480" expanded="true" signature="4891:5027" ph="..." />
           </folding>
         </state>
       </provider>
@@ -558,8 +546,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1984">
-          <caret line="124" column="54" lean-forward="true" selection-start-line="124" selection-start-column="54" selection-end-line="124" selection-end-column="54" />
+        <state relative-caret-position="336">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/application.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="33" column="74" lean-forward="true" selection-start-line="33" selection-start-column="74" selection-end-line="33" selection-end-column="74" />
+          <folding>
+            <element signature="e#271#288#0" expanded="true" />
+            <element signature="e#545#588#0" expanded="true" />
+            <element signature="e#814#843#0" expanded="true" />
+            <element signature="e#1159#1188#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

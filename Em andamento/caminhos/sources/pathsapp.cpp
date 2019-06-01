@@ -72,26 +72,6 @@ void dijkstra(const InputInfo &in, OutputInfo &out) {
 
 }
 
-//std::vector<std::vector<int>> PredInit(const Graph &graph) {
-//    auto adjMatrix = graph.getMinAdjacencyMatrix();
-//
-//    std::vector<std::vector<int>> pred;
-//    std::vector<int> line(adjMatrix.size(), -1);
-//
-//    for (int i = 0; i < adjMatrix.size(); i++)
-//        pred.emplace_back(line);
-//
-//    for (int i = 0; i < (int) adjMatrix.size(); i++) {
-//        for (int j = 0; j < (int) adjMatrix.size(); j++) {
-//            if (adjMatrix[i][j] != std::numeric_limits<double>::infinity() && i != j) {
-//                pred[i][j] = i;
-//            }
-//        }
-//    }
-//
-//    return pred;
-//}
-
 void floydWarshall(const Graph &graph, std::vector<std::vector<double>> &dist, std::vector<std::vector<int>> &pred) {
     auto n = graph.getMinAdjacencyMatrix().size();
 
@@ -204,10 +184,6 @@ void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, con
     if (in.source != -1) {
         printPath(filePath, out.dist[0], out.pred[0], in.source);
     } else {
-//        std::cout << "Predecessores:" << std::endl;
-//        Graph::printMatrix(out.pred);
-//        std::cout << "Distâncias:" << std::endl;
-//        Graph::printMatrix(out.dist);
         for (unsigned int i = 0; i < in.graph.vertices.size(); i++) {
             printPath(filePath, out.dist[i], out.pred[i], i);
         }

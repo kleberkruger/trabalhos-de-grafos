@@ -178,7 +178,7 @@ public:
         printf("==================================================\n");
         for (const auto &i : matrix) {
             for (double j : i) {
-                printf("%4.0lf", (double) j);
+                printf("%4.1lf", (double) j);
             }
             printf("\n");
         }
@@ -192,7 +192,11 @@ private:
 
     mutable std::vector<std::vector<EdgeTo>> adjacencyList;
     mutable std::vector<std::vector<double>> minAdjacencyMatrix;
+    mutable bool updatedList;
+    mutable bool updatedMatrix;
 //    mutable std::vector<std::vector<std::vector<double>>> adjacencyMatrix; // e se existir várias arestas de a para b?
+
+    void graphChanged();
 };
 
 

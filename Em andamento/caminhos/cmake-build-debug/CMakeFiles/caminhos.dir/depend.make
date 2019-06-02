@@ -9,6 +9,9 @@ CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o: ../sources/binaryheap.cpp
 CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o: ../sources/binaryheap.h
 CMakeFiles/caminhos.dir/sources/binaryheap.cpp.o: ../sources/heap.h
 
+CMakeFiles/caminhos.dir/sources/fibheap.cpp.o: ../sources/fibheap.cpp
+CMakeFiles/caminhos.dir/sources/fibheap.cpp.o: ../sources/fibheap.h
+
 CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o: ../sources/fibonacciheap.cpp
 CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o: ../sources/fibonacciheap.h
 CMakeFiles/caminhos.dir/sources/fibonacciheap.cpp.o: ../sources/heap.h

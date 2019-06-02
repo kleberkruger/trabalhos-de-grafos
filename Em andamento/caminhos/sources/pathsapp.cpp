@@ -191,6 +191,9 @@ void PathsApp::createInputInfo(const std::string &text, InputInfo &in) {
 
     in.graph = graph;
     in.source = s;
+
+    graph.printAdjacencyList();
+    graph.printAdjacencyMatrix();
 }
 
 void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, const OutputInfo &out) {

@@ -172,7 +172,10 @@ void PathsApp::createInputInfo(const std::string &text, InputInfo &in) {
     Graph graph(n, m);
 
     for (int i = 0; i < m; i++) {
-        graph.insertEdge(strtol(token, &token, 10), strtol(token, &token, 10), strtod(token, &token));
+        int v1 = strtol(token, &token, 10);
+        int v2 = strtol(token, &token, 10);
+        double w = strtod(token, &token);
+        graph.insertEdge(v1, v2, w);
     }
 
     in.graph = graph;
@@ -195,7 +198,7 @@ void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, con
     if (in.source != -1) {
         fprintf(fp, "%s", printPath(filePath, out.dist[0], out.pred[0], in.source).data());
     } else {
-        for (unsigned int i = 0; i < in.graph.vertices.size(); i++) {
+        for (auto i = 0; i < in.graph.vertices.size(); i++) {
             fprintf(fp, "%s", printPath(filePath, out.dist[i], out.pred[i], i).data());
         }
     }

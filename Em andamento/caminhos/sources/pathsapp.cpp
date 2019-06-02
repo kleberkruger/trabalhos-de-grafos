@@ -195,7 +195,7 @@ void PathsApp::printPath(const std::string &filePath, std::vector<double> dist, 
 
     for (int i = 0; i < pred.size(); i++) {
         path.clear();
-        for (int v = i; v != source; v = pred[v]) {
+        for (int v = i; v != source && v != -1; v = pred[v]) {
             path.insert(path.begin(), v);
         }
         path.insert(path.begin(), source);

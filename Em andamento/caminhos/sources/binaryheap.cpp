@@ -51,7 +51,6 @@ void BinaryHeap::decreaseKey(unsigned long vertice, double value) {
     if (nodes[index].value > value) {
         //std::cout << nodes[index].value << " " << value << std::endl;
         //throw std::invalid_argument("Decrease error!");
-    
 
         nodes[index].value = value;
 
@@ -60,7 +59,6 @@ void BinaryHeap::decreaseKey(unsigned long vertice, double value) {
             index = parent(index);
         }
     }
-
 }
 
 void BinaryHeap::heapify(unsigned long i) {

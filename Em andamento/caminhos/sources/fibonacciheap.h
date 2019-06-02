@@ -29,13 +29,13 @@ struct GraphNode {
     bool operator!=(const GraphNode &other) const { return vertex != other.vertex; }
 };
 
-struct node {
+struct FibonacciNode {
 private:
 
-    node *prev;
-    node *next;
-    node *child;
-    node *parent;
+    FibonacciNode *prev;
+    FibonacciNode *next;
+    FibonacciNode *child;
+    FibonacciNode *parent;
     GraphNode value;
     int degree;
     bool marked;
@@ -44,13 +44,13 @@ public:
 
     friend class FibonacciHeap;
 
-    node *getPrev() { return prev; }
+    FibonacciNode *getPrev() { return prev; }
 
-    node *getNext() { return next; }
+    FibonacciNode *getNext() { return next; }
 
-    node *getChild() { return child; }
+    FibonacciNode *getChild() { return child; }
 
-    node *getParent() { return parent; }
+    FibonacciNode *getParent() { return parent; }
 
     GraphNode getValue() { return value; }
 
@@ -70,16 +70,6 @@ public:
 
     virtual ~FibonacciHeap();
 
-    node *insert(GraphNode value);
-
-    void merge(FibonacciHeap &other);
-
-    GraphNode getMinimum();
-
-    void decreaseKey(node *n, GraphNode value);
-
-    node *find(GraphNode value);
-
     int extractMin() override;
 
     void decreaseKey(unsigned long vertex, double value) override;
@@ -88,28 +78,31 @@ public:
 
 private:
 
-    node *heap;
+    FibonacciNode *root;
 
     void build(int n, int s);
 
-    node *_empty();
+    FibonacciNode *insert(GraphNode value);
 
-    node *_singleton(GraphNode value);
+    FibonacciNode *_singleton(GraphNode value);
 
-    node *_merge(node *a, node *b);
+    FibonacciNode *_merge(FibonacciNode *a, FibonacciNode *b);
 
-    void _deleteAll(node *n);
+    void _deleteAll(FibonacciNode *n);
 
-    void _addChild(node *parent, node *child) ;
+    void _addChild(FibonacciNode *parent, FibonacciNode *child);
 
-    void _unMarkAndUnParentAll(node *n) ;
+    void _unMarkAndUnParentAll(FibonacciNode *n);
 
-    node*_removeMinimum(node *n);
-    node *_cut(node *heap, node *n) ;
+    FibonacciNode *_removeMinimum(FibonacciNode *n);
 
-    node *_decreaseKey(node *heap, node *n, GraphNode value) ;
+    FibonacciNode *_cut(FibonacciNode *heap, FibonacciNode *n);
 
-    node *_find(node *heap, GraphNode value);
+    FibonacciNode *_decreaseKey(FibonacciNode *heap, FibonacciNode *n, GraphNode value);
+
+    FibonacciNode *find(GraphNode value);
+
+    FibonacciNode *find(FibonacciNode *heap, GraphNode value);
 };
 
 

@@ -52,7 +52,6 @@ protected:
 	void Cut(HeapNode* found, HeapNode * temp);
 	void Cascase_cut(HeapNode * temp);
 	void Decrease_key(HeapNode * found, int val);
-    
 
 private:
 	void build(int n,int s);

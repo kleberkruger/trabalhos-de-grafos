@@ -220,3 +220,7 @@ void FibonacciHeap::decreaseKey(unsigned long index, double val) {
             min = x;
     }
 }
+
+void FibonacciHeap::print() {
+
+}

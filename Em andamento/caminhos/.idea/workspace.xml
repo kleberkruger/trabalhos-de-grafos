@@ -12,13 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55fe85cc-5fd2-49b9-bf43-db53f133d5dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/caminhos" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/caminhos" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/binaryheap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/binaryheap.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/binaryheap.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/binaryheap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/fibonacciheap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/fibonacciheap.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/fibonacciheap.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/fibonacciheap.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/pathsapp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/pathsapp.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -35,60 +32,37 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/graph.h">
+        <entry file="file://$PROJECT_DIR$/sources/pathsapp.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="195" column="12" selection-start-line="195" selection-start-column="12" selection-end-line="195" selection-end-column="12" />
-              <folding>
-                <element signature="e#258#277#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="146">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
+        <entry file="file://$PROJECT_DIR$/sources/binaryheap.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+            <state relative-caret-position="172">
+              <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/pathsapp.cpp">
+        <entry file="file://$PROJECT_DIR$/sources/binaryheap.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="194" column="20" lean-forward="true" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datasets/out_cormen1.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-              <folding>
-                <element signature="e#207#226#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/application.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-498">
-              <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
-              <folding>
-                <element signature="e#271#288#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -114,20 +88,22 @@
         <option value="$PROJECT_DIR$/datasets/lu980_in.txt" />
         <option value="$PROJECT_DIR$/sources/pathsalg.cpp" />
         <option value="$PROJECT_DIR$/datasets/felipe_in.txt" />
-        <option value="$PROJECT_DIR$/sources/fibonacciheap.h" />
-        <option value="$PROJECT_DIR$/sources/binaryheap.cpp" />
         <option value="$PROJECT_DIR$/datasets/kruger_out.txt" />
         <option value="$PROJECT_DIR$/datasets/cormen_out.txt" />
-        <option value="$PROJECT_DIR$/sources/fibonacciheap.cpp" />
         <option value="$PROJECT_DIR$/sources/pathsapp.h" />
         <option value="$PROJECT_DIR$/datasets/out_cormen1.txt" />
-        <option value="$PROJECT_DIR$/test.sh" />
         <option value="$PROJECT_DIR$/sources/fibheap.cpp" />
         <option value="$PROJECT_DIR$/sources/graph.h" />
         <option value="$PROJECT_DIR$/sources/main.cpp" />
         <option value="$PROJECT_DIR$/sources/application.h" />
-        <option value="$PROJECT_DIR$/sources/pathsapp.cpp" />
         <option value="$PROJECT_DIR$/sources/graph.cpp" />
+        <option value="$PROJECT_DIR$/test.sh" />
+        <option value="$PROJECT_DIR$/sources/fibonacciheap.cpp" />
+        <option value="$PROJECT_DIR$/sources/fibonacciheap.h" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/sources/binaryheap.h" />
+        <option value="$PROJECT_DIR$/sources/binaryheap.cpp" />
+        <option value="$PROJECT_DIR$/sources/pathsapp.cpp" />
       </list>
     </option>
   </component>
@@ -204,7 +180,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="caminhos" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="dijkstra 0 datasets/in_kruger.txt datasets/out_kruger.txt" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="caminhos" TARGET_NAME="caminhos" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="caminhos" RUN_TARGET_NAME="caminhos">
+    <configuration name="caminhos" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="johnson 0 datasets/in_lu980.txt datasets/out_lu980.txt" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="caminhos" TARGET_NAME="caminhos" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="caminhos" RUN_TARGET_NAME="caminhos">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -228,18 +204,27 @@
       <workItem from="1559430186941" duration="2399000" />
       <workItem from="1559433563881" duration="807000" />
       <workItem from="1559435768151" duration="6760000" />
-      <workItem from="1559454041104" duration="6180000" />
+      <workItem from="1559454041104" duration="12195000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71169000" />
+    <option name="totallyTimeSpent" value="77184000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="1774" y="32" width="1680" height="984" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2014652" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2014652" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -248,10 +233,10 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295964" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.32735425" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32735425" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32735425" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32735425" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32953367" />
@@ -265,20 +250,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sources/application.cpp" />
-    <entry file="file://$PROJECT_DIR$/../backups/caminhos_base2/sources/binaryheap.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../backups/caminhos_base2/sources/pathsalg.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../backups/caminhos_base2/sources/pathsapp.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="29" selection-start-line="29" selection-end-line="34" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../backups/caminhos_base2/sources/application.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -323,13 +294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/binaryheap.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -402,13 +366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../mst/sources/application.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -426,13 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/binaryheap.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
-          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/kruger_out.txt" />
     <entry file="file://$PROJECT_DIR$/datasets/cormen_in(1).txt" />
     <entry file="file://$PROJECT_DIR$/datasets/cormen2_out.txt" />
@@ -444,16 +394,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datasets/cormen1_out.txt" />
-    <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="196" column="22" lean-forward="true" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/in_cormen1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/in_felipe.txt" />
     <entry file="file://$PROJECT_DIR$/datasets/in_cormen2.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -476,13 +416,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datasets/out_cormen2.txt" />
-    <entry file="file://$PROJECT_DIR$/test.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="39" column="80" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sources/fibheap.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -493,13 +426,6 @@
           <folding>
             <element signature="e#225#241#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/vector">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="657" column="9" selection-start-line="657" selection-start-column="9" selection-end-line="657" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -536,17 +462,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/pathsapp.cpp">
+    <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="194" column="20" lean-forward="true" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
+        <state relative-caret-position="-123">
+          <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
+    <entry file="file://$PROJECT_DIR$/datasets/in_cormen1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+        <state relative-caret-position="16">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3504">
+          <caret line="219" column="20" selection-start-line="219" selection-start-column="20" selection-end-line="219" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/vector">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="325" column="41" lean-forward="true" selection-start-line="325" selection-start-column="41" selection-end-line="325" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/memory">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="1521" column="77" lean-forward="true" selection-start-line="1521" selection-start-column="77" selection-end-line="1521" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/binaryheap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/out_lu980_johnson0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/out_lu980_johnson1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/pathsapp.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/binaryheap.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
         </state>
       </provider>
     </entry>

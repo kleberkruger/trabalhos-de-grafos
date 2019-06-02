@@ -35,15 +35,15 @@ public:
     inline bool empty() override { return size == 0; }
 
     inline std::vector<HeapNode>::size_type parent(std::vector<HeapNode>::size_type index) {
-        return (index - 1) / 2;
+        return (unsigned long) (index - 1) / 2;
     }
 
     inline std::vector<HeapNode>::size_type left(std::vector<HeapNode>::size_type index) {
-        return index * 2 + 1;
+        return (index * 2) + 1;
     }
 
     inline std::vector<HeapNode>::size_type right(std::vector<HeapNode>::size_type index) {
-        return index * 2 + 2;
+        return (index * 2) + 2;
     }
 
 protected:

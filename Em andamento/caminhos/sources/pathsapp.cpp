@@ -43,34 +43,41 @@ void bellmanFord(const InputInfo &in, OutputInfo &out) {
 
 template<class DS>
 void dijkstra(const Graph &graph, int source, std::vector<double> &dist, std::vector<int> &pred) {
-
-    static int xxx = 0;
     DS Q(graph.vertices.size(), source);
     dist[source] = 0;
 
-    int zzz = 0;
-
     while (!Q.empty()) {
-        Vertex u = graph.vertices[Q.extractMin()];
+//        static auto k = -1;
+//        std::cout << "p0: " << "extractMin()" << std::endl;
+//        if (k == 974) Q.print();
 
-        printf("\n%d -- %d\n", xxx, zzz);
-        zzz++;
+
+        Vertex u = graph.vertices[Q.extractMin()];
+//        k = u.id;
+
+//        if (u.id == 974) std::cout << "p1: " << u.id << std::endl;
+
 
         for (auto &e : graph.getAdjacencyList(u.id)) {
-            printf("\nAAA\n");
             auto v = e.end;
             auto w = e.weight;
+
+//            if (u.id == 974) std::cout << "p2: " << u.id << "," << e.end << std::endl;
+
             if (dist[v] > dist[u.id] + w) {
                 dist[v] = dist[u.id] + w;
                 pred[v] = u.id;
                 Q.decreaseKey(v, w);
             }
+
+//            if (u.id == 974) std::cout << "p3: " << u.id << "," << e.end << std::endl;
         }
+
+//        std::cout << "p4: " << u.id << std::endl;
+//        Q.print();
     }
 
-    xxx++;
-    printf("\n\n\n");
-
+//    std::cout << "p5: " << "finished" << std::endl;
 }
 
 template<class DS>
@@ -191,9 +198,6 @@ void PathsApp::createInputInfo(const std::string &text, InputInfo &in) {
 
     in.graph = graph;
     in.source = s;
-
-    graph.printAdjacencyList();
-    graph.printAdjacencyMatrix();
 }
 
 void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, const OutputInfo &out) {
@@ -219,7 +223,8 @@ void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, con
     fclose(fp);
 }
 
-std::string PathsApp::printPath(const std::string &filePath, std::vector<double> dist, std::vector<int> pred, int source) {
+std::string
+PathsApp::printPath(const std::string &filePath, std::vector<double> dist, std::vector<int> pred, int source) {
     std::vector<int> path;
     std::stringstream text;
 

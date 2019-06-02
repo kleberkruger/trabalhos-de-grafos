@@ -17,7 +17,7 @@ BinaryHeap::BinaryHeap(int n, int s) : nodes(n), position(n) {
 }
 
 void BinaryHeap::build(int n, int s) {
-    for (unsigned int i = 0; i < nodes.size(); i++) {
+    for (auto i = 0; i < n; i++) {
         nodes[i].vertex = i;
         nodes[i].value = std::numeric_limits<double>::infinity();
 
@@ -41,7 +41,9 @@ int BinaryHeap::extractMin() {
 
 //    std::cout << "vou mesmo extrair o " << min << std::endl;
 
-    heapify(0);
+    if (size > 0) heapify(0);
+
+//    std::cout << "heapfado!" << min << std::endl;
 
     return min;
 }
@@ -93,7 +95,7 @@ void BinaryHeap::swap(unsigned long i, unsigned long j) {
 }
 
 void BinaryHeap::print() {
-    for (unsigned int i = 0; i < size; i++)
+    for (auto i = 0; i < size; i++)
         std::cout << i << "=[(" << nodes[i].value << ") v" << nodes[i].vertex << "=" << position[nodes[i].vertex]
                   << "] ";
     std::cout << std::endl;

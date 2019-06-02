@@ -70,6 +70,7 @@ void Graph::clearAll() {
 
 const std::vector<std::vector<EdgeTo>> &Graph::getAdjacencyList() const {
     if (!updatedList) {
+        // alocação de espaço e inicialização
         auto n = vertices.size();
         adjacencyList.clear();
         adjacencyList.reserve(n);
@@ -77,21 +78,14 @@ const std::vector<std::vector<EdgeTo>> &Graph::getAdjacencyList() const {
             adjacencyList.emplace_back();
             adjacencyList[i].reserve(n); // otimização
         }
+
+        // definição dos valores
         for (auto &e : edges) {
             adjacencyList[e.start].push_back(EdgeTo(e.end, e.weight));
         }
         updatedList = true;
     }
     return adjacencyList;
-
-//    static bool exists = false;
-//    if (!exists) {
-//        for (auto &e : edges) {
-//            adjacencyList[e.start].push_back(EdgeTo(e.end, e.weight));
-//        }
-//        exists = true;
-//    }
-//    return adjacencyList;
 }
 
 const std::vector<EdgeTo> &Graph::getAdjacencyList(int vertex) const {
@@ -115,21 +109,9 @@ const std::vector<std::vector<double>> &Graph::getMinAdjacencyMatrix() const {
                 minAdjacencyMatrix[e.start][e.end] = e.weight;
             }
         }
-
         updatedMatrix = true;
     }
     return minAdjacencyMatrix;
-
-//    static bool exists = false;
-//    if (!exists) {
-//        for (auto &e : edges) {
-//            if (e.weight < minAdjacencyMatrix[e.start][e.end]) {
-//                minAdjacencyMatrix[e.start][e.end] = e.weight;
-//            }
-//        }
-//        exists = true;
-//    }
-//    return minAdjacencyMatrix;
 }
 
 void Graph::graphChanged() {

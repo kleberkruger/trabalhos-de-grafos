@@ -43,13 +43,21 @@ void bellmanFord(const InputInfo &in, OutputInfo &out) {
 
 template<class DS>
 void dijkstra(const Graph &graph, int source, std::vector<double> &dist, std::vector<int> &pred) {
+
+    static int xxx = 0;
     DS Q(graph.vertices.size(), source);
     dist[source] = 0;
+
+    int zzz = 0;
 
     while (!Q.empty()) {
         Vertex u = graph.vertices[Q.extractMin()];
 
+        printf("\n%d -- %d\n", xxx, zzz);
+        zzz++;
+
         for (auto &e : graph.getAdjacencyList(u.id)) {
+            printf("\nAAA\n");
             auto v = e.end;
             auto w = e.weight;
             if (dist[v] > dist[u.id] + w) {
@@ -59,6 +67,9 @@ void dijkstra(const Graph &graph, int source, std::vector<double> &dist, std::ve
             }
         }
     }
+
+    xxx++;
+    printf("\n\n\n");
 
 }
 

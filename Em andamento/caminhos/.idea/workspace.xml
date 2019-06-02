@@ -13,23 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55fe85cc-5fd2-49b9-bf43-db53f133d5dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/caminhos.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/caminhos" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/caminhos" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/caminhos.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/caminhos.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/binaryheap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/binaryheap.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/fibonacciheap.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/fibonacciheap.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/heap.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/heap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/pathsapp.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/pathsapp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/fibonacciheap.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/fibonacciheap.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,20 +28,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.cpp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3600">
-              <caret line="225" column="1" selection-start-line="225" selection-start-column="1" selection-end-line="225" selection-end-column="1" />
+            <state relative-caret-position="1072">
+              <caret line="67" column="4" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.h">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="76" column="27" lean-forward="true" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+            <state relative-caret-position="484">
+              <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -69,6 +53,7 @@
       <find>double</find>
       <find>float</find>
       <find>print</find>
+      <find>_empty</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -105,9 +90,9 @@
         <option value="$PROJECT_DIR$/sources/kfibheap1.h" />
         <option value="$PROJECT_DIR$/sources/pathsapp.cpp" />
         <option value="$PROJECT_DIR$/sources/pathsapp.h" />
-        <option value="$PROJECT_DIR$/datasets/out_kruger.txt" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/sources/fibonacciheap.cpp" />
+        <option value="$PROJECT_DIR$/datasets/out_kruger.txt" />
         <option value="$PROJECT_DIR$/sources/fibonacciheap.h" />
       </list>
     </option>
@@ -205,12 +190,12 @@
       <workItem from="1559433563881" duration="807000" />
       <workItem from="1559435768151" duration="6760000" />
       <workItem from="1559454041104" duration="13127000" />
-      <workItem from="1559499099015" duration="13721000" />
+      <workItem from="1559499099015" duration="15263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91837000" />
+    <option name="totallyTimeSpent" value="93379000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -223,7 +208,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1774" y="32" width="1680" height="984" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2039072" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -236,8 +220,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295964" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.32735425" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32735425" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32735425" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32735425" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32953367" />
@@ -426,13 +410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/out_kruger.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sources/rodfibheap.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3504">
@@ -463,11 +440,6 @@
     <entry file="file://$PROJECT_DIR$/datasets/out_kruger_johnson2.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/out_lu980.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-714" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sources/binaryheap.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="691">
@@ -482,17 +454,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/out_kruger.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/out_lu980.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3600">
-          <caret line="225" column="1" selection-start-line="225" selection-start-column="1" selection-end-line="225" selection-end-column="1" />
+        <state relative-caret-position="484">
+          <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/fibonacciheap.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="76" column="27" lean-forward="true" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+        <state relative-caret-position="1072">
+          <caret line="67" column="4" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
         </state>
       </provider>
     </entry>

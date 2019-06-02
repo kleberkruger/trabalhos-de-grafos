@@ -48,8 +48,8 @@ int BinaryHeap::extractMin() {
     return min;
 }
 
-void BinaryHeap::decreaseKey(unsigned long vertice, double value) {
-    auto index = position[vertice];
+void BinaryHeap::decreaseKey(unsigned long vertex, double value) {
+    auto index = position[vertex];
     if (nodes[index].value > value) {
         //std::cout << nodes[index].value << " " << value << std::endl;
         //throw std::invalid_argument("Decrease error!");

@@ -21,7 +21,7 @@ class Heap {
 
     virtual int extractMin() = 0;
 
-    virtual void decreaseKey(unsigned long index, double value) = 0;
+    virtual void decreaseKey(unsigned long vertex, double value) = 0;
 
     virtual bool empty() = 0;
 

@@ -1,73 +1,116 @@
-/**
- * Algoritmos em Grafos (MO412)
- *
- * Primeiro Trabalho Prático
- * - MST - Minimum Spanning Tree
- *
- * @authors:
- * - Kleber Kruger <kleberkruger@gmail.com>,
- * - Felipe Barbosa <felipebarbosa@uft.edu.com>,
- * - Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
- */
+//
+// Created by Kleber Kruger on 2019-06-02.
+//
 
-#ifndef MST_FIBONACCIHEAP_H
-#define MST_FIBONACCIHEAP_H
+#ifndef CAMINHOS_FIBONACCIHEAP_H
+#define CAMINHOS_FIBONACCIHEAP_H
 
-#include <vector>
-#include <limits>
+
 #include "heap.h"
-#include <math.h>
-#include <functional>
 
-class FibonacciHeap : public Heap {
+struct GraphNode {
+
+    int vertex;
+    double value;
+
+    GraphNode(int vertex = -1, double value = std::numeric_limits<double>::infinity())
+            : vertex(vertex), value(value) {}
+
+    bool operator<(const GraphNode &other) const { return value < other.value; }
+
+    bool operator>(const GraphNode &other) const { return value > other.value; }
+
+    bool operator<=(const GraphNode &other) const { return value <= other.value; }
+
+    bool operator>=(const GraphNode &other) const { return value >= other.value; }
+
+    bool operator==(const GraphNode &other) const { return vertex == other.vertex; }
+
+    bool operator!=(const GraphNode &other) const { return vertex != other.vertex; }
+};
+
+struct node {
+private:
+
+    node *prev;
+    node *next;
+    node *child;
+    node *parent;
+    GraphNode value;
+    int degree;
+    bool marked;
+
 public:
-	struct HeapNode { 
-	    HeapNode* parent; // Parent pointer 
-	    HeapNode* child; // Child pointer 
-	    HeapNode* prev; // Pointer to the HeapNode on the left 
-	    HeapNode* next; // Pointer to the HeapNode on the right
-        double key; // Value of the HeapNode
-	    int pos; // Position of the HeapNode in the position array
-	    int vertex;
-	    int degree; // Degree of the HeapNode
-	    bool mark; // Black or white mark of the HeapNode
-	};
+
+    friend class FibonacciHeap;
+
+    node *getPrev() { return prev; }
+
+    node *getNext() { return next; }
+
+    node *getChild() { return child; }
+
+    node *getParent() { return parent; }
+
+    GraphNode getValue() { return value; }
+
+    bool isMarked() { return marked; }
+
+    bool hasChildren() { return child; }
+
+    bool hasParent() { return parent; }
+};
+
+class FibonacciHeap : Heap {
+public:
+
+    FibonacciHeap();
 
     FibonacciHeap(int n, int s);
-    ~FibonacciHeap();
+
+    virtual ~FibonacciHeap();
+
+    node *insert(GraphNode value);
+
+    void merge(FibonacciHeap &other);
+
+    GraphNode getMinimum();
+
+    void decreaseKey(node *n, GraphNode value);
+
+    node *find(GraphNode value);
 
     int extractMin() override;
 
-    void decreaseKey(unsigned long index, double val) override;
+    void decreaseKey(unsigned long vertex, double value) override;
 
     bool empty() override;
 
-	void insertion(double val,int index);
-
-	void print();
-
-protected:
-	void consolidate();
-	void fibonnaci_link(HeapNode * y, HeapNode * x);
-	void Cut(HeapNode* found, HeapNode * temp);
-	void Cascase_cut(HeapNode * temp);
-	void Decrease_key(HeapNode * found, int val);
-
 private:
-	void build(int n,int s);
-	void insert_on_root(HeapNode * x);
-	void remove_from_root(HeapNode * x);
-	void insert_on_child(HeapNode * y, HeapNode * x);
-	void remove_from_child(HeapNode * x, HeapNode * y);
 
-	HeapNode * min;
-	int total_nodes;
-    std::vector<HeapNode> nodes;
-    std::vector<HeapNode>::size_type size;
-    std::vector<HeapNode *> position;
-    std::vector<HeapNode *> A;
-	
+    node *heap;
 
+    void build(int n, int s);
+
+    node *_empty();
+
+    node *_singleton(GraphNode value);
+
+    node *_merge(node *a, node *b);
+
+    void _deleteAll(node *n);
+
+    void _addChild(node *parent, node *child) ;
+
+    void _unMarkAndUnParentAll(node *n) ;
+
+    node*_removeMinimum(node *n);
+    node *_cut(node *heap, node *n) ;
+
+    node *_decreaseKey(node *heap, node *n, GraphNode value) ;
+
+    node *_find(node *heap, GraphNode value);
 };
 
-#endif //MST_FIBONACCIHEAP_H
+
+#endif //CAMINHOS_FIBONACCIHEAP_H

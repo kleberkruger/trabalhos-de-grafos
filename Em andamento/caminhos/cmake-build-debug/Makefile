@@ -177,33 +177,6 @@ sources/binaryheap.cpp.s:
 	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/binaryheap.cpp.s
 .PHONY : sources/binaryheap.cpp.s
 
-sources/fibheap.o: sources/fibheap.cpp.o
-
-.PHONY : sources/fibheap.o
-
-# target to build an object file
-sources/fibheap.cpp.o:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/fibheap.cpp.o
-.PHONY : sources/fibheap.cpp.o
-
-sources/fibheap.i: sources/fibheap.cpp.i
-
-.PHONY : sources/fibheap.i
-
-# target to preprocess a source file
-sources/fibheap.cpp.i:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/fibheap.cpp.i
-.PHONY : sources/fibheap.cpp.i
-
-sources/fibheap.s: sources/fibheap.cpp.s
-
-.PHONY : sources/fibheap.s
-
-# target to generate assembly for a file
-sources/fibheap.cpp.s:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/fibheap.cpp.s
-.PHONY : sources/fibheap.cpp.s
-
 sources/fibonacciheap.o: sources/fibonacciheap.cpp.o
 
 .PHONY : sources/fibonacciheap.o
@@ -285,33 +258,6 @@ sources/main.cpp.s:
 	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/main.cpp.s
 .PHONY : sources/main.cpp.s
 
-sources/pathsalg.o: sources/pathsalg.cpp.o
-
-.PHONY : sources/pathsalg.o
-
-# target to build an object file
-sources/pathsalg.cpp.o:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/pathsalg.cpp.o
-.PHONY : sources/pathsalg.cpp.o
-
-sources/pathsalg.i: sources/pathsalg.cpp.i
-
-.PHONY : sources/pathsalg.i
-
-# target to preprocess a source file
-sources/pathsalg.cpp.i:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/pathsalg.cpp.i
-.PHONY : sources/pathsalg.cpp.i
-
-sources/pathsalg.s: sources/pathsalg.cpp.s
-
-.PHONY : sources/pathsalg.s
-
-# target to generate assembly for a file
-sources/pathsalg.cpp.s:
-	$(MAKE) -f CMakeFiles/caminhos.dir/build.make CMakeFiles/caminhos.dir/sources/pathsalg.cpp.s
-.PHONY : sources/pathsalg.cpp.s
-
 sources/pathsapp.o: sources/pathsapp.cpp.o
 
 .PHONY : sources/pathsapp.o
@@ -354,9 +300,6 @@ help:
 	@echo "... sources/binaryheap.o"
 	@echo "... sources/binaryheap.i"
 	@echo "... sources/binaryheap.s"
-	@echo "... sources/fibheap.o"
-	@echo "... sources/fibheap.i"
-	@echo "... sources/fibheap.s"
 	@echo "... sources/fibonacciheap.o"
 	@echo "... sources/fibonacciheap.i"
 	@echo "... sources/fibonacciheap.s"
@@ -366,9 +309,6 @@ help:
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"
-	@echo "... sources/pathsalg.o"
-	@echo "... sources/pathsalg.i"
-	@echo "... sources/pathsalg.s"
 	@echo "... sources/pathsapp.o"
 	@echo "... sources/pathsapp.i"
 	@echo "... sources/pathsapp.s"

@@ -58,7 +58,7 @@ private:
 
     std::vector<HeapNode> nodes;
     std::vector<std::vector<HeapNode>::size_type> position;
-    std::vector<HeapNode>::size_type size{};
+    std::vector<HeapNode>::size_type size;
 };
 
 #endif //MST_BINARYHEAP_H

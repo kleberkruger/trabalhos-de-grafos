@@ -26,11 +26,19 @@ unistd.h
 sys/ioctl.h
 -
 
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/arrayheap.cpp
+arrayheap.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/arrayheap.h
+
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/arrayheap.h
 vector
 -
 heap.h
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/heap.h
+
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/binaryheap.cpp
+binaryheap.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/binaryheap.h
 
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/Em andamento/caminhos/sources/binaryheap.h
 vector

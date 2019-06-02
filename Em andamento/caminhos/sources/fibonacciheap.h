@@ -1,6 +1,10 @@
-//
-// Created by Kleber Kruger on 2019-06-02.
-//
+/**
+ * Algoritmos em Grafos (MO412)
+ *
+ * @author: Kleber Kruger <kleberkruger@gmail.com>
+ * @author: Felipe Barbosa <felipebarbosa@uft.edu.com>
+ * @author: Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
+ */
 
 #ifndef CAMINHOS_FIBONACCIHEAP_H
 #define CAMINHOS_FIBONACCIHEAP_H
@@ -83,21 +87,21 @@ private:
 
     FibonacciNode *insert(GraphNode value);
 
-    FibonacciNode *_singleton(GraphNode value);
+    FibonacciNode *singleton(GraphNode value);
 
-    FibonacciNode *_merge(FibonacciNode *a, FibonacciNode *b);
+    FibonacciNode *merge(FibonacciNode *a, FibonacciNode *b);
 
-    void _deleteAll(FibonacciNode *n);
+    void clear(FibonacciNode *n);
 
-    void _addChild(FibonacciNode *parent, FibonacciNode *child);
+    void insertChild(FibonacciNode *parent, FibonacciNode *child);
 
-    void _unMarkAndUnParentAll(FibonacciNode *n);
+    void unpairAll(FibonacciNode *n);
 
-    FibonacciNode *_removeMinimum(FibonacciNode *n);
+    FibonacciNode *extractMin(FibonacciNode *n);
 
-    FibonacciNode *_cut(FibonacciNode *heap, FibonacciNode *n);
+    FibonacciNode *cut(FibonacciNode *heap, FibonacciNode *n);
 
-    FibonacciNode *_decreaseKey(FibonacciNode *heap, FibonacciNode *n, GraphNode value);
+    FibonacciNode *decreaseKey(FibonacciNode *heap, FibonacciNode *n, GraphNode value);
 
     FibonacciNode *find(GraphNode value);
 

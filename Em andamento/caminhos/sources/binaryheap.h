@@ -1,13 +1,9 @@
 /**
  * Algoritmos em Grafos (MO412)
  *
- * Primeiro Trabalho Prático
- * - MST - Minimum Spanning Tree
- *
- * @authors:
- * - Kleber Kruger <kleberkruger@gmail.com>,
- * - Felipe Barbosa <felipebarbosa@uft.edu.com>,
- * - Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
+ * @author: Kleber Kruger <kleberkruger@gmail.com>
+ * @author: Felipe Barbosa <felipebarbosa@uft.edu.com>
+ * @author: Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
  */
 
 #ifndef MST_BINARYHEAP_H

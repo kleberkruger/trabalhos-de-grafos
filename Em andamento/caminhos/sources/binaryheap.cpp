@@ -12,7 +12,7 @@
 
 #include "binaryheap.h"
 
-BinaryHeap::BinaryHeap(int n, int s) : nodes(n), position(n) {
+BinaryHeap::BinaryHeap(int n, int s) : nodes(n), position(n), size(0) {
     build(n, s);
 }
 
@@ -49,7 +49,7 @@ int BinaryHeap::extractMin() {
 }
 
 void BinaryHeap::decreaseKey(unsigned long vertice, double value) {
-    unsigned long index = position[vertice];
+    auto index = position[vertice];
     if (nodes[index].value > value) {
         //std::cout << nodes[index].value << " " << value << std::endl;
         //throw std::invalid_argument("Decrease error!");

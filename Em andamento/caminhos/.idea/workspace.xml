@@ -12,11 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55fe85cc-5fd2-49b9-bf43-db53f133d5dd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/binaryheap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/binaryheap.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/binaryheap.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/binaryheap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/fibonacciheap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/fibonacciheap.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/fibonacciheap.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/fibonacciheap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/pathsapp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/pathsapp.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,44 +28,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/pathsapp.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Makefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sources/binaryheap.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/binaryheap.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -102,8 +63,8 @@
         <option value="$PROJECT_DIR$/sources/fibonacciheap.h" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/sources/binaryheap.h" />
-        <option value="$PROJECT_DIR$/sources/binaryheap.cpp" />
         <option value="$PROJECT_DIR$/sources/pathsapp.cpp" />
+        <option value="$PROJECT_DIR$/sources/binaryheap.cpp" />
       </list>
     </option>
   </component>
@@ -204,12 +165,13 @@
       <workItem from="1559430186941" duration="2399000" />
       <workItem from="1559433563881" duration="807000" />
       <workItem from="1559435768151" duration="6760000" />
-      <workItem from="1559454041104" duration="12195000" />
+      <workItem from="1559454041104" duration="13127000" />
+      <workItem from="1559499099015" duration="234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77184000" />
+    <option name="totallyTimeSpent" value="78116000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -222,9 +184,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1774" y="32" width="1680" height="984" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2014652" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2039072" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -235,8 +196,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295964" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32735425" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32735425" />
+      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.32735425" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32735425" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32953367" />

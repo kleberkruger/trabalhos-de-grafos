@@ -57,7 +57,7 @@ private:
     void swap(std::vector<HeapNode>::size_type i, std::vector<HeapNode>::size_type j);
 
     std::vector<HeapNode> nodes;
-    std::vector<HeapNode>::size_type size;
+    std::vector<HeapNode>::size_type size{};
     std::vector<std::vector<HeapNode>::size_type> position;
 };
 

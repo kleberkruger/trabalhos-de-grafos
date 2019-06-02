@@ -50,7 +50,7 @@ private:
     const char *FLOYD_WARSHALL = "floyd-warshall";
     const char *JOHNSON = "johnson";
 
-    static void printPath(const std::string &filePath, std::vector<double> dist, std::vector<int> pred, int source);
+    static std::string printPath(const std::string &filePath, std::vector<double> dist, std::vector<int> pred, int source);
 };
 
 

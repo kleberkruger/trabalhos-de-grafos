@@ -180,16 +180,29 @@ void PathsApp::createInputInfo(const std::string &text, InputInfo &in) {
 }
 
 void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, const OutputInfo &out) {
+//    int fd;
+//    if ((fd = open(filePath.data(), O_CREAT | O_WRONLY) == -1)) {
+//        throw std::invalid_argument("Incorrect output file path: \"" + filePath + "\"");
+//    }
+//    write(fd, text.str().data(), text.str().size());
+//    close(fd);
+
+    FILE *fp = fopen(filePath.data(), "w");
+    if (fp == nullptr) {
+        throw std::invalid_argument("Incorrect output file path: \"" + filePath + "\"");
+    }
+
     if (in.source != -1) {
-        printPath(filePath, out.dist[0], out.pred[0], in.source);
+        fprintf(fp, "%s", printPath(filePath, out.dist[0], out.pred[0], in.source).data());
     } else {
         for (unsigned int i = 0; i < in.graph.vertices.size(); i++) {
-            printPath(filePath, out.dist[i], out.pred[i], i);
+            fprintf(fp, "%s", printPath(filePath, out.dist[i], out.pred[i], i).data());
         }
     }
+    fclose(fp);
 }
 
-void PathsApp::printPath(const std::string &filePath, std::vector<double> dist, std::vector<int> pred, int source) {
+std::string PathsApp::printPath(const std::string &filePath, std::vector<double> dist, std::vector<int> pred, int source) {
     std::vector<int> path;
     std::stringstream text;
 
@@ -207,17 +220,5 @@ void PathsApp::printPath(const std::string &filePath, std::vector<double> dist, 
         text << std::endl;
     }
 
-//    int fd;
-//    if ((fd = open(filePath.data(), O_CREAT | O_WRONLY) == -1)) {
-//        throw std::invalid_argument("Incorrect output file path: \"" + filePath + "\"");
-//    }
-//    write(fd, text.str().data(), text.str().size());
-//    close(fd);
-
-    FILE *fp = fopen(filePath.data(), "w");
-    if (fp == nullptr) {
-        throw std::invalid_argument("Incorrect output file path: \"" + filePath + "\"");
-    }
-    fprintf(fp, "%s", text.str().data());
-    fclose(fp);
+    return text.str();
 }

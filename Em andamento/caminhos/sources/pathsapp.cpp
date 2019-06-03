@@ -107,15 +107,15 @@ void floydWarshall(const Graph &graph, std::vector<std::vector<double>> &dist, s
 void floydWarshall(const InputInfo &in, OutputInfo &out) {
     in.source = -1;
 
-    int n = in.graph.vertices.size();
+    unsigned int n = in.graph.vertices.size();
     std::vector<int> line(n, -1);
-    for (int i = 0; i < n; i++)
+    for (unsigned int i = 0; i < n; i++)
         out.pred.emplace_back(line);
 
 //    std::vector<std::vector<int>> vec(n, std::vector<int>(n, -1));
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
+    for (unsigned int i = 0; i < n; i++) {
+        for (unsigned int j = 0; j < n; j++) {
             if (in.graph.getMinAdjacencyMatrix()[i][j] != std::numeric_limits<double>::infinity() && i != j) {
                 out.pred[i][j] = i;
             }
@@ -216,7 +216,7 @@ void PathsApp::printOutput(const std::string &filePath, const InputInfo &in, con
     if (in.source != -1) {
         fprintf(fp, "%s", printPath(filePath, out.dist[0], out.pred[0], in.source).data());
     } else {
-        for (auto i = 0; i < in.graph.vertices.size(); i++) {
+        for (unsigned int i = 0; i < in.graph.vertices.size(); i++) {
             fprintf(fp, "%s", printPath(filePath, out.dist[i], out.pred[i], i).data());
         }
     }
@@ -228,7 +228,7 @@ PathsApp::printPath(const std::string &filePath, std::vector<double> dist, std::
     std::vector<int> path;
     std::stringstream text;
 
-    for (int i = 0; i < pred.size(); i++) {
+    for (unsigned int i = 0; i < pred.size(); i++) {
         path.clear();
         for (int v = i; v != source && v != -1; v = pred[v]) {
             path.insert(path.begin(), v);

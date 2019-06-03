@@ -91,7 +91,7 @@ void BinaryHeap::swap(unsigned long i, unsigned long j) {
 }
 
 void BinaryHeap::print() {
-    for (auto i = 0; i < size; i++)
+    for (unsigned int i = 0; i < size; i++)
         std::cout << i << "=[(" << nodes[i].value << ") v" << nodes[i].vertex << "=" << position[nodes[i].vertex]
                   << "] ";
     std::cout << std::endl;

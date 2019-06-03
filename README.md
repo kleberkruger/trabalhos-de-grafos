@@ -1,2 +1,3 @@
-# grafos-t1-mst
-Primeiro Trabalho Prático de Algoritmos em Grafos
+# trabalhos-de-grafos
+Trabalhos de Algoritmos em Grafos
+MO412 - Unicamp

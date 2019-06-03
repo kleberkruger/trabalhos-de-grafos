@@ -118,7 +118,7 @@ private:
         std::cout << std::endl
                   << "================================================================================" << std::endl;
 
-        for (int i = 0; i < tasks.size() - 1; i++) {
+        for (unsigned int i = 0; i < tasks.size() - 1; i++) {
             std::cout << " Time to " << tasks[i].description << ": "
                       << std::chrono::duration_cast<std::chrono::milliseconds>(
                               tasks[i + 1].timePoint - tasks[i].timePoint).count()

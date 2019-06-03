@@ -71,10 +71,10 @@ void Graph::clearAll() {
 const std::vector<std::vector<EdgeTo>> &Graph::getAdjacencyList() const {
     if (!updatedList) {
         // alocação de espaço e inicialização
-        auto n = vertices.size();
+        unsigned int n = vertices.size();
         adjacencyList.clear();
         adjacencyList.reserve(n);
-        for (auto i = 0; i < n; i++) {
+        for (unsigned int i = 0; i < n; i++) {
             adjacencyList.emplace_back();
             adjacencyList[i].reserve(n); // otimização
         }
@@ -95,10 +95,10 @@ const std::vector<EdgeTo> &Graph::getAdjacencyList(int vertex) const {
 const std::vector<std::vector<double>> &Graph::getMinAdjacencyMatrix() const {
     if (!updatedMatrix) {
         // alocação de espaço e inicialização
-        auto n = vertices.size();
+        unsigned int n = vertices.size();
         minAdjacencyMatrix.clear();
         minAdjacencyMatrix.reserve(n);
-        for (auto i = 0; i < n; i++) {
+        for (unsigned int i = 0; i < n; i++) {
             minAdjacencyMatrix.emplace_back(n, std::numeric_limits<double>::infinity());
             minAdjacencyMatrix[i][i] = 0;
         }
@@ -135,7 +135,7 @@ void Graph::print() const {
 void Graph::printAdjacencyList() const {
     std::cout << "==================================================" << std::endl;
     auto &list = getAdjacencyList();
-    for (int i = 0; i < list.size(); ++i) {
+    for (unsigned int i = 0; i < list.size(); ++i) {
         std::cout << "adjacency of " << i << ": ";
         for (auto &e : list[i]) {
             std::cout << "(" << e.end << "):" << e.weight << " " ;

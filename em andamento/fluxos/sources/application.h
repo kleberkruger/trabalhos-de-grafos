@@ -1,26 +1,19 @@
-/**
- * Algoritmos em Grafos (MO412)
- *
- * @author: Kleber Kruger <kleberkruger@gmail.com>
- * @author: Felipe Barbosa <felipebarbosa@uft.edu.com>
- * @author: Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
- */
+//
+// Created by Kleber Kruger on 2019-06-04.
+//
 
-#ifndef CAMINHOS_APPLICATION_H
-#define CAMINHOS_APPLICATION_H
+#ifndef FLUXOS_APPLICATION_H
+#define FLUXOS_APPLICATION_H
 
 
 #include <chrono>
-#include <iostream>
 #include <map>
 #include <string>
-#include <utility>
 #include <vector>
 #include <fcntl.h>
 #include <unistd.h>
-// #include <sys/filio.h>
+#include <sys/filio.h>
 #include <sys/ioctl.h>
-
 
 #ifdef __OSX_AVAILABLE
 typedef std::chrono::steady_clock OS_CLOCK;
@@ -54,8 +47,16 @@ template<typename AIn, typename AOut>
 class Application {
 public:
 
-    void start(const std::string &algorithm, unsigned short version, const std::string &inputFilePath,
-               const std::string &outputFilePath) {
+    /**
+     * Executa o algoritmo de acordo com os dados de entrada gerando uma saída.
+     *
+     * @param inputFilePath
+     * @param outputFilePath
+     * @param algorithm
+     * @param version
+     */
+    void start(const std::string &inputFilePath, const std::string &outputFilePath,
+               const std::string &algorithm, unsigned short version = 0) {
 
         AIn in;
         AOut out;
@@ -83,8 +84,6 @@ protected:
 
     virtual std::map<std::string, std::vector<Algorithm<AIn, AOut>>> algorithmsMap() = 0;
 
-//    virtual Graph createGraph(const std::string &input, const AIn *more) = 0;
-
     virtual void createInputInfo(const std::string &text, AIn &input) = 0;
 
     virtual void printOutput(const std::string &filePath, const AIn &input, const AOut &output) = 0;
@@ -110,26 +109,27 @@ private:
             buffer[returned] = 0x00;
             text.append(buffer);
         }
-        
+
         return text;
     }
 
     static void printTasks(std::vector<Task> tasks) {
-        std::cout << std::endl
-                  << "================================================================================" << std::endl;
-
+        printf("================================================================================\n");
         for (unsigned int i = 0; i < tasks.size() - 1; i++) {
-            std::cout << " Time to " << tasks[i].description << ": "
-                      << std::chrono::duration_cast<std::chrono::milliseconds>(
-                              tasks[i + 1].timePoint - tasks[i].timePoint).count()
-                      << " ms" << std::endl;
+            printf(" Time to %s: %llu ms\n", tasks[i].description.data(),
+                   std::chrono::duration_cast<std::chrono::milliseconds>(
+                           tasks[i + 1].timePoint - tasks[i].timePoint).count());
         }
-        std::cout << "--------------------------------------------------------------------------------" << std::endl
-                  << " Total time: "
-                  << std::chrono::duration_cast<std::chrono::milliseconds>(
-                          tasks[tasks.size() - 1].timePoint - tasks[0].timePoint).count() << " ms" << std::endl
-                  << "================================================================================"
-                  << std::endl;
+        printf("--------------------------------------------------------------------------------\n"
+               " Total time: %llu ms\n"
+               "================================================================================\n",
+               std::chrono::duration_cast<std::chrono::milliseconds>(
+                       tasks[tasks.size() - 1].timePoint - tasks[0].timePoint).count());
+    }
+
+    template<typename R, typename... Args>
+    static inline R run(const std::string &task, R (*function)(Args...), Args... args) {
+        return function(args...);
     }
 
     Algorithm<AIn, AOut> selectAlgorithm(const std::string &algorithm, unsigned short version) {
@@ -147,5 +147,4 @@ private:
 
 };
 
-
-#endif //CAMINHOS_APPLICATION_H
+#endif //FLUXOS_APPLICATION_H

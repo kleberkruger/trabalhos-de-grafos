@@ -32,7 +32,6 @@ struct OutputInfo {
     std::vector<std::vector<int>> pred;
 };
 
-
 typedef Algorithm<InputInfo, OutputInfo> PathAlg;
 
 class PathsApp : public Application<InputInfo, OutputInfo> {

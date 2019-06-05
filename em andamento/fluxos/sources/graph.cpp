@@ -75,6 +75,14 @@ const std::vector<EdgeTo> &Graph::getAdjacencyList(int vertex) const {
     return getAdjacencyList()[vertex];
 }
 
+const std::vector<std::vector<EdgeTo>> &Graph::getMinAdjacencyList() const {
+    return getAdjacencyList();
+}
+
+const std::vector<EdgeTo> &Graph::getMinAdjacencyList(int vertex) const {
+    return getAdjacencyList()[vertex];
+}
+
 const std::vector<std::vector<int>> &Graph::getMinAdjacencyMatrix() const {
     if (!updatedMatrix) {
         // alocação de espaço e inicialização

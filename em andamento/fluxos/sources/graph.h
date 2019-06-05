@@ -145,6 +145,21 @@ public:
     const std::vector<EdgeTo> &getAdjacencyList(int vertex) const;
 
     /**
+     * Retorna a lista de adjacências do grafo.
+     *
+     * @return
+     */
+    const std::vector<std::vector<EdgeTo>> &getMinAdjacencyList() const;
+
+    /**
+     * Retorna a lista de adjacências de um vértice especificado.
+     *
+     * @param vertex
+     * @return
+     */
+    const std::vector<EdgeTo> &getMinAdjacencyList(int vertex) const;
+
+    /**
      * Retorna a matriz de adjacência do grafo.
      *
      * @return

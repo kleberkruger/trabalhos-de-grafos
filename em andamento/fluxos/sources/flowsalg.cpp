@@ -34,12 +34,12 @@ void breadthFirstSearch(const Graph &graph, int s) {
         std::cout << "v=" << v.vertex << " p=" << v.parent << " d=" << v.distance << " c=" << v.color << std::endl;
     }
 
-    std::queue<SearchVertex *> q;
-    q.push(&vertices[s]);
+    std::deque<SearchVertex *> q;
+    q.push_back(&vertices[s]);
 
     while (!q.empty()) {
         auto &u = q.front();
-        q.pop();
+        q.pop_front();
 
         for (auto &e : graph.getAdjacencyList(u->vertex)) {
             auto &v = vertices[e.end];
@@ -47,13 +47,13 @@ void breadthFirstSearch(const Graph &graph, int s) {
                 v.color = GRAY;
                 v.distance = u->distance + 1;
                 v.parent = u->vertex;
-                q.push(&v);
+                q.push_back(&v);
             }
         }
         u->color = BLACK;
     }
 
-    std::cout << "resposta: " << std::endl;
+    std::cout << "Resposta: " << std::endl;
     for (auto &v : vertices) {
         std::cout << "v=" << v.vertex << " p=" << v.parent << " d=" << v.distance << " c=" << v.color << std::endl;
     }
@@ -84,6 +84,9 @@ void depthFirstSearch(const Graph &graph, int s) {
 
     unsigned long time = 0;
 
+    // chamar primeiro para o source
+    if (vertices[s].color == WHITE)
+        depthFirstSearchVisit(graph, vertices, vertices[s], time);
     for (auto &u : vertices) {
         if (u.color == WHITE) depthFirstSearchVisit(graph, vertices, u, time);
     }

@@ -6,7 +6,7 @@
 #define FLUXOS_FLOWSALG_H
 
 
-#include <queue>
+#include <deque>
 #include "graph.h"
 
 struct InputInfo {

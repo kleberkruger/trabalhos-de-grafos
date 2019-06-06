@@ -44,5 +44,12 @@ void FlowsApp::createInputInfo(const std::string &text, InputInfo &in) {
 }
 
 void FlowsApp::printOutput(const std::string &filePath, const InputInfo &in, const OutputInfo &out) {
-
+    FILE *fp = fopen(filePath.data(), "w");
+    if (fp == nullptr) {
+        throw std::invalid_argument("Incorrect output file path: \"" + filePath + "\"");
+    }
+    for (auto &e : in.graph.edges) {
+        fprintf(fp, "%d %d %d\n", e.start, e.end, e.flow);
+    }
+    fclose(fp);
 }

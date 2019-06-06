@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/em andamento/fluxos/sources/application.h
+chrono
+-
+map
+-
+string
+-
+vector
+-
+fcntl.h
+-
+unistd.h
+-
+sys/filio.h
+-
+sys/ioctl.h
+-
+
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/em andamento/fluxos/sources/flowsalg.cpp
 flowsalg.h
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/em andamento/fluxos/sources/flowsalg.h
@@ -17,6 +35,18 @@ utility
 -
 graph.h
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/em andamento/fluxos/sources/graph.h
+
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/em andamento/fluxos/sources/flowsapp.cpp
+flowsapp.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/em andamento/fluxos/sources/flowsapp.h
+
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/em andamento/fluxos/sources/flowsapp.h
+application.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/em andamento/fluxos/sources/application.h
+graph.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/em andamento/fluxos/sources/graph.h
+flowsalg.h
+/Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/em andamento/fluxos/sources/flowsalg.h
 
 /Volumes/KrugerDrive/kleberkruger/Clouds/Box Sync/SourceCode/Git/GitHub/Disciplinas/Algoritmos em Grafos/Trabalhos/trabalhos-de-grafos/em andamento/fluxos/sources/graph.h
 iostream

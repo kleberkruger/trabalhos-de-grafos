@@ -12,10 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf1e3b9e-ed31-4b5f-9dbf-32fb8a9eca34" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/flowsalg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/flowsalg.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/flowsalg.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/flowsalg.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sources/flowsalg.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="142" column="51" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="51" />
+            <state relative-caret-position="174">
+              <caret line="131" column="18" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -42,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="85" column="77" selection-start-line="85" selection-start-column="77" selection-end-line="85" selection-end-column="77" />
+            <state relative-caret-position="659">
+              <caret line="119" column="123" lean-forward="true" selection-start-line="119" selection-start-column="123" selection-end-line="119" selection-end-column="123" />
             </state>
           </provider>
         </entry>
@@ -82,8 +81,8 @@
         <option value="$PROJECT_DIR$/sources/flowsalg.h" />
         <option value="$PROJECT_DIR$/datasets/in_kruger.txt" />
         <option value="$PROJECT_DIR$/datasets/in_cormen.txt" />
-        <option value="$PROJECT_DIR$/sources/graph.cpp" />
         <option value="$PROJECT_DIR$/sources/graph.h" />
+        <option value="$PROJECT_DIR$/sources/graph.cpp" />
         <option value="$PROJECT_DIR$/sources/flowsalg.cpp" />
       </list>
     </option>
@@ -131,6 +130,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/datasets" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
   </component>
   <component name="RecentsManager">
@@ -172,12 +172,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559698957273</updated>
-      <workItem from="1559698959231" duration="31419000" />
+      <workItem from="1559698959231" duration="35415000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31419000" />
+    <option name="totallyTimeSpent" value="35415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1774" y="32" width="1680" height="984" extended-state="0" />
@@ -189,12 +189,12 @@
       <window_info anchor="bottom" id="CMake" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.3295964" />
+      <window_info anchor="bottom" id="Messages" weight="0.3295964" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295964" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295964" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -379,15 +379,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="85" column="77" selection-start-line="85" selection-start-column="77" selection-end-line="85" selection-end-column="77" />
+        <state relative-caret-position="659">
+          <caret line="119" column="123" lean-forward="true" selection-start-line="119" selection-start-column="123" selection-end-line="119" selection-end-column="123" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/flowsalg.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="142" column="51" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="51" />
+        <state relative-caret-position="174">
+          <caret line="131" column="18" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="18" />
         </state>
       </provider>
     </entry>

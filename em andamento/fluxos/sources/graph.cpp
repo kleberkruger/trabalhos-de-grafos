@@ -117,7 +117,7 @@ void Graph::print() const {
     if (!edges.empty()) {
         std::cout << "--------------------------------------------------" << std::endl;
         for (auto e : edges)
-            std::cout << " (v" << e.start << ", v" << e.end << ") c(" << e.capacity << ")" << std::endl;
+            std::cout << " (v" << e.start << ", v" << e.end << ") c/f(" << e.capacity << "/" << e.flow << ")" << std::endl;
     }
     std::cout << "==================================================" << std::endl;
 }

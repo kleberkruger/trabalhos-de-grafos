@@ -131,35 +131,36 @@ bool DFS(const Graph &graph, int s, int t, std::pair<int, std::vector<Edge *>> &
 
 void fordFulkerson(const InputInfo &in, OutputInfo &out) {
     std::pair<int, std::vector<Edge *>> path;
+    long total = 0;
 
     Graph residual = in.graph;
     for (auto &e : residual.edges) {
         residual.insertEdge(e.end, e.start, 0);
     }
-//    residual.print();
 
-    auto matrix = residual.getMinAdjacencyMatrix();
+    auto &matrix = in.graph.getMinAdjacencyMatrix();
+    auto &matrixR = residual.getMinAdjacencyMatrix();
 
     while (DFS(residual, in.source, in.target, path)) {
         for (auto p : path.second) std::cout << "(" << p->start << "," << p->end << ") ";
-        std::cout << std::endl;
         std::cout << path.first << std::endl;
+
+        total += path.first;
 
         for (auto &e : path.second) {
             if (matrix[e->start][e->end] != nullptr) {
-                e->flow += path.first;
-//                e->capacity -= path.first;
-//                if (e->flow == e->capacity) {
-//                    matrix[e->start][e->end] = nullptr;
-//                }
-            } else if (matrix[e->end][e->start] != nullptr) {
-                e->flow -= path.first;
-//                e->capacity += path.first;
-                if (e->flow == 0) {
-                    matrix[e->start][e->end] = nullptr;
-                }
+                matrix[e->start][e->end]->flow += path.first;
+            } else {
+                matrix[e->end][e->start]->flow -= path.first;
             }
+            matrixR[e->start][e->end]->capacity -= path.first;
+            matrixR[e->end][e->start]->capacity += path.first;
         }
+
+        in.graph.print();
+        residual.print();
+
+        std::cout << total << std::endl;
     }
 }
 

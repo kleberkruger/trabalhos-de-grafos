@@ -19,7 +19,13 @@ struct SearchVertex {
                                         distance(std::numeric_limits<long>::max()), color(WHITE) {}
 };
 
-void breadthFirstSearch(const Graph &graph, int s) {
+/**
+ *
+ * @param graph
+ * @param s
+ * @param t
+ */
+void breadthFirstSearch(const Graph &graph, int s, int t) {
     std::vector<SearchVertex> vertices;
     vertices.reserve(graph.vertices.size());
 
@@ -42,7 +48,7 @@ void breadthFirstSearch(const Graph &graph, int s) {
         q.pop_front();
 
         for (auto &e : graph.getAdjacencyList(u->vertex)) {
-            auto &v = vertices[e.end];
+            auto &v = vertices[e->end];
             if (v.color == WHITE) {
                 v.color = GRAY;
                 v.distance = u->distance + 1;
@@ -59,22 +65,45 @@ void breadthFirstSearch(const Graph &graph, int s) {
     }
 }
 
-void depthFirstSearchVisit(const Graph &graph, std::vector<SearchVertex> &vertices,
-                           SearchVertex &u, unsigned long &time) {
-    u.distance = ++time;
+bool DFSVisit(const Graph &graph, std::vector<SearchVertex> &vertices, int s, int t,
+              std::pair<int, std::vector<Edge *>> &path) {
+
+//    std::cout << "visitando v " << s << std::endl;
+
+    auto &u = vertices[s];
     u.color = GRAY;
+//    path.second.push_back(u.vertex);
+    if (u.vertex == t) {
+//        std::cout << "encontrei o " << t << std::endl;
+        u.color = BLACK;
+        return true;
+    }
+
     for (auto &e : graph.getAdjacencyList(u.vertex)) {
-        auto &v = vertices[e.end];
-        if (v.color == WHITE) {
-            v.parent = u.vertex;
-            depthFirstSearchVisit(graph, vertices, v, time);
+        if (e->capacity > 0) {
+            auto &v = vertices[e->end];
+            if (v.color == WHITE) {
+                v.parent = u.vertex;
+//            if (e.capacity < path.first) path.first = e.capacity;
+                if (DFSVisit(graph, vertices, v.vertex, t, path)) {
+                    if (e->capacity < path.first) path.first = e->capacity;
+                    path.second.push_back(e);
+                    return true;
+                }
+            }
         }
     }
     u.color = BLACK;
-    u.finished = ++time;
+    return false;
 }
 
-void depthFirstSearch(const Graph &graph, int s) {
+/**
+ *
+ * @param graph
+ * @param s
+ * @param t
+ */
+bool DFS(const Graph &graph, int s, int t, std::pair<int, std::vector<Edge *>> &path) {
     std::vector<SearchVertex> vertices;
     vertices.reserve(graph.vertices.size());
 
@@ -82,30 +111,61 @@ void depthFirstSearch(const Graph &graph, int s) {
         vertices.emplace_back(u.id);
     }
 
-    unsigned long time = 0;
+    path.first = std::numeric_limits<int>::max();
+    path.second.clear();
+
+    return DFSVisit(graph, vertices, s, t, path);
 
     // chamar primeiro para o source
-    if (vertices[s].color == WHITE)
-        depthFirstSearchVisit(graph, vertices, vertices[s], time);
-    for (auto &u : vertices) {
-        if (u.color == WHITE) depthFirstSearchVisit(graph, vertices, u, time);
-    }
+//    if (vertices[s].color == WHITE)
+//        DFSVisit(graph, vertices, vertices[s], t, time);
+//    for (auto &u : vertices) {
+//        if (u.color == WHITE) DFSVisit(graph, vertices, u, t, time);
+//    }
 
-    for (auto &v : vertices) {
-        std::cout << "v=" << v.vertex << " p=" << v.parent << " d=" << v.distance << " f=" << v.finished << " c="
-                  << v.color << std::endl;
-    }
+//    for (auto &v : vertices) {
+//        std::cout << "v=" << v.vertex << " p=" << v.parent << " d=" << v.distance << " f=" << v.finished << " c="
+//                  << v.color << std::endl;
+//    }
 }
 
-
 void fordFulkerson(const InputInfo &in, OutputInfo &out) {
-//    breadthFirstSearch(in.graph, in.source);
-    depthFirstSearch(in.graph, in.source);
+    std::pair<int, std::vector<Edge *>> path;
+
+    Graph residual = in.graph;
+    for (auto &e : residual.edges) {
+        residual.insertEdge(e.end, e.start, 0);
+    }
+//    residual.print();
+
+    auto matrix = residual.getMinAdjacencyMatrix();
+
+    while (DFS(residual, in.source, in.target, path)) {
+        for (auto p : path.second) std::cout << "(" << p->start << "," << p->end << ") ";
+        std::cout << std::endl;
+        std::cout << path.first << std::endl;
+
+        for (auto &e : path.second) {
+            if (matrix[e->start][e->end] != nullptr) {
+                e->flow += path.first;
+//                e->capacity -= path.first;
+//                if (e->flow == e->capacity) {
+//                    matrix[e->start][e->end] = nullptr;
+//                }
+            } else if (matrix[e->end][e->start] != nullptr) {
+                e->flow -= path.first;
+//                e->capacity += path.first;
+                if (e->flow == 0) {
+                    matrix[e->start][e->end] = nullptr;
+                }
+            }
+        }
+    }
 }
 
 void edmondsKarp(const InputInfo &in, OutputInfo &out) {
 //    breadthFirstSearch(in.graph, in.source);
-    depthFirstSearch(in.graph, in.source);
+//    DFS(in.graph, in.source, in.target);
 }
 
 //void FlowAlgs::fordFulkerson(const InputInfo &in, OutputInfo &out) {

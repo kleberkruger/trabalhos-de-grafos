@@ -12,11 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf1e3b9e-ed31-4b5f-9dbf-32fb8a9eca34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fluxos.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fluxos.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/fluxos" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/fluxos" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/flowsalg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/flowsalg.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/flowsalg.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/flowsalg.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/sources/graph.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,41 +33,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sources/flowsalg.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1408">
-              <caret line="88" column="66" lean-forward="true" selection-start-line="88" selection-start-column="66" selection-end-line="88" selection-end-column="66" />
+            <state relative-caret-position="178">
+              <caret line="142" column="51" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/main.cpp">
+        <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+            <state relative-caret-position="183">
+              <caret line="85" column="77" selection-start-line="85" selection-start-column="77" selection-end-line="85" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/application.h">
+        <entry file="file://$PROJECT_DIR$/sources/graph.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
-              <folding>
-                <element signature="e#110#127#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/flowsalg.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-              <folding>
-                <element signature="e#104#120#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="337">
+              <caret line="170" column="74" lean-forward="true" selection-start-line="170" selection-start-column="74" selection-end-line="170" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -78,6 +62,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>infini</find>
+      <find>Edge &amp;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,12 +77,13 @@
         <option value="$PROJECT_DIR$/sources/flowsapp.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/sources/application.h" />
-        <option value="$PROJECT_DIR$/sources/graph.cpp" />
-        <option value="$PROJECT_DIR$/datasets/in_kruger.txt" />
-        <option value="$PROJECT_DIR$/sources/graph.h" />
         <option value="$PROJECT_DIR$/sources/graph2.h" />
-        <option value="$PROJECT_DIR$/sources/flowsalg.h" />
         <option value="$PROJECT_DIR$/sources/main.cpp" />
+        <option value="$PROJECT_DIR$/sources/flowsalg.h" />
+        <option value="$PROJECT_DIR$/datasets/in_kruger.txt" />
+        <option value="$PROJECT_DIR$/datasets/in_cormen.txt" />
+        <option value="$PROJECT_DIR$/sources/graph.cpp" />
+        <option value="$PROJECT_DIR$/sources/graph.h" />
         <option value="$PROJECT_DIR$/sources/flowsalg.cpp" />
       </list>
     </option>
@@ -121,6 +107,11 @@
             <path>
               <item name="fluxos" type="b2602c69:ProjectViewProjectNode" />
               <item name="fluxos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fluxos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fluxos" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fluxos" type="b2602c69:ProjectViewProjectNode" />
@@ -164,7 +155,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="fluxos" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="edmonds-karp datasets/in_kruger.txt datasets/out_kruger.txt" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fluxos" TARGET_NAME="fluxos" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fluxos" RUN_TARGET_NAME="fluxos">
+    <configuration name="fluxos" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="ford-fulkerson datasets/in_cormen.txt datasets/out_cormen.txt" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fluxos" TARGET_NAME="fluxos" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fluxos" RUN_TARGET_NAME="fluxos">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -181,12 +172,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559698957273</updated>
-      <workItem from="1559698959231" duration="13226000" />
+      <workItem from="1559698959231" duration="31419000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13226000" />
+    <option name="totallyTimeSpent" value="31419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1774" y="32" width="1680" height="984" extended-state="0" />
@@ -276,24 +267,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/flowsapp.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../backups/mst_submetida_t1/sources/graph.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="120" column="66" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -304,22 +281,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/in_kruger.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sources/graph2.cpp">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/graph.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="30" selection-start-line="30" selection-end-line="50" selection-end-column="2" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/graph2.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -331,37 +294,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/main.cpp">
+    <entry file="file://$PROJECT_DIR$/sources/flowsapp.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        <state relative-caret-position="117">
+          <caret line="16" column="70" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/application.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+        <state relative-caret-position="293">
+          <caret line="88" column="28" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="28" />
           <folding>
             <element signature="e#110#127#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/tclDecls.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/vector">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="704" column="35" selection-start-line="704" selection-start-column="35" selection-end-line="704" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/__config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="509" selection-start-line="509" selection-end-line="509" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sources/flowsalg.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        <state relative-caret-position="183">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
           <folding>
             <element signature="e#104#120#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="998" column="21" selection-start-line="998" selection-start-column="21" selection-end-line="998" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/in_cormen.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/in_kruger.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/graph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="170" column="74" lean-forward="true" selection-start-line="170" selection-start-column="74" selection-end-line="170" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/graph.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="85" column="77" selection-start-line="85" selection-start-column="77" selection-end-line="85" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sources/flowsalg.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1408">
-          <caret line="88" column="66" lean-forward="true" selection-start-line="88" selection-start-column="66" selection-end-line="88" selection-end-column="66" />
+        <state relative-caret-position="178">
+          <caret line="142" column="51" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="51" />
         </state>
       </provider>
     </entry>

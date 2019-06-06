@@ -12,11 +12,11 @@
 Vertex::Vertex(int id) : id(id) {}
 
 
-Edge::Edge(int start, int end, int capacity) : start(start), end(end), capacity(capacity) {}
+Edge::Edge(int start, int end, int capacity) : start(start), end(end), capacity(capacity), flow(0) {}
 
-EdgeTo::EdgeTo(int end, int capacity) : end(end), capacity(capacity) {}
+//EdgeTo::EdgeTo(int start, int end, int capacity) : start(start), end(end), capacity(capacity) {}
 
-EdgeTo::~EdgeTo() = default;
+//EdgeTo::~EdgeTo() = default;
 
 
 Graph::Graph(int n, int m) : updatedList(false), updatedMatrix(false) {
@@ -51,7 +51,7 @@ void Graph::clearAll() {
     graphChanged();
 }
 
-const std::vector<std::vector<EdgeTo>> &Graph::getAdjacencyList() const {
+const std::vector<std::vector<Edge *>> &Graph::getAdjacencyList() const {
     if (!updatedList) {
         // alocação de espaço e inicialização
         unsigned int n = vertices.size();
@@ -63,42 +63,41 @@ const std::vector<std::vector<EdgeTo>> &Graph::getAdjacencyList() const {
         }
 
         // definição dos valores
-        for (auto &e : edges) {
-            adjacencyList[e.start].push_back(EdgeTo(e.end, e.capacity));
+        for (const Edge &e : edges) {
+            adjacencyList[e.start].push_back(const_cast<Edge *>(&e));
         }
         updatedList = true;
     }
     return adjacencyList;
 }
 
-const std::vector<EdgeTo> &Graph::getAdjacencyList(int vertex) const {
+const std::vector<Edge *> &Graph::getAdjacencyList(int vertex) const {
     return getAdjacencyList()[vertex];
 }
 
-const std::vector<std::vector<EdgeTo>> &Graph::getMinAdjacencyList() const {
+const std::vector<std::vector<Edge *>> &Graph::getMinAdjacencyList() const {
     return getAdjacencyList();
 }
 
-const std::vector<EdgeTo> &Graph::getMinAdjacencyList(int vertex) const {
+const std::vector<Edge *> &Graph::getMinAdjacencyList(int vertex) const {
     return getAdjacencyList()[vertex];
 }
 
-const std::vector<std::vector<int>> &Graph::getMinAdjacencyMatrix() const {
+const std::vector<std::vector<Edge *>> &Graph::getMinAdjacencyMatrix() const {
     if (!updatedMatrix) {
         // alocação de espaço e inicialização
         unsigned int n = vertices.size();
         minAdjacencyMatrix.clear();
         minAdjacencyMatrix.reserve(n);
         for (unsigned int i = 0; i < n; i++) {
-            minAdjacencyMatrix.emplace_back(n, std::numeric_limits<double>::infinity());
-            minAdjacencyMatrix[i][i] = 0;
+            minAdjacencyMatrix.emplace_back(n, nullptr);
         }
 
         // definição dos valores
         for (auto &e : edges) {
-            if (e.capacity < minAdjacencyMatrix[e.start][e.end]) {
-                minAdjacencyMatrix[e.start][e.end] = e.capacity;
-            }
+//            if (e.capacity < minAdjacencyMatrix[e.start][e.end]) {
+            minAdjacencyMatrix[e.start][e.end] = const_cast<Edge *>(&e);
+//            }
         }
         updatedMatrix = true;
     }
@@ -129,7 +128,7 @@ void Graph::printAdjacencyList() const {
     for (unsigned int i = 0; i < list.size(); ++i) {
         std::cout << "adjacency of " << i << ": ";
         for (auto &e : list[i]) {
-            std::cout << "(" << e.end << "):" << e.capacity << " " ;
+            std::cout << "(" << e->end << "):" << e->capacity << " ";
         }
         std::cout << std::endl;
     }
@@ -137,14 +136,17 @@ void Graph::printAdjacencyList() const {
 }
 
 void Graph::printAdjacencyMatrix() const {
-    std::cout << "==================================================" << std::endl;
+    printf("==================================================\n");
     auto &matrix = getMinAdjacencyMatrix();
-    for (const auto &i : matrix) {
-        for (double j : i) {
-            printf("%4.0lf", j);
+    for (const auto & line : matrix) {
+        for (auto e : line) {
+            printf("%d ", e != nullptr ? e->capacity : 0);
         }
-        std::cout << std::endl;
+        printf("\n");
     }
+    printf("==================================================\n");
+}
 
-    std::cout << "==================================================" << std::endl;
+bool Graph::containsEdge(Edge &edge) const {
+    return (std::find(edges.begin(), edges.end(), edge) != edges.end());
 }

@@ -14,7 +14,7 @@
 
 struct Vertex;
 struct Edge;
-struct EdgeTo;
+//struct EdgeTo;
 
 struct Vertex {
 
@@ -39,31 +39,35 @@ struct Edge {
      */
     explicit Edge(int start, int end, int capacity);
 
-    bool operator<(const Edge &other) const { return capacity < other.capacity; }
+//    bool operator<(const Edge &other) const { return capacity < other.capacity; }
+//
+//    bool operator>(const Edge &other) const { return capacity > other.capacity; }
+//
+//    bool operator<=(const Edge &other) const { return capacity <= other.capacity; }
+//
+//    bool operator>=(const Edge &other) const { return capacity >= other.capacity; }
 
-    bool operator>(const Edge &other) const { return capacity > other.capacity; }
+    bool operator==(const Edge &other) const { return start == other.start && end == other.end && capacity == other.capacity; }
 
-    bool operator<=(const Edge &other) const { return capacity <= other.capacity; }
+    bool operator!=(const Edge &other) const { return start != other.start || end != other.end || capacity != other.capacity; }
 
-    bool operator>=(const Edge &other) const { return capacity >= other.capacity; }
-
-    int start, end, capacity;
+    int start, end, capacity, flow;
 };
 
-struct EdgeTo {
-
-    /**
-     * Cria uma "meia aresta".
-     *
-     * @param end
-     * @param capacity
-     */
-    EdgeTo(int end, int capacity);
-
-    virtual ~EdgeTo();
-
-    int end, capacity;
-};
+//struct EdgeTo {
+//
+//    /**
+//     * Cria uma "meia aresta".
+//     *
+//     * @param end
+//     * @param capacity
+//     */
+//    EdgeTo(int start, int end, int capacity);
+//
+//    virtual ~EdgeTo();
+//
+//    int start, end, capacity;
+//};
 
 class Graph {
 public:
@@ -134,7 +138,7 @@ public:
      *
      * @return
      */
-    const std::vector<std::vector<EdgeTo>> &getAdjacencyList() const;
+    const std::vector<std::vector<Edge *>> &getAdjacencyList() const;
 
     /**
      * Retorna a lista de adjacências de um vértice especificado.
@@ -142,14 +146,14 @@ public:
      * @param vertex
      * @return
      */
-    const std::vector<EdgeTo> &getAdjacencyList(int vertex) const;
+    const std::vector<Edge *> &getAdjacencyList(int vertex) const;
 
     /**
      * Retorna a lista de adjacências do grafo.
      *
      * @return
      */
-    const std::vector<std::vector<EdgeTo>> &getMinAdjacencyList() const;
+    const std::vector<std::vector<Edge *>> &getMinAdjacencyList() const;
 
     /**
      * Retorna a lista de adjacências de um vértice especificado.
@@ -157,14 +161,14 @@ public:
      * @param vertex
      * @return
      */
-    const std::vector<EdgeTo> &getMinAdjacencyList(int vertex) const;
+    const std::vector<Edge *> &getMinAdjacencyList(int vertex) const;
 
     /**
      * Retorna a matriz de adjacência do grafo.
      *
      * @return
      */
-    const std::vector<std::vector<int>> &getMinAdjacencyMatrix() const;
+    const std::vector<std::vector<Edge *>> &getMinAdjacencyMatrix() const;
 
 //    /**
 //     * Retorna a matriz de adjacência do grafo.
@@ -198,10 +202,12 @@ public:
     std::vector<Vertex> vertices;
     std::vector<Edge> edges;
 
+    bool containsEdge(Edge &e) const;
+
 private:
 
-    mutable std::vector<std::vector<EdgeTo>> adjacencyList;
-    mutable std::vector<std::vector<int>> minAdjacencyMatrix;
+    mutable std::vector<std::vector<Edge *>> adjacencyList;
+    mutable std::vector<std::vector<Edge *>> minAdjacencyMatrix;
     mutable bool updatedList{};
     mutable bool updatedMatrix{};
 //    mutable std::vector<std::vector<std::vector<double>>> adjacencyMatrix; // e se existir várias arestas de a para b?

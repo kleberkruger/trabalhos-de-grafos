@@ -17,6 +17,8 @@ struct InputInfo {
 };
 
 struct OutputInfo {
+
+    long total;
 };
 
 template<typename AIn, typename AOut>

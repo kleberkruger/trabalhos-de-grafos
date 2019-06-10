@@ -12,7 +12,7 @@
 #include <vector>
 #include <fcntl.h>
 #include <unistd.h>
-#include <sys/filio.h>
+// #include <sys/filio.h>
 #include <sys/ioctl.h>
 
 #ifdef __OSX_AVAILABLE

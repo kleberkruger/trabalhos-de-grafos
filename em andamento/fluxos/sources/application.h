@@ -14,6 +14,7 @@
 #include <unistd.h>
 // #include <sys/filio.h>
 #include <sys/ioctl.h>
+#include <cinttypes>
 
 #ifdef __OSX_AVAILABLE
 typedef std::chrono::steady_clock OS_CLOCK;
@@ -116,12 +117,12 @@ private:
     static void printTasks(std::vector<Task> tasks) {
         printf("================================================================================\n");
         for (unsigned int i = 0; i < tasks.size() - 1; i++) {
-            printf(" Time to %s: %llu ms\n", tasks[i].description.data(),
+            printf(" Time to %s: %" PRId64 "ms\n", tasks[i].description.data(),
                    std::chrono::duration_cast<std::chrono::milliseconds>(
                            tasks[i + 1].timePoint - tasks[i].timePoint).count());
         }
         printf("--------------------------------------------------------------------------------\n"
-               " Total time: %llu ms\n"
+               " Total time: %" PRId64 "ms\n"
                "================================================================================\n",
                std::chrono::duration_cast<std::chrono::milliseconds>(
                        tasks[tasks.size() - 1].timePoint - tasks[0].timePoint).count());

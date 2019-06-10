@@ -137,7 +137,7 @@ void compadreWashington(const InputInfo &in, OutputInfo &out,
             matrixR[e->end][e->start]->capacity += path.first;
         }
     }
-//    std::cout << out.total << std::endl;
+    std::cout << "Max Flow: " << out.total << std::endl;
 }
 
 void fordFulkerson(const InputInfo &in, OutputInfo &out) {

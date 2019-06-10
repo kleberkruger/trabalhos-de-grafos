@@ -146,7 +146,3 @@ void Graph::printAdjacencyMatrix() const {
     }
     printf("==================================================\n");
 }
-
-bool Graph::containsEdge(Edge &edge) const {
-    return (std::find(edges.begin(), edges.end(), edge) != edges.end());
-}

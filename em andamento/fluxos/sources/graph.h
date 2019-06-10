@@ -202,8 +202,6 @@ public:
     std::vector<Vertex> vertices;
     std::vector<Edge> edges;
 
-    bool containsEdge(Edge &e) const;
-
 private:
 
     mutable std::vector<std::vector<Edge *>> adjacencyList;

@@ -1,13 +1,9 @@
 /**
  * Algoritmos em Grafos (MO412)
  *
- * Primeiro Trabalho Prático
- * - MST - Minimum Spanning Tree
- *
- * @authors:
- * - Kleber Kruger <kleberkruger@gmail.com>,
- * - Felipe Barbosa <felipebarbosa@uft.edu.com>,
- * - Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
+ * @author: Kleber Kruger <kleberkruger@gmail.com>
+ * @author: Felipe Barbosa <felipebarbosa@uft.edu.com>
+ * @author: Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
  */
 
 #include "arrayheap.h"
@@ -17,7 +13,7 @@ ArrayHeap::ArrayHeap(int n, int s) : nodes(n), position(n) {
 }
 
 void ArrayHeap::build(int n, int s) {
-    for (int i = 0; i < nodes.size(); i++) {
+    for (unsigned int i = 0; i < nodes.size(); i++) {
         nodes[i].vertex = i;
         nodes[i].value = std::numeric_limits<double>::infinity();
 
@@ -33,7 +29,7 @@ int ArrayHeap::extractMin() {
     }
 
     int minIndex = 0;
-    for (int i = 1; i < size; ++i) {
+    for (unsigned int i = 1; i < size; ++i) {
         if (nodes[i].value < nodes[minIndex].value) {
             minIndex = i;
         }
@@ -54,7 +50,7 @@ bool ArrayHeap::empty() {
 }
 
 void ArrayHeap::print() {
-    for (int i = 0; i < size; i++) std::cout << "[" << nodes[i].value << "]:" << nodes[i].vertex << " ";
+    for (unsigned int i = 0; i < size; i++) std::cout << "[" << nodes[i].value << "]:" << nodes[i].vertex << " ";
     std::cout << std::endl;
 }
 

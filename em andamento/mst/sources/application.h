@@ -17,20 +17,27 @@
 #include <string>
 #include <fcntl.h>
 #include <unistd.h>
-#include <sys/filio.h>
+//#include <sys/filio.h>
 #include <sys/ioctl.h>
 #include "graph.h"
 
-enum Algorithm {
-    NONE = 0, KRUSKAL = 1, PRIM = 2
-};
+#ifdef __OSX_AVAILABLE
+typedef std::chrono::steady_clock OS_CLOCK;
+#else
+typedef std::chrono::system_clock OS_CLOCK;
+#endif
 
 struct Task {
 
-    explicit Task(std::string description);
+    explicit Task(std::string description) : description(std::move(description)),
+                                             timePoint(OS_CLOCK::now()) {}
 
     std::string description;
     std::chrono::high_resolution_clock::time_point timePoint;
+};
+
+enum Algorithm {
+    NONE = 0, KRUSKAL = 1, PRIM = 2
 };
 
 

@@ -13,7 +13,7 @@
  */
 
 #include "application.h"
-
+/*
 Task::Task(std::string description) : description(std::move(description)),
                                       timePoint(std::chrono::steady_clock::now()) {}
 
@@ -109,3 +109,4 @@ void Application::printCheckPoints() {
               << "================================================================================"
               << std::endl;
 }
+*/

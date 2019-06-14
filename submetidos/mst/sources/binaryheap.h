@@ -1,13 +1,9 @@
 /**
  * Algoritmos em Grafos (MO412)
  *
- * Primeiro Trabalho Prático
- * - MST - Minimum Spanning Tree
- *
- * @authors:
- * - Kleber Kruger <kleberkruger@gmail.com>,
- * - Felipe Barbosa <felipebarbosa@uft.edu.com>,
- * - Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
+ * @author: Kleber Kruger <kleberkruger@gmail.com>
+ * @author: Felipe Barbosa <felipebarbosa@uft.edu.com>
+ * @author: Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
  */
 
 #ifndef MST_BINARYHEAP_H
@@ -35,15 +31,15 @@ public:
     inline bool empty() override { return size == 0; }
 
     inline std::vector<HeapNode>::size_type parent(std::vector<HeapNode>::size_type index) {
-        return (index - 1) / 2;
+        return (unsigned long) (index - 1) / 2;
     }
 
     inline std::vector<HeapNode>::size_type left(std::vector<HeapNode>::size_type index) {
-        return index * 2 + 1;
+        return (index * 2) + 1;
     }
 
     inline std::vector<HeapNode>::size_type right(std::vector<HeapNode>::size_type index) {
-        return index * 2 + 2;
+        return (index * 2) + 2;
     }
 
 protected:
@@ -57,8 +53,8 @@ private:
     void swap(std::vector<HeapNode>::size_type i, std::vector<HeapNode>::size_type j);
 
     std::vector<HeapNode> nodes;
-    std::vector<HeapNode>::size_type size;
     std::vector<std::vector<HeapNode>::size_type> position;
+    std::vector<HeapNode>::size_type size;
 };
 
 #endif //MST_BINARYHEAP_H

@@ -1,69 +1,114 @@
 /**
  * Algoritmos em Grafos (MO412)
  *
- * Primeiro Trabalho Prático
- * - MST - Minimum Spanning Tree
- *
- * @authors:
- * - Kleber Kruger <kleberkruger@gmail.com>,
- * - Felipe Barbosa <felipebarbosa@uft.edu.com>,
- * - Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
+ * @author: Kleber Kruger <kleberkruger@gmail.com>
+ * @author: Felipe Barbosa <felipebarbosa@uft.edu.com>
+ * @author: Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
  */
 
-#ifndef MST_FIBONACCIHEAP_H
-#define MST_FIBONACCIHEAP_H
+#ifndef CAMINHOS_FIBONACCIHEAP_H
+#define CAMINHOS_FIBONACCIHEAP_H
 
-#include <vector>
-#include <limits>
 #include "heap.h"
-#include <math.h>
-#include <functional>
 
-class FibonacciHeap : public Heap {
+class FibonacciHeap : Heap {
 public:
-	struct HeapNode { 
-	    HeapNode* parent; // Parent pointer 
-	    HeapNode* child; // Child pointer 
-	    HeapNode* prev; // Pointer to the HeapNode on the left 
-	    HeapNode* next; // Pointer to the HeapNode on the right 
-        double key; // Value of the HeapNode
-	    int pos; // Position of the HeapNode in the position array
-	    int degree; // Degree of the HeapNode
-	    char mark; // Black or white mark of the HeapNode
-	};
 
-    FibonacciHeap(int n);
-    //~FibonacciHeap(void);
+    struct GraphNode {
+
+        int vertex;
+        double value;
+
+        GraphNode(int vertex = -1, double value = std::numeric_limits<double>::infinity())
+                : vertex(vertex), value(value) {}
+
+        bool operator<(const GraphNode &other) const { return value < other.value; }
+
+        bool operator>(const GraphNode &other) const { return value > other.value; }
+
+        bool operator<=(const GraphNode &other) const { return value <= other.value; }
+
+        bool operator>=(const GraphNode &other) const { return value >= other.value; }
+
+        bool operator==(const GraphNode &other) const { return vertex == other.vertex; }
+
+        bool operator!=(const GraphNode &other) const { return vertex != other.vertex; }
+    };
+
+    struct FibonacciNode {
+    private:
+
+        FibonacciNode *prev;
+        FibonacciNode *next;
+        FibonacciNode *child;
+        FibonacciNode *parent;
+        GraphNode value;
+        int degree;
+        bool marked;
+
+    public:
+
+        friend class FibonacciHeap;
+
+        FibonacciNode *getPrev() { return prev; }
+
+        FibonacciNode *getNext() { return next; }
+
+        FibonacciNode *getChild() { return child; }
+
+        FibonacciNode *getParent() { return parent; }
+
+        GraphNode getValue() { return value; }
+
+        bool isMarked() { return marked; }
+
+        bool hasChildren() { return child; }
+
+        bool hasParent() { return parent; }
+    };
+
+    FibonacciHeap();
+
+    FibonacciHeap(int n, int s);
+
+    virtual ~FibonacciHeap();
 
     int extractMin() override;
 
-    void decreaseKey(unsigned long index, double val) override;
+    void decreaseKey(unsigned long vertex, double value) override;
 
     bool empty() override;
 
-	void insertion(double val,int index);
-
-	void print();
-
-protected:
-	void consolidate();
-	void fibonnaci_link(HeapNode * ptr2, HeapNode * ptr1);
-	void Cut(HeapNode* found, HeapNode * temp);
-	void Cascase_cut(HeapNode * temp);
-	void Decrease_key(HeapNode * found, int val);
-    
-
 private:
-	void build(int n,int s);
-	void insert_on_root(HeapNode * x);
 
-	HeapNode * min;
-	int total_nodes;
-    std::vector<HeapNode> nodes;
-    std::vector<HeapNode>::size_type size;
-    std::vector<HeapNode *> position;
-    std::vector<HeapNode *> A;
+    FibonacciNode *root;
 
+    void build(int n, int s);
+
+    FibonacciNode *insert(GraphNode value);
+
+    FibonacciNode *singleton(GraphNode value);
+
+    FibonacciNode *merge(FibonacciNode *a, FibonacciNode *b);
+
+    void clear(FibonacciNode *n);
+
+    void insertChild(FibonacciNode *parent, FibonacciNode *child);
+
+    void unpairAll(FibonacciNode *n);
+
+    FibonacciNode *extractMin(FibonacciNode *n);
+
+    FibonacciNode *cut(FibonacciNode *heap, FibonacciNode *n);
+
+    FibonacciNode *decreaseKey(FibonacciNode *heap, FibonacciNode *n, GraphNode value);
+
+    FibonacciNode *find(GraphNode value);
+
+    FibonacciNode *find(FibonacciNode *heap, GraphNode value);
 };
 
-#endif //MST_FIBONACCIHEAP_H
+typedef FibonacciHeap::GraphNode GraphNode;
+typedef FibonacciHeap::FibonacciNode FibonacciNode;
+
+#endif //CAMINHOS_FIBONACCIHEAP_H

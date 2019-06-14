@@ -102,6 +102,6 @@ int main(int argc, char *argv[]) {
                     strcasecmp(argv[1], "kruskal") == 0 ? KRUSKAL : NONE;
 
     execute(alg, std::atoi(argv[2]), argv[3], argv[4]); // NOLINT(cert-err34-c)
-
+    printf("\n");
     return EXIT_SUCCESS;
 }

@@ -156,7 +156,7 @@ double Graph::kruskal(const Graph &graph, Graph &mst) {
 
     std::vector<Edge> edges = graph.edges;
     std::sort(edges.begin(), edges.end());
-
+    
     for (auto e : edges) {
         if (!ds.sameSet(e.start, e.end)) {
             mst.insertEdge(e.start, e.end, e.weight);

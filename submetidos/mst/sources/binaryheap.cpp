@@ -1,23 +1,19 @@
 /**
  * Algoritmos em Grafos (MO412)
  *
- * Primeiro Trabalho Prático
- * - MST - Minimum Spanning Tree
- *
- * @authors:
- * - Kleber Kruger <kleberkruger@gmail.com>,
- * - Felipe Barbosa <felipebarbosa@uft.edu.com>,
- * - Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
+ * @author: Kleber Kruger <kleberkruger@gmail.com>
+ * @author: Felipe Barbosa <felipebarbosa@uft.edu.com>
+ * @author: Rodrigo Kanehisa <rodrigokanehisa@gmail.com>
  */
 
 #include "binaryheap.h"
 
-BinaryHeap::BinaryHeap(int n, int s) : nodes(n), position(n) {
+BinaryHeap::BinaryHeap(int n, int s) : nodes(n), position(n), size(0) {
     build(n, s);
 }
 
 void BinaryHeap::build(int n, int s) {
-    for (int i = 0; i < nodes.size(); i++) {
+    for (auto i = 0; i < n; i++) {
         nodes[i].vertex = i;
         nodes[i].value = std::numeric_limits<double>::infinity();
 
@@ -41,23 +37,25 @@ int BinaryHeap::extractMin() {
 
 //    std::cout << "vou mesmo extrair o " << min << std::endl;
 
-    heapify(0);
+    if (size > 0) heapify(0);
+
+//    std::cout << "heapfado!" << min << std::endl;
 
     return min;
 }
 
-void BinaryHeap::decreaseKey(unsigned long vertice, double value) {
-    unsigned long index = position[vertice];
+void BinaryHeap::decreaseKey(unsigned long vertex, double value) {
+    auto index = position[vertex];
+    if (nodes[index].value > value) {
+        //std::cout << nodes[index].value << " " << value << std::endl;
+        //throw std::invalid_argument("Decrease error!");
 
-    if (nodes[index].value < value) {
-        throw std::invalid_argument("Decrease error!");
-    }
+        nodes[index].value = value;
 
-    nodes[index].value = value;
-
-    while (index > 0 && nodes[index].value < nodes[parent(index)].value) {
-        swap(index, parent(index));
-        index = parent(index);
+        while (index > 0 && nodes[index].value < nodes[parent(index)].value) {
+            swap(index, parent(index));
+            index = parent(index);
+        }
     }
 }
 
@@ -93,7 +91,7 @@ void BinaryHeap::swap(unsigned long i, unsigned long j) {
 }
 
 void BinaryHeap::print() {
-    for (int i = 0; i < size; i++)
+    for (unsigned int i = 0; i < size; i++)
         std::cout << i << "=[(" << nodes[i].value << ") v" << nodes[i].vertex << "=" << position[nodes[i].vertex]
                   << "] ";
     std::cout << std::endl;
